@@ -80,6 +80,10 @@ app.get('/:file', (request, response)=> {
     response.sendFile(`./html/${file}`, { root: '.' });
 });
 
+app.get('/phone-arg/:file', (request, response)=> {
+    var file = request.params.file;
+    response.sendFile(`./phone-arg/${file}`, { root: '.' });
+});
 app.listen(3000, () => {
   console.log('server started');
 });
