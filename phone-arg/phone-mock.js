@@ -3,6 +3,10 @@ $(document).ready(function() {
         $(".col").removeClass("app-view")
     })
 
+    // $(".phone-crack").click((event) => {
+    //     console.log(event)
+    // })
+
     $(".app-sc").click((event) => {
         // console.log({ event }, event.currentTarget, $(event.currentTarget))
         // $(this).classList.toggle('.app-view');
