@@ -3,8 +3,9 @@
     /* background-size: 100% auto; */
     background-size: contain;
     background-repeat: no-repeat;
-    max-width: 600px;
-    min-width: 300px;
+    /* max-width: 400px;
+    min-width: 300px; */
+    width: 364px;
     height: 100%;
     /* display: table;
     margin: 0 auto; */
@@ -43,14 +44,30 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    transition: all 10s ease;
+    /* transition: all 10s ease; */
+    transition: height 2s, ease;
 }
 
 .app-view {
-    height: 254px;
+    /* height: 254px;
+    flex-basis: auto;
+    z-index: 1; */
+    /* transition: all 10s ease; */
+    /* transition: height 2s, ease; */
+    transition: all 10s ease; 
+    /* transition: height 2s, ease; */
+    height: 456px;
+    background-color: orange;
+    background-image: none;
+    /* width: 100%; */
+    width: 257px;
+    margin: 0 8px;
+    position: absolute;
+    top: 92px;
     flex-basis: auto;
     z-index: 1;
-    transition: all 10s ease;
+    /* transition: all 10s ease; */
+    transition: height 2s, ease;
 }
 
 .app-gmail {
@@ -60,3 +77,35 @@
     background-position: center;
 }
 
+.home-btn {
+    /* height: 40px; */
+    /* background-color: pink; */
+    /* width: 10px; */
+    /* display: table; */
+    /* margin: 0 auto; */
+    /* z-index: 1; */
+    /* position: absolute; */
+    /* top: 20; */
+    /* left: 20; */
+    /* border-radius: 20px; */
+    /* width: 40px; */
+    /* display: flex;   */
+    /* align-items: center;
+    justify-content: center; */
+
+    position: absolute;
+    margin-left: 162px;
+    margin-top: 555px;
+
+    border-radius: 20px;
+    background-color: pink;
+    height: 40px;
+    width: 40px;
+}
+
+/* .home-btn div {
+    border-radius: 20px;
+    background-color: pink;
+    height: 40px;
+    width: 40px;
+} */
