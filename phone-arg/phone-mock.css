@@ -1,0 +1,62 @@
+.phone-container {
+    background-image: url(https://i.imgur.com/fL9NBiz.png);
+    /* background-size: 100% auto; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 600px;
+    min-width: 300px;
+    height: 100%;
+    /* display: table;
+    margin: 0 auto; */
+}
+
+.phone-content {
+    position: absolute;
+    /* background-image: url(../images/wallpaper.jpeg); */
+    top: 135px;
+    left: 80px;
+    width: 375px;
+    height: 667px;
+}
+
+.app {
+    background-color: pink;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+.app-row {
+    /* width: 300px; */
+    padding: 12px;
+    height: 90px;
+}
+
+.app-container {
+    padding-top: 100px;
+    margin-left: 34px;
+    width: 300px;
+}
+
+.app-sc {
+    background-image: url(https://i.imgur.com/Ayi48lm.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 10s ease;
+}
+
+.app-view {
+    height: 254px;
+    flex-basis: auto;
+    z-index: 1;
+    transition: all 10s ease;
+}
+
+.app-gmail {
+    background-image: url(https://i.imgur.com/vbcR6aY.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
