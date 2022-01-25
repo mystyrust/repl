@@ -75,7 +75,7 @@
     /* top: 103px; */
     z-index: 10;
     pointer-events: none;
-    bottom: 100;
+    top: 250;
     margin-left: 39px;
     filter: hue-rotate(162deg) brightness(3.5);
 }
