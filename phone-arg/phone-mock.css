@@ -179,12 +179,12 @@
 } */
 
 .phone-checklist-title {
-    position: fixed;
+    position: absolute;
     margin-top: -20px;
 }
 
 .phone-checklist-title-2 {
-    position: fixed;
+    position: absolute;
     margin-top: 250px;
 }
 
