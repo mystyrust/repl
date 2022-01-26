@@ -24,6 +24,12 @@
     margin: 0 auto; */
 }
 
+.screen-container {
+    width: 364px;
+    height: 732px;
+    scroll-snap-align: start;
+}
+
 .phone-img {
     background-image: url(https://i.imgur.com/fL9NBiz.png);
     /* background-size: 100% auto; */
@@ -109,7 +115,7 @@
 }
 
 .app-row {
-    /* width: 300px; */
+    width: 300px;
     padding: 12px;
     height: 90px;
 }
@@ -118,6 +124,13 @@
     padding-top: 100px;
     margin-left: 34px;
     width: 300px;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    height: 546px;
+    z-index: 1;
 }
 
 .app-sc {
@@ -133,7 +146,6 @@
 }
 
 .app-view {
-
     /* transition: height 2s, ease; */
     height: 456px;
     background-color: orange;
@@ -148,6 +160,8 @@
     transition: display 1s ease;
     /* transition: all 10s ease; */
     /* transition: height 2s, ease; */
+    margin-left: 20px;
+
 }
 
 .app-view div {
@@ -159,6 +173,8 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    height: 60px;
+    width: 60px;
 }
 
 .col {
@@ -196,42 +212,20 @@
     display: inline-flex;
 }
 
-/* .home-btn div {
-    border-radius: 20px;
-    background-color: pink;
-    height: 40px;
-    width: 40px;
-} */
-/* 
-.phone-checklist-title {
-    position: absolute;
-    margin-top: -20px;
-}
+/* width */
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    display: none;
+  }
 
-.phone-checklist-title-2 {
-    position: absolute;
-    margin-top: 250px;
-}
-
-.phone-checklist {
-    max-width: 350px;
-    display: inline-flex;
-    padding-top: 30px;
-}
-
-.phone-checklist div:not(.phone-checklist-title-2, .phone-checklist-title, .choice1, .choice2) {
-    display: inline-flex;
-    height: 80px;
-}
-
-.phone-checklist img {
-    margin: 5px;
-}
-
-.choice1, .choice2 {
-    text-align: left;
-}
-
-.choice1 img, .choice2 img {
-    height: 80px;
-} */
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+    max-height: 30px
+  }
+  
