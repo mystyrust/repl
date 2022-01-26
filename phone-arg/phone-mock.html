@@ -15,105 +15,83 @@
 <div class="phone-container">
     <div class="home-btn"></div>
     <div class="phone-img"></div>
-    <!-- <img class="phone-wallpaper-img" src="https://i.imgur.com/vqt7UbC.jpg" /> -->
     <div class="phone-wallpaper"></div>
     <img src="https://i.imgur.com/x5OkG01.png" class="phone-crack"/>
     <!-- <img src="https://i.imgur.com/WGnAPWV.png?1" class="phone-smear" /> -->
     <img src="https://i.imgur.com/mHadlFO.png" class="phone-splatter" />
-    <div class="app-container">
-        <!-- <div style="height: 455px; 
-            background-color: pink;
-            width: 255px;
-            z-index: 10;
-            position: absolute;
-            margin: -7px 7px 0px 2px;">
-        </div> -->
-        <div class="screen-container">
-        <div class="row app-row">
-            <div class="col app-sc">
-                <div> snapchat 1</div>
-            </div>
-            <div class="col app-sc">
-                <div> snapchat 2</div>
-            </div>
-            <div class="col app-sc">
-                <div> snapchat 3</div>
-            </div>
-        </div>
-        <div class="row app-row">
-            <div class="col app-sc">
-                <div> snapchat 4</div>
-            </div>
-            <div class="col app-sc">
-                <div> snapchat 5</div>
-            </div>
-            <div class="col app-sc">
-                <div> snapchat 6</div>
-            </div>
-        </div>
-        <div class="row app-row">
-            <div class="col app-sc">
-                <div> snapchat 7</div>
-            </div>
-            <div class="col app-sc">
-                <div> snapchat 8</div>
-            </div>
-            <div class="col app-sc">
-                <div> snapchat 9</div>
-            </div>
-        </div>
-        <div class="row app-row">
-            <div class="col app-gmail"></div>
-            <div class="col app-gmail"></div>
-            <div class="col app-gmail"></div>
-        </div>
-        </div>
-        <div class="screen-container">
-            <div class="row app-row">
-                <div class="col app-sc">
-                    <div> snapchat 1</div>
-                </div>
-                <div class="col app-sc">
-                    <div> snapchat 2</div>
-                </div>
-                <div class="col app-sc">
-                    <div> snapchat 3</div>
-                </div>
-            </div>
-            <div class="row app-row">
-                <div class="col app-sc">
-                    <div> snapchat 4</div>
-                </div>
-                <div class="col app-gmail"></div>
-                <div class="col app-sc">
-                    <div> snapchat 6</div>
-                </div>
-            </div>
-            <div class="row app-row">
-                <div class="col app-sc">
-                    <div> snapchat 7</div>
-                </div>
-                <div class="col app-sc">
-                    <div> snapchat 8</div>
-                </div>
-                <div class="col app-sc">
-                    <div> snapchat 9</div>
-                </div>
-            </div>
-            <div class="row app-row">
-                <div class="col app-gmail"></div>
-                <div class="col app-gmail"></div>
-                <div class="col app-gmail"></div>
-            </div>
+    
+    <div class="app-screen-view">
+        <div id="snapchat-view">
+
         </div>
     </div>
+
+    <div class="app-container">
+        <div id="screen1" class="screen-container">
+            screen1
+        <div class="row app-row">
+            <div class="col app-icon app-sc" app-target="snapchat-view"></div>
+            <div class="col app-icon app-sc"></div>
+            <div class="col app-icon app-sc"></div>
+        </div>
+        <div class="row app-row">
+            <div class="col app-icon app-sc"></div>
+            <div class="col app-icon app-sc"></div>
+            <div class="col app-icon app-sc"></div>
+        </div>
+        <div class="row app-row">
+            <div class="col app-icon app-gmail"></div>
+            <div class="col app-icon app-gmail"></div>
+            <div class="col app-icon app-gmail"></div>
+        </div>
+        </div>
+        <div id="screen2" class="screen-container">
+            screen2
+            <div class="row app-row">
+                <div class="col app-icon app-sc"></div>
+                <div class="col app-icon app-sc"></div>
+                <div class="col app-icon app-sc"></div>
+            </div>
+            <div class="row app-row">
+                <div class="col app-icon app-gmail"></div>
+                <div class="col app-icon app-gmail"></div>
+                <div class="col app-icon app-gmail"></div>
+            </div>
+        </div>
+        <div id="screen3" class="screen-container">
+            screen3
+            <div class="row app-row">
+                <div class="col app-icon app-sc"></div>
+                <div class="col app-icon app-sc"></div>
+                <div class="col app-icon app-sc"></div>
+            </div>
+            <div class="row app-row">
+                <div class="col app-icon app-sc"></div>
+                <div class="col app-icon app-gmail"></div>
+                <div class="col app-icon app-sc"></div>
+            </div>
+            <div class="row app-row">
+                <div class="col app-icon app-sc"></div>
+                <div class="col app-icon app-gmail"></div>
+                <div class="col app-icon"></div>
+            </div>
+        </div>
+
+        <div class="scroller">
+            <div scroll-target="screen1"></div>
+            <div scroll-target="screen2"></div> 
+            <div scroll-target="screen3"></div> 
+        </div>
+    </div>
+    
     <div class="screen-buttons">
         <!-- width: 273px; -->
         <div class="row app-row">
-            <div class="col app-sc"></div>
-            <div class="col app-sc"></div>
-            <div class="col app-sc"></div>
+            <div class="col app-icon app-sc"></div>
+            <div class="col app-icon app-gmail"></div>
+            <div class="col app-icon app-sc"></div>
         </div>
+       
     </div>
 </div>
 

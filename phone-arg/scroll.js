@@ -5,6 +5,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let pos = { top: 0, left: 0, x: 0, y: 0 };
 
+    function isScrolledIntoView(el) {
+        var rect = el.getBoundingClientRect();
+        // console.log(el)
+        // var elemRight = rect.right;
+        // var elemLeft = rect.left;
+
+        var screen = el.getBoundingClientRect()
+        var parent = ele.getBoundingClientRect()
+        var width = $(".app-container")[0].getBoundingClientRect().width
+        
+        var isVisible = Math.abs(screen.left - parent.left) < width
+        // var isVisible =  el.id == "screen"+(screenLeft+1);
+        
+        // console.log({ screen }, {parent})
+        // console.log(el.id, isVisible, screenLeft)
+    
+        // Only completely visible elements return true:
+        // var isVisible = (elemRight >= 0) && (elemLeft <= window.innerWidth);
+        // Partially visible elements return true:
+        //isVisible = elemRight < window.innerHeight && elemLeft >= 0;
+        return isVisible;
+    }
+
     const mouseDownHandler = function (e) {
         ele.style.cursor = 'grabbing';
         ele.style.userSelect = 'none';
@@ -45,15 +68,14 @@ document.addEventListener('DOMContentLoaded', function () {
     // ----------------------------------------//
 
     // ease scroll within container -- pill bug click // https://stackoverflow.com/a/51005649 method 1
-    function scrollTest() 
-    {
-        console.log("scrollTest")
+    $(".scroller div").click(event => {
+        var targetId = event.target.attributes['scroll-target'].value;
+        var target = $("#"+targetId)[0]
         var container = $(".app-container")[0]
-        var child = $(".screen-container:last-of-type")[0]
-        scrollToElm(container, child, 400)
-    }
+        scrollToElm(container, target, 400)
 
-    $(".app-gmail").click(scrollTest)
+        // color the pill bugs accordingly
+    })
     
     function scrollToElm(container, elm, duration){
         var pos = getRelativePos(elm);
@@ -65,10 +87,10 @@ document.addEventListener('DOMContentLoaded', function () {
           cPos = elm.getBoundingClientRect(), // target pos
           pos = {};
     
-      pos.top    = cPos.top    - pPos.top + elm.parentNode.scrollTop,
-      pos.right  = cPos.right  - pPos.right,
+      pos.top    = cPos.top    - pPos.top,
+      pos.right  = cPos.right  - pPos.right, // + elm.parentNode.scrollLeft,
       pos.bottom = cPos.bottom - pPos.bottom,
-      pos.left   = cPos.left   - pPos.left;
+      pos.left   = cPos.left   - pPos.left + elm.parentNode.scrollLeft;
     
       return pos;
     }
@@ -97,4 +119,22 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function easeInOutQuad(t){ return t<.5 ? 2*t*t : -1+(4-2*t)*t };
 
+    function updatePillBugs(pillNumber) {
+        console.log('update pill bugs, turn them "off"')
+        console.log('turn on ' + pillNumber)
+    }
+
+    $(".app-container").on( 'scroll', function(event){
+        // console.log('Event Fired');
+
+        $(".scroller div").css({ background: 'blue' })
+
+        $(".screen-container").each((index, screen) => { 
+            if (isScrolledIntoView(screen))
+            {
+                $($(".scroller div")[index]).css({ background: 'green' })
+            }
+        })
+
+     });
 });

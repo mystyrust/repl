@@ -112,7 +112,7 @@
     margin: 0 54px;
     position: absolute;
     top: 92px;
-    z-index: 10;
+    z-index: 13;
     pointer-events: none;
 }
 
@@ -121,7 +121,7 @@
     margin: 0 54px;
     position: absolute;
     /* top: 103px; */
-    z-index: 10;
+    z-index: 13;
     pointer-events: none;
     bottom: 100;
     margin-left: 39px;
@@ -132,7 +132,7 @@
     margin: 0 54px;
     position: absolute;
     /* top: 103px; */
-    z-index: 10;
+    z-index: 13;
     pointer-events: none;
     top: 250;
     margin-left: 39px;
@@ -167,6 +167,18 @@
     cursor: grab;
 }
 
+.app-screen-view {
+    height: 457px;
+    /* height: 0px; */
+    /* background-color: pink; */
+    pointer-events: none;
+    width: 257px;
+    z-index: 10;
+    top: 99px;
+    position: absolute;
+    margin: -7px 7px 0px 54px;
+}
+
 .app-sc {
     background-image: url(https://i.imgur.com/Ayi48lm.png);
     background-size: contain;
@@ -175,11 +187,11 @@
     transition: height 1s ease;
 }
 
-.app-sc:hover {
+.app-icon:hover {
     filter: drop-shadow(2px 4px 6px black);
 }
 
-.app-sc:not(.app-view) div  {
+.app-icon:not(.app-view) div  {
     display: none;
 }
 
@@ -231,6 +243,17 @@
     z-index: 2;
 }
 
+/* individual apps  */
+#snapchat-view {
+    background-color: gold;
+    width: 0px;
+    height: 0px;
+    transition: height 1s, width 1s;
+    /* opacity: 0; */
+}
+
+/* ------------- */
+
 .phone-checklist {
     display: inline-flex;
 }
@@ -253,4 +276,24 @@
     max-height: 30px */
     display: none;
   }
-  
+
+.scroller {
+    position: absolute;
+    /* top: 92px; */
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    width: 259px;
+    /* margin-left: 162px; */
+    margin-top: 338px;
+    background-color: purple;
+}
+
+.scroller div {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    background: blue;
+    border-radius: 20px;
+    margin: 0 20px;
+}
