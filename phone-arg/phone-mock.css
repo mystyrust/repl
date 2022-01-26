@@ -10,6 +10,21 @@
 }
 
 .phone-container {
+    /* background-image: url(https://i.imgur.com/fL9NBiz.png); */
+    /* background-size: 100% auto; */
+    /* background-size: contain;
+    background-repeat: no-repeat; */
+    /* max-width: 400px;
+    min-width: 300px; */
+    width: 364px;
+    height: 732px;
+    display: inline-flex;
+    margin-bottom: -120px;
+    /* display: table;
+    margin: 0 auto; */
+}
+
+.phone-img {
     background-image: url(https://i.imgur.com/fL9NBiz.png);
     /* background-size: 100% auto; */
     background-size: contain;
@@ -18,7 +33,8 @@
     min-width: 300px; */
     width: 364px;
     height: 732px;
-    display: inline-flex;
+    /* display: inline-flex; */
+    position: absolute;
     margin-bottom: -120px;
     /* display: table;
     margin: 0 auto; */
