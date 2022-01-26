@@ -189,6 +189,7 @@
     background-color: pink;
     height: 40px;
     width: 40px;
+    z-index: 2;
 }
 
 .phone-checklist {
