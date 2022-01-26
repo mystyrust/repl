@@ -3,7 +3,10 @@
 } */
 
 .phone-arg {
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .phone-container {
@@ -16,6 +19,7 @@
     width: 364px;
     height: 732px;
     display: inline-flex;
+    margin-bottom: -120px;
     /* display: table;
     margin: 0 auto; */
 }
@@ -171,13 +175,17 @@
     width: 40px;
 }
 
+.phone-checklist {
+    display: inline-flex;
+}
+
 /* .home-btn div {
     border-radius: 20px;
     background-color: pink;
     height: 40px;
     width: 40px;
 } */
-
+/* 
 .phone-checklist-title {
     position: absolute;
     margin-top: -20px;
@@ -209,4 +217,4 @@
 
 .choice1 img, .choice2 img {
     height: 80px;
-}
+} */
