@@ -447,7 +447,7 @@
 .phone-checklist {
     display: inline-flex;
     position: relative;
-    padding-top: 25px;
+    margin-top: 25px;
 }
 
 .notebook-spiral {
