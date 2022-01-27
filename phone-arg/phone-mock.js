@@ -29,6 +29,17 @@ $(document).ready(function() {
     
     })
 
+    $(".notebook-cover").click( event => {
+        $(".notebook-cover").css({ transform: "rotateX(90deg) scale(1.15)" })
+        // setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(90deg) scale(1.15)" }), 500)
+        setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(180deg) scale(1)"}), 500)
+        // setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(180deg)" }), 750)
+        setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(270deg)" , height: "98%", "z-index": 0 }), 750)
+        setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(360deg)" }), 1000)
+
+    })
+
+
     const setTime = () => {
         var date = new  Date()
         var time = date.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});

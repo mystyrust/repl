@@ -355,11 +355,6 @@
   } */
 /* ---------- -------------- ---------- */
 
-
-.phone-checklist {
-    display: inline-flex;
-}
-
 /* ---------- scrollbar overrides ---------- */
 
 /* width */
@@ -447,4 +442,58 @@
     padding: 0px 3px
 }
 
-/* --------------------------------------------------------- */
+/* ------------------ checklist notebook stuff---------------------------- */
+
+.phone-checklist {
+    display: inline-flex;
+    position: relative;
+}
+
+.notebook-spiral {
+    position: absolute;
+    z-index: 5;
+    /* margin-right: 20px; */
+    margin-left: 20px;
+    margin-top: 6px;
+    /* top: 0; */
+}
+
+.notebook-cover {
+    /* background-color: brown; */
+    background-image: url(https://i.imgur.com/bCYDKPS.jpg?1);
+    margin-top: 10px;
+    /* min-width: 300px;
+    max-width: 400px; */
+    border-radius: 20px;
+    width: 100%;
+    height: 97%;
+    z-index: 2;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+}
+
+.paper {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+}
+
+.notebook-cover-out {
+    transform: rotateX(90deg) scale(1.15);
+}
+.textwmar p {
+    /* position: absolute; */
+    /* top: 106px; */
+        /* height: 100%; */
+    /* width: 100%; */
+    /* position: relative; */
+    min-height: 500px;
+    padding: 5px 10px;
+    /* width: 300px;
+    min-width: 357px;
+    display: inline-block; */
+}
+/* ----------------------------------------------------------------------- */
+

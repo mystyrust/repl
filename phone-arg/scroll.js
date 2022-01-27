@@ -105,18 +105,12 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function easeInOutQuad(t){ return t<.5 ? 2*t*t : -1+(4-2*t)*t };
 
-    function updatePillBugs(pillNumber) {
-        console.log('update pill bugs, turn them "off"')
-        console.log('turn on ' + pillNumber)
-    }
-
     $(".app-container").on( 'scroll', function(event){
         $(".scroller div").css({ background: 'slategray' })
         $(".screen-container").each((index, screen) => { 
             if (isScrolledIntoView(screen))
             {
                 $($(".scroller div")[index]).css({ background: 'white' })
-                // scrollToElm($(".app-container")[0], screen)
             }
         })
 
