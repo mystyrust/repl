@@ -39,6 +39,7 @@
     /* margin-left: 162px; */
     margin-top: 455px;
     margin-left: 54px;
+    cursor: pointer;
     /* padding: 0 10px; */
     /* width: 250px; */
     /* background-color: green; */
@@ -243,20 +244,76 @@
     z-index: 2;
 }
 
-/* individual apps  */
-#snapchat-view {
+/* ----------individual apps ---------- */
+/* #snapchat-view { */
+
+.app-screen-view div:not(#notification, #notif-backdrop) {
     background-color: gold;
+    opacity: 0;
     width: 0px;
     height: 0px;
-    transition: height 1s, width 1s;
-    /* opacity: 0; */
+    transition: height 1s, width 1s, opacity 1s;
 }
 
-/* ------------- */
+#notification {
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    /* width: 0px; */
+    width: 257px;
+    height: 0px;
+    transition: height 1s, width 1s, opacity 0.7s;
+}
+
+#notification p {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    margin: 35px;
+    margin: 20px;
+    padding: 10px;
+    filter: drop-shadow(2px 4px 6px black);
+    border-radius: 10px;
+    z-index: 11;
+    font-size: small;
+    display: flex;
+}
+
+#notification img {
+    float: right
+}
+#notif-backdrop {
+    position: absolute;
+    /* display: flex; */
+    background-color: gray;
+    /* filter: blur(10000px); */
+    opacity: 0;
+    /* z-index: 10; */
+    width: 257px;
+    height: 456px;
+    transition: opacity 0.1s;
+
+}
+/* #notification p:before {
+    content: "";
+    position: absolute;
+    background-color: gray;
+    filter: blur(10000px);
+    z-index: 10;
+    width: 257px;
+    height: 456px;
+    top: -195px;
+    margin-left: -30;
+  } */
+/* ---------- -------------- ---------- */
+
 
 .phone-checklist {
     display: inline-flex;
 }
+
+/* ---------- scrollbar overrides ---------- */
 
 /* width */
 .app-container::-webkit-scrollbar {
@@ -275,7 +332,7 @@
     border-radius: 10px;
     max-height: 30px */
     display: none;
-  }
+}
 
 .scroller {
     position: absolute;
@@ -286,14 +343,19 @@
     width: 259px;
     /* margin-left: 162px; */
     margin-top: 338px;
-    background-color: purple;
 }
 
 .scroller div {
     display: inline-flex;
-    width: 20px;
-    height: 20px;
-    background: blue;
+    width: 10px;
+    height: 10px;
+    background: slategray;
     border-radius: 20px;
     margin: 0 20px;
+    border-style: solid;
+    border-width: thin;
+}
+
+.scroller div:first-of-type {
+    background: white;
 }
