@@ -218,10 +218,16 @@
     margin-top: 555px;
     cursor: pointer;
     border-radius: 20px;
-    background-color: pink;
+    background-color: white;
+    opacity: 0.1;
     height: 40px;
     width: 40px;
     z-index: 2;
+}
+
+.home-btn:hover {
+    filter: drop-shadow(2px 4px 6px black);
+    opacity: 1;
 }
 
 /* ----------individual apps ---------- */
