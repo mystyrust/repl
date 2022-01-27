@@ -164,47 +164,42 @@
     <div class="app-container">
         <div id="screen1" class="screen-container">
         <div class="row app-row">
-            <div class="col app-icon app-sc" app-target="snapchat-view"></div>
-            <div class="col app-icon app-discord" app-target="discord-view"></div>
-            <div class="col app-icon app-msgs"></div>
+            <div class="col app-icon app-sc" app-target="snapchat-view" app-name="Snapchat"></div>
+            <div class="col app-icon app-discord" app-target="discord-view" app-name="Discord"></div>
+            <div class="col app-icon app-msgs" app-name="iMessage"></div>
         </div>
         <div class="row app-row">
-            <div class="col app-icon app-tiktok"></div>
-            <div class="col app-icon app-youtube"></div>
-            <div class="col app-icon app-ig"></div>
+            <div class="col app-icon app-tiktok" app-name="Tiktok"></div>
+            <div class="col app-icon app-youtube" app-name="Youtube"></div>
+            <div class="col app-icon app-ig" app-name="Instagram"></div>
         </div>
         <div class="row app-row">
-            <div class="col app-icon app-tumblr"></div>
-            <div class="col app-icon app-twitter"></div>
-            <div class="col app-icon app-gmail"></div>
+            <div class="col app-icon app-tumblr" app-name="Tumblr"></div>
+            <div class="col app-icon app-twitter" app-name="Twitter"></div>
+            <div class="col app-icon app-gmail" app-name="Gmail"></div>
         </div>
         </div>
         <div id="screen2" class="screen-container">
             <div class="row app-row">
-                <div class="col app-icon app-notes"></div>
-                <div class="col app-icon app-appstore"></div>
-                <div class="col app-icon app-amazon"></div>
+                <div class="col app-icon app-notes" app-name="Notes"></div>
+                <div class="col app-icon app-appstore" app-name="App"></div>
+                <div class="col app-icon app-amazon" app-name="test"></div>
             </div>
             <div class="row app-row">
-                <div class="col app-icon app-settings"></div>
-                <div class="col app-icon app-reddit"></div>
-                <div class="col app-icon app-gallery"></div>
+                <div class="col app-icon app-settings" app-name="Settings"></div>
+                <div class="col app-icon app-reddit" app-name="Reddit"></div>
+                <div class="col app-icon app-gallery" app-name="Gallery"></div>
             </div>
         </div>
         <div id="screen3" class="screen-container">
             <div class="row app-row">
-                <div class="col app-icon app-Gdrive"></div>
-                <div class="col app-icon app-Gmaps"></div>
-                <div class="col app-icon app-clock"></div>
+                <div class="col app-icon app-Gdrive" app-name="Google Drive"></div>
+                <div class="col app-icon app-Gmaps" app-name="Google Maps"></div>
+                <div class="col app-icon app-clock" app-name="Clock"></div>
             </div>
             <div class="row app-row">
-                <div class="col app-icon app-sc"></div>
-                <div class="col app-icon app-gmail"></div>
-                <div class="col app-icon app-sc"></div>
-            </div>
-            <div class="row app-row">
-                <div class="col app-icon app-sc"></div>
-                <div class="col app-icon app-gmail"></div>
+                <div class="col app-icon app-calculator" app-name="Calculator"></div>
+                <div class="col app-icon"></div>
                 <div class="col app-icon"></div>
             </div>
         </div>
@@ -219,9 +214,9 @@
     <div class="screen-buttons">
         <!-- width: 273px; -->
         <div class="row app-row">
-            <div class="col app-icon app-chrome"></div>
-            <div class="col app-icon app-phone"></div>
-            <div class="col app-icon app-camera"></div>
+            <div class="col app-icon app-chrome" app-name="Chrome"></div>
+            <div class="col app-icon app-phone" app-name="Phone"></div>
+            <div class="col app-icon app-camera" app-name="Camera"></div>
         </div>
        
     </div>
@@ -240,15 +235,22 @@
     <div class="textwmar"> 
         <p>
             <span>Let's keep track of all the apps I visited on the phone</span> <br>
-            <span>Let's visit at least 5 apps</span> <br>
+            <span id="appsVisited-title">Let's visit at least 5 apps</span> <br>
+            <span id="appsVisited"></span> <br><br><br><br><br>
+            <span id="appsCouldntVisit-title">Couldn't visit these apps, for some reason</span> <br>
+            <span id="appsCouldntVisit"></span> <br><br><br><br><br>
 
-            <!-- <span>Let's keep track of all the apps I visited on the phone</span> <br>
-            <span>Let's keep track of all the apps I visited on the phone</span> <br>
-            <span>Let's keep track of all the apps I visited on the phone</span> <br>
-            <span>Let's keep track of all the apps I visited on the phone</span> <br>
-            <span>Let's keep track of all the apps I visited on the phone</span> <br>
-            <span>Let's keep track of all the apps I visited on the phone</span> <br>
-            <span>Let's keep track of all the apps I visited on the phone</span> <br> -->
+            <span id="choiceTime">
+                <span id="choiceText">I think the phone belongs to...</span> <br> <br>
+                <span id="choice1"> Danny Fenton</span> 
+                <span id="choice2"> Danny Phantom</span> 
+                <span id="choice2"> Choice 3</span> 
+            </span>
+
+        </p>
+        <p class="sticky-container">
+            <span class="sticky">Jazz stop taking notes and come make tiktoks with us.</span>
+            <span class="sticky sticky2">Jazz stop taking notes and come make tiktoks with us.</span>
         </p>
     </div>
     </td></tr></tbody></table>
@@ -256,5 +258,4 @@
 <!-- </div> -->
 
 <!-- </div> -->
-<!-- https://htmldom.dev/drag-to-scroll/ -->
 </div>

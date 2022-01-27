@@ -72,3 +72,41 @@
     list-style-type: disc;
     list-style-position: outside;
   }
+
+
+  /* sticky notes */
+.sticky-container {
+  display: inline;
+}
+
+.sticky {
+  position: absolute;
+  display: inline-block;
+  background-color: #ffff99;
+  color: #000000;
+  text-decoration: none;
+  font-family: "comic sans ms", "chalkboard se", sans-serif;
+  right: -49px;
+  top: 200;
+  height: 150px;
+  width: 150px;
+  padding: 10px;
+  text-align: left;
+  margin-top: -5em;
+  margin-right: 0.2em;
+  -moz-box-shadow: 5px 5px 7px rgba(33,33,33,1);
+  -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+  -webkit-transform: rotate(-6deg);
+  -o-transform: rotate(-6deg);
+  -moz-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+
+.sticky2 {
+  z-index: 1;
+  left: 0px;
+  top: unset;
+  background: lightblue;
+  transform: rotate(11deg);
+}
