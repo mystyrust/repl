@@ -38,7 +38,8 @@
     filter: opacity(0.5);
 }
 
-.screen-container:last-of-type {
+/* .screen-container:last-of-type { */
+#screen3 {
     margin-right: 0px;
     /* margin-left: 10px; */
 }
@@ -160,54 +161,106 @@
     margin: -7px 7px 0px 54px;
 }
 
-.app-gmail {
-    background-image: url(https://i.imgur.com/vbcR6aY.png);
+.app-icon {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-}
-
-.app-sc {
-    background-image: url(https://i.imgur.com/Ayi48lm.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.app-discord {
-    background-image: url(https://i.imgur.com/bxH2JKD.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 98%;
+    height: 98%;
 }
 
 .app-icon:hover {
     filter: drop-shadow(2px 4px 6px black);
     width: 97%;
     height: 97%;
-    /* width: 60px;
-    height: 60px; */
-}
-/* 
-.app-icon:not(.app-view) div  {
-    display: none;
 }
 
-.app-view {
-    height: 456px;
-    background-color: orange;
-    background-image: none;
-    width: 257px;
-    position: absolute;
-    top: 92px;
-    z-index: 8 !important;
-    transition: display 1s ease;
-    margin-left: 1px;
+.app-gmail {
+    background-image: url(https://i.imgur.com/vbcR6aY.png);
 }
 
-.app-view div {
-    display: block;
-} */
+.app-sc {
+    background-image: url(https://i.imgur.com/Ayi48lm.png);
+}
+
+.app-discord {
+    background-image: url(https://i.imgur.com/bxH2JKD.png);
+}
+
+.app-phone {
+    background-image: url(https://i.imgur.com/us7Jh7G.png);
+}
+
+.app-msgs {
+    background-image: url(https://i.imgur.com/IgzbXzX.png);
+}
+
+.app-tiktok {
+    background-image: url(https://i.imgur.com/mMiEYyM.png);
+}
+
+.app-youtube {
+    background-image: url(https://i.imgur.com/4RJi358.png);
+}
+
+.app-ig {
+    background-image: url(https://i.imgur.com/Y7HGNP1.png);
+}
+
+.app-tumblr {
+    background-image: url(https://i.imgur.com/FbQwd7E.png);
+    height: 93%;
+    margin-top: 2px;
+}
+
+.app-twitter {
+    background-image: url(https://i.imgur.com/WyNPChT.png);
+}
+
+.app-amazon {
+    background-image: url(https://i.imgur.com/xavfj8F.png);
+}
+
+.app-appstore {
+    background-image: url(https://i.imgur.com/KdbNSPI.png);
+}
+
+.app-notes {
+    background-image: url(https://i.imgur.com/N8xUHdy.png);
+}
+
+.app-reddit {
+    background-image: url(https://i.imgur.com/S43qFL9.png);
+}
+
+.app-settings {
+    background-image: url(https://i.imgur.com/gkhOYnk.png);
+}
+
+.app-gallery {
+    background-image: url(https://i.imgur.com/5BS8t16.png);
+}
+
+.app-camera {
+    background-image: url(https://i.imgur.com/YRMrPnY.png);
+}
+
+.app-clock {
+    background-image: url(https://i.imgur.com/XpmJJFj.png);
+}
+
+.app-Gmaps {
+    background-image: url(https://i.imgur.com/CyWo14T.png);
+}
+
+.app-chrome {
+    height: 93%;
+    background-image: url(https://i.imgur.com/mmSJAyZ.png);
+}
+
+.app-Gdrive {
+    background-image: url(https://i.imgur.com/FjxTWVm.png);
+}
 
 .col {
     z-index: 3;
@@ -228,7 +281,7 @@
 
 .home-btn:hover {
     filter: drop-shadow(2px 4px 6px black);
-    opacity: 1;
+    opacity: 0.3;
 }
 
 /* ----------individual apps ---------- */
