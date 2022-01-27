@@ -136,6 +136,7 @@
 .app-container {
     padding-top: 100px;
     margin-left: 53px;
+    margin-top: 3px;
     width: 259px;
     display: flex;
     flex-flow: row wrap;
