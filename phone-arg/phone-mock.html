@@ -5,8 +5,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script type="text/javascript" src="./scroll.js"></script>
 <script type="text/javascript" src="./phone-mock.js"></script>
-<link href="./phone-mock.css" rel="stylesheet" />
-<link href="./paper.css" rel="stylesheet" />
+<link href="./css/phone-mock.css" rel="stylesheet" />
+<link href="./css/paper.css" rel="stylesheet" />
+<link href="./css/app-mock.css" rel="stylesheet" />
 
 <div class="phone-arg">
 <!-- <div class="row"> -->
@@ -20,12 +21,135 @@
     <!-- <img src="https://i.imgur.com/WGnAPWV.png?1" class="phone-smear" /> -->
     <img src="https://i.imgur.com/mHadlFO.png" class="phone-splatter" />
     
+    <div class="phone-status-backdrop"></div>
+    <div class="phone-status">
+        <span id="time"></span>
+        <span class="status-icon">
+            <img src="https://i.imgur.com/5PdMObS.png" />
+            <img src="https://i.imgur.com/ZSfMbFj.png" />
+        </span>
+        <!-- <span class="status-icon">
+            <img src="https://i.imgur.com/5PdMObS.png" />
+        </span> -->
+    </div>
+
     <div class="app-screen-view">
-        <div id="snapchat-view">
-            snapchat
+        <div class="app-screen" id="snapchat-view">
+            
+            <dl class="snapchat">
+                <h4 class="day">Today</h4>
+                
+                <div class="in">
+                <dt>Alice</dt>
+                <dd>are you there yet?</dd>
+                <dd>Where are you?</dd>
+                </div>
+                
+                <div class="out">
+                <dt>Bob</dt>
+                <dd>I'm waiting outside</dd>
+                <dd>wait I can see you now</dd>
+                </div>
+
+                <div class="out">
+                <dt>Aulus</dt>
+                <dd>Try clicking on the icon button.</dd>
+                <dd><span class="snap opened"><i>Snap (without audio) sent and opened</i></span></dd>
+                </div>
+                  
+                <div class="in">
+                <dt>Alice</dt>
+                <dd>are you there yet?</dd>
+                <dd>Where are you?</dd>
+                </div>
+                  
+                <div class="in">
+                <dt>Alice</dt>
+                <dd>are you there yet?</dd>
+                <dd>Where are you?</dd>
+                </div>
+
+                <div class="out">
+                <dt>Bob</dt>
+                <dd>I'm waiting outside</dd>
+                <dd>wait I can see you now</dd>
+                </div>
+
+                 <div class="out">
+                <dt>Bob</dt>
+                <dd>I'm waiting outside</dd>
+                <dd>wait I can see you now</dd>
+                </div>
+            </dl>
+            <dl class="snapchat nonudes">
+
+                <div class="out">
+                <dt>Aulus</dt>
+                <dd>Try clicking on the icon button.</dd>
+                <dd><span class="snap opened"><i>Snap (without audio) sent and opened</i></span></dd>
+                </div>
+                
+                </dl>
+                
         </div>
-        <div id="discord-view">
-            discord
+        <div class="app-screen" id="discord-view">
+            <div class="discord darkmode">
+
+                <!-- CHANNEL HEADER -->
+                <div class="channel">
+                    <p><span class="hash">#</span><span class="channelname">test-channel-name</span></p>
+                </div>
+            
+                <!-- THE ACTUAL MESSAGES (each new user's messages in a separate block) -->
+                <div class="message">
+                    <!-- USER ICON (the first p tag in every div) -->
+                    <p><img src="https://archiveofourown.org/images/skins/iconsets/default/icon_user.png" /></p>
+                    <!-- MESSAGE (username & timestamp in first line, successive messages separated with br tags -->
+                    <p>
+                        <span class="name role1">user number 1</span> <span class="hide">(</span><span class="timestamp">Yesterday at 11:49 PM</span><span class="hide">)</span><br />
+                        text, plus extra image<br />
+                        <img src="https://i.gyazo.com/2055e3d6d1df280abcd8ceff77f7b59e.jpg" class="large" />
+                    </p>
+                </div>
+            
+                <!-- DATE DIVIDER -->
+                <div class="dateline">
+                    <p>March 12, 2021</p>
+                </div>
+            
+                <div class="message">
+                    <p><img src="https://archiveofourown.org/images/skins/iconsets/default/icon_user.png" /></p>
+                    <p>
+                        <span class="name">numero dos</span> <span class="hide">(</span><span class="timestamp">Today at 1:32 AM</span><span class="hide">)</span><br />
+                        a test of a sample text message that is in fact rather long, perhaps taking up multiple lines, even; it should be a great help in checking if this code is working correctly, no? <span class="edited">(edited)</span>
+                    </p>
+                </div>
+            
+                <div class="message">
+                    <p><img src="https://archiveofourown.org/images/skins/iconsets/default/icon_user.png" /></p>
+                    <p>
+                        <span class="name role10">numero dos</span> <span class="hide">(</span><span class="timestamp">Today at 1:34 AM</span><span class="hide">)</span><br />
+                        and here's a <a>link</a> along with a <a class="ping">@ping</a>, for good measure!
+                    </p>
+                </div>
+            
+                <div class="message">
+                    <p><img src="https://media1.tenor.com/images/2d13ede25b31d946284eaa3b8a4e6b31/tenor.gif?itemid=11990658" /></p>
+                    <p>
+                        <span class="name role10">numero tres</span> <span class="hide">(</span><span class="timestamp">MM/DD/YYYY</span><span class="hide">)</span><br />
+                        <a href="https://tenor.com/view/cat-love-huge-hug-big-gif-11990658">https://tenor.com/view/cat-love-huge-hug-big-gif-11990658</a><br /><img src="https://media1.tenor.com/images/2d13ede25b31d946284eaa3b8a4e6b31/tenor.gif?itemid=11990658" />
+                    </p>
+                </div>
+            
+                <!-- FILE UPLOAD AND TYPING LINE -->
+                <div>
+                    <!-- TYPING LINE: if you want this left empty, replace the text "hey, ... names" with "Message #your-channel-here", and make the p tag's class "placeholder". See lightmode for example of this -->
+                    <p><span class="hide">[Typing: </span>hey, why did everyone change their names<span class="hide">]</span></p>
+                </div>
+            
+            </div>
+            
+            
         </div>
         <div id="notif-backdrop"></div>
         <div id="notification">
@@ -39,7 +163,7 @@
         <div id="screen1" class="screen-container">
         <div class="row app-row">
             <div class="col app-icon app-sc" app-target="snapchat-view"></div>
-            <div class="col app-icon app-sc" app-target="discord-view"></div>
+            <div class="col app-icon app-discord" app-target="discord-view"></div>
             <div class="col app-icon app-sc"></div>
         </div>
         <div class="row app-row">

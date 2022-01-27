@@ -1,0 +1,631 @@
+
+/* ------------------ snapchat mock ------------------*/
+/* from https://archiveofourown.org/works/24273862/chapters/58504477 */
+/* Wrapper */
+.snapchat {
+	width: 100%;
+	max-width: 320px;
+	margin: auto;
+	font-family: "Avenir Next", Avenir, system-ui;
+}
+
+/* Matching font style of both names and dates */
+.snapchat dt,
+.snapchat .day {
+	font-family: inherit;
+	text-transform: uppercase;
+	font-weight: normal;
+	letter-spacing: 1px;
+	font-size: 0.75em;
+}
+
+/* Day */
+.snapchat .day {
+	text-align: center;
+	color: #d9d9d9;
+}
+
+/* Names */
+.snapchat dt {
+	margin-top: 10px;
+}
+
+/* Texts */
+.snapchat dd {
+	margin: 0;
+	margin-left: 2px;
+	padding: 4px 10px;
+	border-left: solid 2px;
+}
+
+/* Outgoing/red */
+.snapchat .out dt {color: #e92754;}
+.snapchat .out dd {border-color: #e92754;}
+
+/* Incoming/blue */
+.snapchat .in dt {color: #3cb2e2;}
+.snapchat .in dd {border-color: #3cb2e2;}
+
+.snapchat .snap {
+	display: table;
+	box-sizing: border-box;
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid rgba(0,0,0, 0.15);
+	background: rgba(255,255,255, 0.3);
+	color: black;
+}
+
+/* Image part */
+.snapchat .snap:before {
+	display: table-cell;
+	content: "";
+	width: 3rem;
+	background-repeat: no-repeat;
+	background-size: auto 1rem;
+	background-position: center;
+}
+
+/* Text part */
+.snapchat .snap:after {
+	display: table-cell;
+	font-weight: bold;
+	padding: 0.5rem;
+	padding-left: 0;
+}
+
+
+/* Hidden backup */
+.snapchat .snap i {
+	display: none;
+}
+
+/*
+ * Opened
+ */
+.snapchat .snap.opened:after {
+	content: "Opened";
+}
+/* Outgoing (arrow) */
+.snapchat .out .snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_red.png");}
+.snapchat .out .snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_purple.png");}
+.snapchat .out .snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_blue.png");}
+/* Incoming (arrow) */
+.snapchat .in .snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_red.png");}
+.snapchat .in .snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_purple.png");}
+.snapchat .in .snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_blue.png");}
+
+/*
+ * Unopened
+ */
+.snapchat .snap.unopened:after {
+	content: "Delivered";
+}
+/* Outgoing (arrow) */
+.snapchat .out .snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_red.png");}
+.snapchat .out .snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_purple.png");}
+.snapchat .out .snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_blue.png");}
+/* Incoming (box) */
+.snapchat .in .snap.unopened:after {
+	content: "Tap to view";
+}
+.snapchat .in .snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_red.png");}
+.snapchat .in .snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_purple.png");}
+.snapchat .in .snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_blue.png");}
+
+/*
+ * Screenshot
+ */
+.snapchat .snap.screenshot:after {
+	content: "Screenshot!";
+}
+.snapchat .snap.screenshot:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_red.png");}
+.snapchat .snap.screenshot.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_purple.png");}
+.snapchat .snap.screenshot.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_blue.png");}
+
+/*
+ * Replay
+ */
+.snapchat .snap.replay:after {
+	content: "Replay!";
+}
+.snapchat .snap.replay:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_red.png");}
+.snapchat .snap.replay.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_purple.png");}
+
+/*
+ * Icon message if clicked
+ */
+.snapchat.nonudes .snap:active:after {
+	content: "[No actual nudes. Sorry. This is a fanfic.]";
+}
+
+
+/* ------------------ discord mock v1 ------------------*/
+/* https://archiveofourown.org/works/26534413/chapters/74599071 */
+
+
+
+/* The overall discord module */
+.discord {
+    max-width: 710px;
+    /* margin: 2em auto; */
+    padding-bottom: 1.286em;
+    font-family: "Whitney", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, Arial, sans-serif;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 0 8px #aaaa;
+  }
+  
+  /* Background colors for dark and light mode */
+  .darkmode {
+    background: #36393f;
+    color: #dcddde;
+  }
+  .lightmode {
+    background: #fff;
+    color: #2e3338;
+  }
+  
+  /* Aligning the text and system messages */
+  .discord > div.message,
+  .discord > div.system {
+    margin: 17px 0;
+    padding: .125em 16px;
+    display: grid;
+      grid-template-columns: 2.7em 1fr;
+      column-gap: 16px;
+  }
+  
+  .discord > div.message p,
+  .discord > div.system p {
+      width: 100%;
+    margin: 0;
+  }
+  
+  .darkmode > div.message:hover,
+  .darkmode > div.system:hover { background-color: rgba(4, 4, 5, 0.07); }
+  .lightmode > div.message:hover,
+  .lightmode > div.system:hover { background-color: rgba(6, 6, 7, 0.02); }
+  
+  /* Sizing the icons */
+  .discord > div p:first-child > img {
+    width: 2.7em;
+    height: 2.7em;
+    /* object-fit: cover; Property not allowed on AO3 */
+    border-radius: 100%;
+    margin-top: 2px;
+  }
+  
+  /* Making large images in text messages display correctly */
+  .discord > .message > p:not(:first-child) img.large { width: 400px; }
+  
+  /* Making usernames act like links when hovered */
+  .discord .name { cursor: pointer; }
+  .discord .name:hover { text-decoration: underline; }
+  
+  /* Colors for system messages */
+  .darkmode .system { color: #8e9297; }
+  .lightmode .system { color: #6a7480; }
+  
+  /* General layouts for system message icons */
+  .discord .system::before {
+    content: "";
+    height: 16px;
+    width: 2.7em;
+    text-align: center;
+    display: block;
+    background: transparent no-repeat center;
+    background-size: 16px 16px;
+    margin-top: 4px;
+  }
+  
+  /* System message: Welcome
+  Original image URL: https://discord.com/assets/e06a573355c490f7ce6e3125ac01db81.svg */
+  .discord .system.welcome::before { background-image: url("https://i.imgur.com/4lneHce.png"); }
+  
+  /* System message: Pinned message
+  Original image URL: https://discord.com/assets/5da4cdab01d4d89c593c48c62ae0d937.svg */
+  .discord .system.pin::before { background-image: url("https://i.imgur.com/SdqqXPO.png"); }
+  
+  /* Colors for dark and light mode; channel headers, default usernames, timestamps, typing bar placeholder */
+  .darkmode .name,
+  .darkmode .channel .channelname {
+    color: #fff;
+    font-weight: 600;
+  }
+  .lightmode .name,
+  .lightmode .channel .channelname {
+    color: #060607;
+    font-weight: 600;
+  }
+  
+  .darkmode .hash,
+  .darkmode > div:last-child .placeholder,
+  .darkmode .timestamp {
+    color: #72767d;
+  }
+  .lightmode .hash,
+  .lightmode > div:last-child .placeholder,
+  .lightmode .timestamp {
+    color: #747f8d;
+  }
+  
+  /* Alignment and sizing of channel headers and their content */
+  .discord .channel > p {
+    padding: 6px 12px;
+    display: grid;
+    grid-template-columns: 24px auto 1fr auto;
+    /* align-items: center; Property not allowed on AO3 */
+    margin: -3px 0 3px;
+  }
+  
+  .discord .channel *,
+  .discord .channel *::after {
+    margin: auto 0; /* Since align-items isn't allowed on AO3 */
+  }
+  
+  .discord .hash {
+    font-size: 1.6em;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+  .discord .channel .channelname {
+    font-size: 1.07em;
+    padding-left: 8px;
+  }
+  
+  .discord .channel .description {
+    font-size: 0.93em;
+    font-weight: 500;
+    margin-left: 8.25px;
+    padding: 0 8px;
+    border-left: solid thin;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+  }
+  
+  /* Right side's fade-out for channel description */
+  .discord .channel .description::after {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 2em;
+    position: absolute;
+    right: 2%;
+  }
+  .darkmode .channel .description::after {
+      background: linear-gradient(90deg,rgba(54,57,63,0) 0,#36393f);
+  }
+  .lightmode .channel .description::after {
+      background: linear-gradient(90deg,rgba(54,57,63,0) 0,#fff);
+  }
+  
+  /* Shading for the channel header */
+  .darkmode .channel { box-shadow: #2c2f33bd 0 2px 1px; }
+  .lightmode .channel { box-shadow: #2c2f332e 0 2px 1px; }
+  
+  /* Colors for the channel description and its border */
+  .darkmode .channel > p { color: #b9bbbe; }
+  .lightmode .channel > p { color: #4f5660; }
+  
+  .darkmode .channel .description { border-left-color: #ffffff0f; }
+  .lightmode .channel .description { border-left-color: #06060714; }
+  
+  /* The three icons to the right of the channel header. Normal */
+  .discord .channel > p::after {
+    grid-column: 4;
+    content: "";
+    height: 1.4em;
+    width: 6.7em;
+    background: transparent no-repeat center;
+    background-size: 6.7em auto;
+    margin-right: 10px;
+  }
+  .darkmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/2Jo3bI3.png); }
+  .lightmode .channel > p:not(.newpins)::after { background-image: url(https://i.imgur.com/L8KR3n0.png); }
+  
+  /* The three icons to the right of the channel header. When there are new pins */
+  .darkmode .channel > p.newpins::after { background-image: url(https://i.imgur.com/GClC6WS.png); }
+  .lightmode .channel > p.newpins::after { background-image: url(https://i.imgur.com/xtoAXUx.png); }
+  
+  /* Top-of-channel header: alignment */
+  .discord .channeltop {
+    padding-left: 16px;
+    padding-right: 4.5%;
+  }
+  
+  /* Top-of-channel header: hash symbol */
+  .discord .channeltop h1:first-child::before {
+    content: '#';
+    display: block;
+    height: 1.41em;
+    width: 1.41em;
+    font-weight: 400;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 1.3;
+    border-radius: 100%;
+    margin-bottom: 8px;
+    color: #fff;
+  }
+  .darkmode .channeltop h1::before { background-color: #4f545c; }
+  .lightmode .channeltop h1::before { background-color: #747f8d; }
+  
+  /* Top-of-channel header: heading */
+  .discord .channeltop h1 {
+    font-family: "Whitney", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2.13em;
+    text-align: left;
+    margin-bottom: 8px;
+  }
+  .darkmode .channeltop h1 { color: #ffffff; }
+  .lightmode .channeltop h1 { color: #060607; }
+  
+  /* Top-of-channel header: description */
+  .discord .channeltop p {
+    padding-bottom: 1em;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+    border-bottom: thin solid;
+  }
+  .darkmode .channeltop p {
+    border-bottom-color: #ffffff0f;
+    color: #b9bbbe;
+  }
+  .lightmode .channeltop p {
+    border-bottom-color: #06060714;
+    color: #4f5660;
+  }
+  
+  /* Colors and decoration for links and pings */
+  .discord a {
+    border: none;
+    cursor: pointer;
+  }
+  
+  .discord a:not(.ping):hover { text-decoration: underline; }
+  
+  .discord a.ping,
+  .discord a.ping:link,
+  .discord a.ping:hover {
+    border-radius: 3px;
+    padding: 0 2px;
+    font-weight: 500;
+    transition-duration: .05s;
+  }
+  .lightmode a.ping,
+  .lightmode a.ping:link {
+    color: rgb(80, 92, 220);
+    background-color: rgba(80, 92, 220, 0.1);
+  }
+  .lightmode a.ping:hover {
+    color: #fff;
+    background-color: #505cdc;
+  }
+  .darkmode a.ping,
+  .darkmode a.ping:link {
+    color: #dee0fc;
+    background-color: rgba(88, 101, 242, 0.3);
+  }
+  .darkmode a.ping:hover {
+    color: #fff;
+    background-color: #5865f2;
+  }
+  .darkmode a,
+  .darkmode a:link,
+  .darkmode a:visited,
+  .darkmode a:hover,
+  .darkmode a:visited:hover {
+    color: #00b0f4;
+  }
+  .lightmode a,
+  .lightmode a:link,
+  .lightmode a:visited,
+  .lightmode a:hover,
+  .lightmode a:visited:hover {
+    color: #0067e0;
+  }
+  
+  /* Alignment and sizing of message timestamps */
+  .discord .timestamp {
+    padding-left: 6px;
+    font-size: .75em;
+  }
+  
+  /* The edited message notice */
+  .discord .edited {
+    font-size: 0.625em;
+    user-select: none; /* For all others */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none; /* For IE */
+  }
+  .darkmode .edited { color: #72767d; }
+  .lightmode .edited { color: #747f8d; }
+  
+  /* New date divider */
+  .discord .dateline {
+    margin: 1.5em 1em 0;
+    border-top: thin solid;
+  }
+  
+  .discord .dateline p {
+    padding: 2px 4px;
+    font-size: 0.8em;
+    margin: -1em auto -.75em;
+    font-weight: 600;
+    width: fit-content;
+  }
+  .discord .dateline p { width: -webkit-fit-content; }
+  .discord .dateline p { width: -moz-fit-content; }
+  
+  .darkmode .dateline { border-top-color: #ffffff0f; }
+  .darkmode .dateline p {
+    color: #72767d;
+    background: #36393f;
+  }
+  .lightmode .dateline { border-top-color: #06060714; }
+  .lightmode .dateline p {
+    color: #747f8d;
+    background: #fff;
+  }
+  
+  /* Alignment and colors for typing bar */
+  .discord > div:last-child {
+    margin: 0 2.5%;
+    padding: 11px;
+    border-radius: 8px;
+  }
+  .darkmode > div:last-child { background: #40444b; }
+  .lightmode > div:last-child { background: #ebedef; }
+  
+  /* Aligning the message in the typing bar, and making it unselectable when placeholder displays */
+  .discord > div:last-child > p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .discord > div:last-child .placeholder {
+    user-select: none; /* For all others */
+    -webkit-user-select: none; /* For Safari */
+    -ms-user-select: none; /* For IE */
+  }
+  
+  /* The upload files button in the typing bar */
+  .discord > div:last-child > p.upload { display: none; } /* Supporting discord_v1.html layout */
+  
+  .discord > div:last-child > p:last-child {
+    display: grid;
+    grid-template-columns: 2em 1fr;
+    column-gap: 16px;
+  }
+  
+  .discord > div:last-child > p:last-child::before {
+    content: '+';
+    font-size: 1.35em;
+    font-weight: 600;
+    text-align: center;
+    line-height: 0.925em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-left: 8px;
+    border-radius: 100%;
+  }
+  .darkmode > div:last-child > p:last-child::before {
+    background: #b9bbbe;
+    color: #40444b;
+  }
+  .lightmode > div:last-child > p:last-child::before {
+    background: #4f5660;
+    color: #ebedef;
+  }
+  
+  /* Default discord role colors, light versions (upper row) */
+  .discord .role1 { color: rgb(26, 188, 156) !important; }
+  .discord .ping.role1 { background-color: rgba(26, 188, 156, 0.1) !important; }
+  .discord .ping.role1:hover { background-color: rgba(26, 188, 156, 0.3) !important; }
+  
+  .discord .role2 { color: rgb(46, 204, 113) !important }
+  .discord .ping.role2 { background-color: rgba(46, 204, 113, 0.1) !important; }
+  .discord .ping.role2:hover { background-color: rgba(46, 204, 113, 0.3) !important; }
+  
+  .discord .role3 { color: rgb(52, 152, 219) !important }
+  .discord .ping.role3 { background-color: rgba(52, 152, 219, 0.1) !important; }
+  .discord .ping.role3:hover { background-color: rgba(52, 152, 219, 0.3) !important; }
+  
+  .discord .role4 { color: rgb(155, 89, 182) !important }
+  .discord .ping.role4 { background-color: rgba(155, 89, 182, 0.1) !important; }
+  .discord .ping.role4:hover { background-color: rgba(155, 89, 182, 0.3) !important; }
+  
+  .discord .role5 { color: rgb(233, 30, 99) !important }
+  .discord .ping.role5 { background-color: rgba(233, 30, 99, 0.1) !important; }
+  .discord .ping.role5:hover { background-color: rgba(233, 30, 99, 0.3) !important; }
+  
+  .discord .role6 { color: rgb(241, 196, 15) !important }
+  .discord .ping.role6 { background-color: rgba(241, 196, 15, 0.1) !important; }
+  .discord .ping.role6:hover { background-color: rgba(241, 196, 15, 0.3) !important; }
+  
+  .discord .role7 { color: rgb(230, 126, 34) !important }
+  .discord .ping.role7 { background-color: rgba(230, 126, 34, 0.1) !important; }
+  .discord .ping.role7:hover { background-color: rgba(230, 126, 34, 0.3) !important; }
+  
+  .discord .role8 { color: rgb(231, 76, 60) !important; }
+  .discord .ping.role8 { background-color: rgba(231, 76, 60, 0.1) !important; }
+  .discord .ping.role8:hover { background-color: rgba(231, 76, 60, 0.3) !important; }
+  
+  .discord .role9 { color: rgb(149, 165, 166) !important; }
+  .discord .ping.role9 { background-color: rgba(149, 165, 166, 0.1) !important; }
+  .discord .ping.role9:hover { background-color: rgba(149, 165, 166, 0.3) !important; }
+  
+  .discord .role10 { color: rgb(96, 125, 139) !important; }
+  .discord .ping.role10 { background-color: rgba(96, 125, 139, 0.1) !important; }
+  .discord .ping.role10:hover { background-color: rgba(96, 125, 139, 0.3) !important; }
+  
+  /* Default discord role colors, dark versions (lower row) */
+  .discord .role1a { color: rgb(17, 144, 106) !important }
+  .discord .ping.role1a { background-color: rgba(17, 144, 106, 0.1) !important; }
+  .discord .ping.role1a:hover { background-color: rgba(17, 144, 106, 0.3) !important; }
+  
+  .discord .role2a { color: rgb(31, 139, 76) !important }
+  .discord .ping.role2a { background-color: rgba(31, 139, 76, 0.1) !important; }
+  .discord .ping.role2a:hover { background-color: rgba(31, 139, 76, 0.3) !important; }
+  
+  .discord .role3a { color: rgb(32, 102, 148) !important }
+  .discord .ping.role3a { background-color: rgba(32, 102, 148, 0.1) !important; }
+  .discord .ping.role3a:hover { background-color: rgba(32, 102, 148, 0.3) !important; }
+  
+  .discord .role4a { color: rgb(113, 54, 138) !important }
+  .discord .ping.role4a { background-color: rgba(113, 54, 138, 0.1) !important; }
+  .discord .ping.role4a:hover { background-color: rgba(113, 54, 138, 0.3) !important; }
+  
+  .discord .role5a { color: rgb(173, 20, 87) !important }
+  .discord .ping.role5a { background-color: rgba(173, 20, 87, 0.1) !important; }
+  .discord .ping.role5a:hover { background-color: rgba(173, 20, 87, 0.3) !important; }
+  
+  .discord .role6a { color: rgb(194, 124, 14) !important }
+  .discord .ping.role6a { background-color: rgba(194, 124, 14, 0.1) !important; }
+  .discord .ping.role6a:hover { background-color: rgba(194, 124, 14, 0.3) !important; }
+  
+  .discord .role7a { color: rgb(168, 67, 0) !important }
+  .discord .ping.role7a { background-color: rgba(168, 67, 0, 0.1) !important; }
+  .discord .ping.role7a:hover { background-color: rgba(168, 67, 0, 0.3) !important; }
+  
+  .discord .role8a { color: rgb(153, 45, 34) !important; }
+  .discord .ping.role8a { background-color: rgba(153, 45, 34, 0.1) !important; }
+  .discord .ping.role8a:hover { background-color: rgba(153, 45, 34, 0.3) !important; }
+  
+  .discord .role9a { color: rgb(151, 156, 159) !important; }
+  .discord .ping.role9a { background-color: rgba(151, 156, 159, 0.1) !important; }
+  .discord .ping.role9a:hover { background-color: rgba(151, 156, 159, 0.3) !important; }
+  
+  .discord .role10a { color: rgb(84, 110, 122) !important; }
+  .discord .ping.role10a { background-color: rgba(84, 110, 122, 0.1) !important; }
+  .discord .ping.role10a:hover { background-color: rgba(84, 110, 122, 0.3) !important; }
+  
+  /** CUSTOM ROLE GUIDE
+      Edit the text YOUR_ROLE_HERE to another name.
+      For example, a role named "support" would read as follows:
+      - .discord .support
+      - .discord .ping.support
+      Make sure not to delete the dot before the role name, or the "!important" marker!
+      
+      To use your role in a ping, take the 3 digits within the rgb() brackets and replace
+      the first three digits within the rgba() brackets in both the .ping.YOUR_ROLE_HERE classes.
+      Make sure not to alter the 0.1/0.3 values at the end.
+      Once you're done, you can create a role ping using an <a class="ping YOUR_ROLE_HERE"> tag!
+  */
+  .discord .YOUR_ROLE_HERE {
+    color: rgb(255, 255, 255);
+  }
+  .discord .ping.YOUR_ROLE_HERE {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+  }
+  .discord .ping.YOUR_ROLE_HERE:hover {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+  }
+
+  /* ----------------------------------------------------------------- */
