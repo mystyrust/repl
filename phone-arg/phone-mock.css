@@ -472,6 +472,10 @@
     z-index: 10;
 }
 
+#notebook-prompt:hover {
+    filter: drop-shadow(2px 4px 6px black);
+}
+
 .notebook-spiral {
     position: absolute;
     z-index: 25;

@@ -56,7 +56,7 @@ $(document).ready(function() {
         // this isnt great or even best practice but its good enough for me
         $(".notebook-cover").css({ transform: "rotateX(90deg) scale(1.15)" })
         
-        setTimeout( () => $(".notebook-cover div, #notebook-keepOut, #notebook-topsecret, #notebook-badge").css({ opacity: 0 }), 500)
+        setTimeout( () => $(".notebook-cover div, .notebook-cover img").css({ opacity: 0 }), 500)
         setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(180deg) scale(1)" }), 500)
         setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(270deg)" , height: "98%" }), 750)
         setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(320deg)" }), 1000)
@@ -67,6 +67,13 @@ $(document).ready(function() {
             $("#notebook-keepOut").css({ opacity: 1 }) 
         }, 1500)
 
+        setTimeout( () => { 
+            writing($(".titletext"), "Who does this phone belong to?", "")
+        }, 1700)
+
+        setTimeout(() => { 
+            writing($("#notebook-line1"), "Let's keep track of all the apps I visited on the phone", "")
+        }, 3500)
     })
 
 
@@ -79,4 +86,22 @@ $(document).ready(function() {
     setTime()
 
     setInterval(setTime, 60*1000)
+
+
+    function writing(destination, fullStr, writtenStr)
+    {
+        if (writtenStr.length < fullStr.length)
+        {
+            writtenStr += fullStr[writtenStr.length];
+            destination.html(writtenStr)
+            // setTimeout(() => { destination.html(toWrite) }, 500)
+            // return setTimeout(() => writeOut(destination, fullStr, writtenStr), 50)
+            setTimeout(() => writing(destination, fullStr, writtenStr), 50)
+            return true
+        }
+        return false // done writing
+        // setTimeout(() => writeOut(destination, fullStr, writtenStr), 50)
+    }
+    
+      
 })
