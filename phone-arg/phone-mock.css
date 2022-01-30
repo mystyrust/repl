@@ -332,7 +332,8 @@
 }
 
 #notification img {
-    float: right
+    float: right;
+    height: 35px;
 }
 #notif-backdrop {
     position: absolute;
@@ -360,6 +361,22 @@
 /* ---------- -------------- ---------- */
 
 /* ---------- scrollbar overrides ---------- */
+
+
+/* width */
+/* #calc-view::-webkit-scrollbar {
+    width: 2px;
+  } */
+  
+  /* Track */
+#calc-view::-webkit-scrollbar-track {
+    display: none;
+  }
+
+  /* Handle */
+#calc-view::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}
 
 /* width */
 .app-container::-webkit-scrollbar {
@@ -568,6 +585,7 @@
 #choiceTime {
     display: inline-block;
     text-align: center;
+    /* width: 366px; */
     width: 100%;
 }
 
@@ -588,5 +606,9 @@
     color: white;
     background-color: black;
 }
+
+/* .titletext , #notebook-line1 {
+    font-family: 'Waiting for the Sunrise';
+} */
 /* ----------------------------------------------------------------------- */
 

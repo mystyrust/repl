@@ -3,9 +3,10 @@
 .paper {
     /* width: 97%; */
     /* width: -webkit-fill-available; */
-    min-width: 300px;
+    width: 388px;
+    /* min-width: 300px;
     max-width: 400px;
-    width: 97%;
+    width: 97%; */
     /* height: 100%; */
     background: linear-gradient(to bottom,#ffffff 24px,#00b0d7 1px);
     margin: 10px auto;
@@ -31,6 +32,10 @@
     width: 1px;
     background: #db4034;
   }
+
+  /* .paper td {
+    width: 365px;
+  } */
   
   .header-paper {
     height: 80px;

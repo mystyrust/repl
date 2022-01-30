@@ -1,143 +1,151 @@
 
 /* ------------------ snapchat mock ------------------*/
-/* from https://archiveofourown.org/works/24273862/chapters/58504477 */
-/* Wrapper */
-.snapchat {
-	width: 100%;
-	max-width: 320px;
-	margin: auto;
-	font-family: "Avenir Next", Avenir, system-ui;
+/* from https://archiveofourown.org/works/26777200 */
+
+.snp-box {
+  /* max-width: 500px;
+  min-width: 300px;
+  float: center; */
+  width: 247px;
+  margin: 0 auto;
+  font-family: 'Roboto', 'Helvetica Neue LT Std', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 13px;
 }
 
-/* Matching font style of both names and dates */
-.snapchat dt,
-.snapchat .day {
-	font-family: inherit;
-	text-transform: uppercase;
-	font-weight: normal;
-	letter-spacing: 1px;
-	font-size: 0.75em;
+.snp-header {
+  width: auto;
+  height: 40px;
+  padding-left: 7px;
+  /* padding-bottom: 10px; */
+  border-bottom: 1px solid #ababab;
 }
 
-/* Day */
-.snapchat .day {
-	text-align: center;
-	color: #d9d9d9;
+.snp-avatar {
+  width: 40px;
+  border-radius: 50%;
+  float: left;
+  margin-top: -10px;
 }
 
-/* Names */
-.snapchat dt {
-	margin-top: 10px;
+.snp-contact {
+  font-weight: bold;
+  font-size: 20px;
+  padding-left: 15px;
+  top: -7px;
+  position: relative;
 }
 
-/* Texts */
-.snapchat dd {
-	margin: 0;
-	margin-left: 2px;
-	padding: 4px 10px;
-	border-left: solid 2px;
+.snp-body {
+  padding: 10px;
+  padding-top: 0px;
+  /* overflow: auto; */
+  /* width: auto; */
+  /* max-height: 600px; */
+}
+.snp-body p {
+  margin-left: -5px;
 }
 
-/* Outgoing/red */
-.snapchat .out dt {color: #e92754;}
-.snapchat .out dd {border-color: #e92754;}
-
-/* Incoming/blue */
-.snapchat .in dt {color: #3cb2e2;}
-.snapchat .in dd {border-color: #3cb2e2;}
-
-.snapchat .snap {
-	display: table;
-	box-sizing: border-box;
-	width: 100%;
-	border-radius: 4px;
-	border: 1px solid rgba(0,0,0, 0.15);
-	background: rgba(255,255,255, 0.3);
-	color: black;
+.snp-name-yellow {
+  color: #ecdd46;
 }
 
-/* Image part */
-.snapchat .snap:before {
-	display: table-cell;
-	content: "";
-	width: 3rem;
-	background-repeat: no-repeat;
-	background-size: auto 1rem;
-	background-position: center;
+.snp-msg-yellow,
+.snp-img-yellow {
+  border-left: 4px solid #ecdd46;
 }
 
-/* Text part */
-.snapchat .snap:after {
-	display: table-cell;
-	font-weight: bold;
-	padding: 0.5rem;
-	padding-left: 0;
+.snp-name-green {
+  color: #66b28b;
 }
 
-
-/* Hidden backup */
-.snapchat .snap i {
-	display: none;
+.snp-msg-green,
+.snp-img-green {
+  border-left: 4px solid #66b28b;
 }
 
-/*
- * Opened
- */
-.snapchat .snap.opened:after {
-	content: "Opened";
+.snp-name-blue {
+  color: #50bfe5;
 }
-/* Outgoing (arrow) */
-.snapchat .out .snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_red.png");}
-.snapchat .out .snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_purple.png");}
-.snapchat .out .snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_blue.png");}
-/* Incoming (arrow) */
-.snapchat .in .snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_red.png");}
-.snapchat .in .snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_purple.png");}
-.snapchat .in .snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_blue.png");}
 
-/*
- * Unopened
- */
-.snapchat .snap.unopened:after {
-	content: "Delivered";
+.snp-msg-blue,
+.snp-img-blue {
+  border-left: 4px solid #50bfe5;
 }
-/* Outgoing (arrow) */
-.snapchat .out .snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_red.png");}
-.snapchat .out .snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_purple.png");}
-.snapchat .out .snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_blue.png");}
-/* Incoming (box) */
-.snapchat .in .snap.unopened:after {
-	content: "Tap to view";
-}
-.snapchat .in .snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_red.png");}
-.snapchat .in .snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_purple.png");}
-.snapchat .in .snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_blue.png");}
 
-/*
- * Screenshot
- */
-.snapchat .snap.screenshot:after {
-	content: "Screenshot!";
+.snp-name-red {
+  color: #e0496f;
 }
-.snapchat .snap.screenshot:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_red.png");}
-.snapchat .snap.screenshot.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_purple.png");}
-.snapchat .snap.screenshot.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_blue.png");}
 
-/*
- * Replay
- */
-.snapchat .snap.replay:after {
-	content: "Replay!";
+.snp-msg-red,
+.snp-img-red {
+  border-left: 4px solid #e0496f;
 }
-.snapchat .snap.replay:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_red.png");}
-.snapchat .snap.replay.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_purple.png");}
 
-/*
- * Icon message if clicked
- */
-.snapchat.nonudes .snap:active:after {
-	content: "[No actual nudes. Sorry. This is a fanfic.]";
+.snp-img-blue,
+.snp-img-green,
+.snp-img-red,
+.snp-img-yellow {
+  /* max-width: 300px; */
+  max-width: 200px;
+  padding-left: 5px;
 }
+
+.snp-name-green,
+.snp-name-red,
+.snp-name-blue,
+.snp-name-yellow {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+
+.snp-msg-green,
+.snp-msg-red,
+.snp-msg-blue,
+.snp-msg-yellow {
+  padding-left: 5px;
+  display: inline-block;
+}
+
+.snp-timestamp {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  color: #757575;
+  text-align: center;
+  margin-bottom: -20px;
+}
+
+.snp-bottom {
+  background-image: url(https://i.imgur.com/MivfOeH.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width: 100%; */
+  /* overflow: hidden; */
+  height: 40px;
+  background-size: contain;
+  /* margin-left: -10px; */
+  /* height: 0px; */
+}
+
+/* ::-webkit-scrollbar {
+  width: 10px;
+} */
+
+/* ::-webkit-scrollbar-track {
+  background: none;
+} */
+
+/* ::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+} */
 
 
 /* ------------------ discord mock v1 ------------------*/
@@ -147,13 +155,15 @@
 
 /* The overall discord module */
 .discord {
-    max-width: 710px;
+    /* max-width: 710px; */
     /* margin: 2em auto; */
     padding-bottom: 1.286em;
     font-family: "Whitney", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, Arial, sans-serif;
     border-radius: 8px;
     position: relative;
     box-shadow: 0 0 8px #aaaa;
+    width: 257px;
+    font-size: 12px;
   }
   
   /* Background colors for dark and light mode */
@@ -197,7 +207,7 @@
   }
   
   /* Making large images in text messages display correctly */
-  .discord > .message > p:not(:first-child) img.large { width: 400px; }
+  .discord img { max-width: 180px; }
   
   /* Making usernames act like links when hovered */
   .discord .name { cursor: pointer; }
@@ -341,8 +351,8 @@
   .discord .channeltop h1:first-child::before {
     content: '#';
     display: block;
-    height: 1.41em;
-    width: 1.41em;
+    height: 1.413px;
+    width: 1.413px;
     font-weight: 400;
     font-size: 1.5em;
     text-align: center;
@@ -367,7 +377,7 @@
   
   /* Top-of-channel header: description */
   .discord .channeltop p {
-    padding-bottom: 1em;
+    padding-bottom: 13px;
     margin-top: 0;
     margin-bottom: 0.5em;
     border-bottom: thin solid;
@@ -448,14 +458,14 @@
   
   /* New date divider */
   .discord .dateline {
-    margin: 1.5em 1em 0;
+    margin: 1.5em 13px 0;
     border-top: thin solid;
   }
   
   .discord .dateline p {
     padding: 2px 4px;
     font-size: 0.8em;
-    margin: -1em auto -.75em;
+    margin: -13px auto -.75em;
     font-weight: 600;
     width: fit-content;
   }
@@ -510,8 +520,8 @@
     text-align: center;
     line-height: 0.925em;
     display: inline-block;
-    width: 1em;
-    height: 1em;
+    width: 13px;
+    height: 13px;
     margin-left: 8px;
     border-radius: 100%;
   }
@@ -627,5 +637,266 @@
   .discord .ping.YOUR_ROLE_HERE:hover {
     background-color: rgba(255, 255, 255, 0.3) !important;
   }
+
+  /* ----------------------------------------------------------------- */
+
+  /* -------------------  chatting skin  -------------------------- */
+  /* from https://archiveofourown.org/works/6434845/chapters/14729722 */
+  /* with edits */
+
+  
+  #imsg-view {
+    background-color: white;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    /* transition: all 1s; */
+  } 
+
+  
+  .phone-list {
+    background: white;
+    height: 457px;
+    width: 257px;
+    display: inline-block;
+    transition: all 1s;
+    overflow: "hidden" ;
+  }
+
+  .phone {
+    /* max-width: 300px; */
+    height: 457px;
+    /* height: 0px; */
+    width: 0px;
+    /* width: 257px; */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    display: table;
+    margin: auto;
+    font-size: 13px;
+    display: inline-block;
+    transition: all 1s;
+
+  }
+
+  .header {
+    /* min-width: 300px; */
+    width: 257px;
+    background-color: #f6f6f6;
+    border-bottom: 1px solid #b2b2b2;
+    color: #000000;
+    font-weight: bold;
+    padding-bottom: 6.5px;
+    padding-top: 6.5px;
+    margin-left: -6.5px;
+    margin-right: -6.5px;
+    margin-bottom: -2em;
+    text-align: center;
+    text-transform: capitalize;
+    display: table;
+  }
+
+  .header-chevron {
+    float: left;
+    content: url(https://img.icons8.com/ios-glyphs/20/000000/chevron-left.png);
+    cursor: pointer;
+    pointer-events:auto;
+  }
+
+  .messagebody {
+    background-color: #FFFFFF;
+    display: table;
+    padding-left: 6.5px;
+    padding-right: 6.5px;
+    /* height: 457px; */
+    margin-bottom: 0px;
+  }
+
+  .breply {
+    float: right;
+    color: #FFFFFF;
+    margin: 0 0 6.5px;
+    border-radius: 13px;
+    padding: 6.5px 13px;
+    background: #1289fe;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+  .breply::after {
+    content: "";
+    position: absolute;
+    right: -6.5px;
+    bottom: 0;
+    width: 12.5px;
+    height: 13px;
+    border-left: 6.5px solid #1289fe;
+    border-bottom-left-radius: 13px 6.5px;
+  }
+
+  .text {
+    float: left;
+    color: #000000;
+    margin: 0 0 6.5px;
+    border-radius: 13px;
+    padding: 6.5px 13px;
+    background: #e5e5ea;
+    max-width: 75%;
+    clear: both;
+    position: relative;
+  }
+  
+  .text::after {
+    content: "";
+    position: absolute;
+    left: -6.5px;
+    bottom: 0;
+    width: 12.5px;
+    height: 13px;
+    border-right: 6.5px solid #e5e5ea;
+    border-bottom-right-radius: 13px 6.5px;
+  }
+
+  .time {
+    /* min-width: 295px; */
+    width: 257px;
+    color: #7B7C80;
+    font-size: .75em;
+    padding-bottom: 6.5px;
+    padding-top: 6.5px;
+    margin-left: -6.5px;
+    margin-right: -6.5px;
+    margin-bottom: -6.5px;
+    text-align: center;
+    display: table;
+    }
+
+
+    /* phone list */
+
+  .contact {
+    cursor: pointer;
+    /* pointer-events: visible; */
+    padding: 15px 8px;
+    display: grid;
+    grid-template-columns: 2.7em 1fr;
+    column-gap: 16px;
+    font-size: 12px;
+    width: 97%;
+    margin: 0 auto;
+    border-top: gray solid thin;
+  }
+
+  .contact-header {
+    /* background-image: url(https://i.imgur.com/Pe5SN9n.png); */
+    background-image: url(https://i.imgur.com/e2TVSRq.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 47px;
+    width: 257px;
+  }
+
+  .contact-title { 
+
+  }
+
+  .contact p {
+    width: 100%;
+    margin: 0;
+  }
+
+  .contact img {
+    border-radius: 100%;
+    width: 40px;
+    border: black solid thin;
+  }
+
+  /* .contact-name {
+  } */
+
+  .contact-time {
+    float: right;
+  }
+
+  .contact-time:after {
+    content: url(https://img.icons8.com/ios-glyphs/14/000000/chevron-right.png);
+    float: right;
+    margin-top: 2px;
+    margin-right: -8px;
+    padding-left: 2px;
+  }
+
+  /* .contact-msg {
+    float: left;
+  } */
+
+
+  /* ----------------------------------------------------------------- */
+
+
+  /* -------------------  fake calculator app -------------------------- */
+#calc-view {
+  background-color: darkslategray;
+}
+
+.calc-top {
+  background-color: gray;
+  height: 30%;
+  overflow: scroll;
+}
+
+.calc-bottom {
+  margin-top: 10px;
+}
+
+.calc-btn {
+  height: 40px;
+  width: 30px;
+  background-color: orange;
+  border-radius: 61%;
+  text-align: center;
+  padding: 6px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.calc-btn:hover {
+  filter: drop-shadow(2px 4px 6px black);
+  border: black thin solid;
+}
+
+.calc-current p {
+  color: white;
+  /* font-size: 70px; */
+  float: right;
+  margin-right: 10px;
+  clear: both;
+  /* margin-bottom: -20px; */
+}
+
+.calc-exp {
+  margin-bottom: -20px;
+  font-size: 40px;
+}
+
+.calc-ans {
+  font-size: 25px;
+  margin-bottom: 0px;
+}
+
+.calc-history {
+  float: left;
+  margin-left: 10px;
+  color: orange;
+  clear: both;
+}
+
+.calc-op {
+  background-color: lightseagreen;
+}
+
+#calc-back img {
+  width: 29px;
+}
 
   /* ----------------------------------------------------------------- */

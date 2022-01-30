@@ -24,6 +24,7 @@ $(document).ready(function() {
         {
             var appScreenId = appScreen.value;
             $("#"+appScreenId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible"  })
+            $("#"+appScreenId).trigger("viewingApp")
 
             event.preventDefault()
         } else {
@@ -35,20 +36,52 @@ $(document).ready(function() {
         if (appScreen && appName && !appsVisisted.includes(appName.value))
         {
             appsVisisted.push(appName.value);
-            $("#appsVisited").html(appsVisisted.join(", "))
+            var displayedText =  $("#appsVisited").html();
+            var textToDisplay = appsVisisted.join(", ")
+            writing($("#appsVisited"), textToDisplay, displayedText)
+            // $("#appsVisited").html(appsVisisted.join(", "))
         } 
         else if (!appScreen && appName && !appsCouldntVisit.includes(appName.value))
         {
             appsCouldntVisit.push(appName.value);
             if (appsCouldntVisit.length == 1)
             {
-                $("#appsCouldntVisit-title").css({ display : "inline" })
+                const text = "Couldn't visit these apps, for some reason"
+                writing($("#appsCouldntVisit-title"), text, "")
+                // $("#appsCouldntVisit-title").css({ display : "inline" })
+                
             }
 
-            $("#appsCouldntVisit").html(appsCouldntVisit.join(", "))
+            // $("#appsCouldntVisit").html(appsCouldntVisit.join(", "))
+
+            var displayedText =  $("#appsCouldntVisit").html();
+            var textToDisplay = appsCouldntVisit.join(", ")
+            writing($("#appsCouldntVisit"), textToDisplay, displayedText)
         }
 
     
+    })
+
+    $(".contact").click(event => {
+        var contact = event.currentTarget.attributes['contact-target'];
+        // console.log(event.currentTarget, contact)
+        if (contact)
+        {
+            var contactId = contact.value;
+            
+            $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "visible"  })
+            // $(".phone-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "visible"  })
+            // setTimeout( () => {
+            $(".phone-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
+                // $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible"  })
+            // }, 1000)
+        }
+    })
+
+    $(".header-chevron").click(event => {
+        // console.log(event)
+        $(event.currentTarget.parentElement.parentElement).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
+        $(".phone-list").css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
     })
 
     $(".notebook-cover").one('click', event => {
@@ -58,7 +91,13 @@ $(document).ready(function() {
         
         setTimeout( () => $(".notebook-cover div, .notebook-cover img").css({ opacity: 0 }), 500)
         setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(180deg) scale(1)" }), 500)
-        setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(270deg)" , height: "98%" }), 750)
+
+        setTimeout( () => $(".notebook-cover").css({ 
+            transform: "rotateX(270deg)", 
+            height: "98%" , width: "103%", 
+            "margin-left": "-5px" 
+        }), 750)
+
         setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(320deg)" }), 1000)
         setTimeout( () => $(".notebook-cover").css({ transform: "rotateX(360deg)", "z-index": 0 }), 1300)
 
@@ -74,6 +113,10 @@ $(document).ready(function() {
         setTimeout(() => { 
             writing($("#notebook-line1"), "Let's keep track of all the apps I visited on the phone", "")
         }, 3500)
+
+        setTimeout(() => { 
+            writing($("#appsVisited-title"), "Let's visit at least 5 apps", "")
+        }, 5500)
     })
 
 
@@ -84,10 +127,9 @@ $(document).ready(function() {
     }
     
     setTime()
-
     setInterval(setTime, 60*1000)
 
-
+    // to do make this a promise or thenable
     function writing(destination, fullStr, writtenStr)
     {
         if (writtenStr.length < fullStr.length)
@@ -100,8 +142,71 @@ $(document).ready(function() {
             return true
         }
         return false // done writing
-        // setTimeout(() => writeOut(destination, fullStr, writtenStr), 50)
     }
+
+    $("#calc-view").on('viewingApp', () => {
+        $(".calc-top").scrollTop($(".calc-history").height())
+    })
+
+    // var currExp = $(".calc-current .calc-exp")
+    
+    $(".calc-btn").click(event => {
+        var currExp = $(".calc-current .calc-exp")
+        var currAns = $(".calc-current .calc-ans")
+
+        var btnPressed = event.currentTarget.innerHTML
+        $(".calc-top").scrollTop($(".calc-history").height())
+
+        // add to current expression displayed on screen
+        if (btnPressed != '=' && !event.currentTarget.attributes["id"]) 
+        {
+            // var expression = currExp.html()
+            if (!currAns[0].innerHTML.trim()) { // 
+                if (event.currentTarget.classList.contains("calc-op"))
+                {
+                    btnPressed = " " + btnPressed + " "
+                }
+                btnPressed = currExp.html() + btnPressed
+                // currExp.html(currExp.html() + btnPressed)
+            } else {
+                // add to history, clear current expression
+                // $(".calc-history").html($(".calc-history").html() + expression)
+                $(".calc-history").html($(".calc-history").html() + $(".calc-current").html())
+                $(".calc-current p").html("")
+            }
+            // add new expression
+            currExp.html(btnPressed)
+        }
+        // add to history, clear current expression, add new expression
+        // else if (currAns[0].innerHTML.trim()) {
+
+        // } 
+        // eval expression
+        else if (event.currentTarget.attributes["id"] && event.currentTarget.attributes["id"].value == "calc-back" && )
+        {
+            // erase previous one 
+            var newExp = currExp.html().substr(0, currExp.html().length-1).trim()
+            $(".calc-current .calc-exp").html(newExp)
+        }
+        else if (btnPressed == '=')
+        {
+            // $(".calc-history").html($(".calc-history").html() + $(".calc-current").html())
+            // $(".calc-current .calc-exp").html("")
+            var toEval = currExp[0].innerHTML
+            var answer = ""
+            try {
+                answer = eval(toEval)
+            } catch (exc) {
+                answer = "NaN"
+            }
+            currAns.html(answer)
+        }
+
+
+        // console.log( event.currentTarget.innerHTML, currExp[0].innerHTML)
+        // $(".calc-history").html($(".calc-history").html() + $(".calc-current").html())
+        
+    })
     
       
 })

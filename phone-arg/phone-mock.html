@@ -1,5 +1,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/> -->
 <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
@@ -17,9 +18,9 @@
     <div class="home-btn"></div>
     <div class="phone-img"></div>
     <div class="phone-wallpaper"></div>
-    <img src="https://i.imgur.com/x5OkG01.png" class="phone-crack"/>
+    <!-- <img src="https://i.imgur.com/x5OkG01.png" class="phone-crack"/> -->
     <!-- <img src="https://i.imgur.com/WGnAPWV.png?1" class="phone-smear" /> -->
-    <img src="https://i.imgur.com/mHadlFO.png" class="phone-splatter" />
+    <!-- <img src="https://i.imgur.com/mHadlFO.png" class="phone-splatter" /> -->
     
     <div class="phone-status-backdrop"></div>
     <div class="phone-status">
@@ -37,68 +38,47 @@
     <div class="app-screen-view">
         <div class="app-screen" id="snapchat-view">
             
-            <dl class="snapchat">
-                <h4 class="day">Today</h4>
+            <div class="snp-box"><p></p>
+                <div class="snp-header">
+                <img class="snp-avatar" src="https://i.imgur.com/T4kUTXn.png" />
+                <span class="snp-contact">Team 7</span>
+                </div>
+                <div class="snp-body">
                 
-                <div class="in">
-                <dt>Alice</dt>
-                <dd>are you there yet?</dd>
-                <dd>Where are you?</dd>
-                </div>
+                <div class="snp-timestamp"><p>14 june, 2019</p></div>
                 
-                <div class="out">
-                <dt>Bob</dt>
-                <dd>I'm waiting outside</dd>
-                <dd>wait I can see you now</dd>
-                </div>
-
-                <div class="out">
-                <dt>Aulus</dt>
-                <dd>Try clicking on the icon button.</dd>
-                <dd><span class="snap opened"><i>Snap (without audio) sent and opened</i></span></dd>
-                </div>
-                  
-                <div class="in">
-                <dt>Alice</dt>
-                <dd>are you there yet?</dd>
-                <dd>Where are you?</dd>
-                </div>
-                  
-                <div class="in">
-                <dt>Alice</dt>
-                <dd>are you there yet?</dd>
-                <dd>Where are you?</dd>
-                </div>
-
-                <div class="out">
-                <dt>Bob</dt>
-                <dd>I'm waiting outside</dd>
-                <dd>wait I can see you now</dd>
-                </div>
-
-                 <div class="out">
-                <dt>Bob</dt>
-                <dd>I'm waiting outside</dd>
-                <dd>wait I can see you now</dd>
-                </div>
-            </dl>
-            <dl class="snapchat nonudes">
-
-                <div class="out">
-                <dt>Aulus</dt>
-                <dd>Try clicking on the icon button.</dd>
-                <dd><span class="snap opened"><i>Snap (without audio) sent and opened</i></span></dd>
-                </div>
+                <p><span class="snp-name-yellow">sakura</span><br />
+                <span class="snp-msg-yellow">hello everyone!</span><br />
+                <br />
+                <span class="snp-name-red">naruto</span><br />
+                <span class="snp-msg-red">sakura-chan, see we're perfect for each other!</span><br />
+                <img class="snp-img-red" src="https://i.imgur.com/cS8zaCw.png" /><br />
+                <br />
+                <span class="snp-name-green">kakashi</span><br />
+                <span class="snp-msg-green">did you just cut me off?!</span><br />
+                <br />
+                <span class="snp-name-blue">sasuke</span><br />
+                <span class="snp-msg-blue">hmpf</span><br />
+                <br />
+                </p>
                 
-                </dl>
+                <div class="snp-timestamp"><p>20 june, 2019</p></div>
+                
+                <p><span class="snp-name-red">naruto</span><br />
+                <span class="snp-msg-red">i-i didn't mean to kakashi-sensei!</span><br />
+                </p>
+                </div>
+                <div class="snp-bottom">&nbsp;</div>
+            </div>
                 
         </div>
+        
         <div class="app-screen" id="discord-view">
             <div class="discord darkmode">
 
                 <!-- CHANNEL HEADER -->
                 <div class="channel">
-                    <p><span class="hash">#</span><span class="channelname">test-channel-name</span></p>
+                    <p><span class="hash">#</span><span class="channelname">channel</span></p>
                 </div>
             
                 <!-- THE ACTUAL MESSAGES (each new user's messages in a separate block) -->
@@ -145,17 +125,140 @@
                 <!-- FILE UPLOAD AND TYPING LINE -->
                 <div>
                     <!-- TYPING LINE: if you want this left empty, replace the text "hey, ... names" with "Message #your-channel-here", and make the p tag's class "placeholder". See lightmode for example of this -->
-                    <p><span class="hide">[Typing: </span>hey, why did everyone change their names<span class="hide">]</span></p>
+                    <p><span class="hide">[Typing: </span></p>
                 </div>
             
-            </div>
-            
-            
+        </div>            
         </div>
+
+        <div class="app-screen" id="imsg-view">
+            <div class="phone-list">
+                <div class="contact-header"></div>
+                <!-- <div class="contact-title">Messages</div> -->
+                
+                <div class="contact" contact-target="contact1">
+                    <p><img src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="contact-name">Contact Name</span> 
+                        <span class="contact-time">Saturday</span> <br>
+                        <span class="contact-msg">text, plus extra image </span>
+                    </p>
+                </div>
+                <div class="contact" contact-target="contact2">
+                    <p><img src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="contact-name">Contact Name</span> 
+                        <span class="contact-time">Saturday</span> <br>
+                        <span class="contact-msg">text, plus extra image </span>
+                    </p>
+                </div>
+                <div class="contact">
+                    <p><img src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="contact-name">Contact Name</span> 
+                        <span class="contact-time">Saturday</span> <br>
+                        <span class="contact-msg">text, plus extra image </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="phone" id="contact1">
+            <p class="messagebody">
+                <span class="header">Mom</span>
+                <span class="header-chevron"></span>
+                <br /><br />
+                <span class="time"><b>Yesterday</b> 10:15 PM</span><br />
+                <span class="text">Can you call me as soon as you get this message?</span><br />
+                <span class="time"><b>Today</b> 9:05 AM</span><br />
+                <span class="text">Hello?</span><br />
+                <span class="text">Are you going to answer me?</span><br />
+                <span class="breply">iOS reply</span><br><br>
+                <span class="breply">iOS reply</span><br><br>
+                <span class="breply">iOS reply</span><br><br>
+                <span class="time"><b>Yesterday</b> 10:15 PM</span><br />
+                <span class="text">Can you call me as soon as you get this message?</span><br />
+                <span class="time"><b>Today</b> 9:05 AM</span><br />
+                <span class="text">Hello?</span><br />
+                <span class="text">Are you going to answer me?</span><br />
+                <span class="breply">iOS reply</span><br><br>
+                <span class="breply">iOS reply</span><br><br>
+                <span class="breply">iOS reply</span><br><br>
+                </p>
+            </div>
+
+            <div class="phone" id="contact2">
+                <p class="messagebody">
+                    <span class="header">Dad</span>
+                    <span class="header-chevron"></span>
+                    <br /><br />
+                    <span class="time"><b>Yesterday</b> 10:15 PM</span><br />
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    </p>
+            </div>
+        </div>
+
+        <div class="app-screen" id="calc-view">
+            <div class="calc-top">
+                <div class="calc-history">
+                    <p class="calc-exp">3 * 3</p>
+                    <p class="calc-ans">9</p>
+
+                    <p class="calc-exp">4 * 4</p>
+                    <p class="calc-ans">16</p>
+
+                    <p class="calc-exp">5 * 3</p>
+                    <p class="calc-ans">15</p>
+                </div>
+                <div class="calc-current">
+                    <p class="calc-exp">3 * 3</p>
+                    <p class="calc-ans"></p>
+                </div>
+            </div>
+            <div class="calc-bottom container">
+                <div class="row">
+                    <div class="col calc-btn calc-op">(</div>
+                    <div class="col calc-btn calc-op">)</div>
+                    <div class="col calc-btn calc-op">√</div>
+                    <div class="col calc-btn calc-op">/</div>
+                </div>
+                <div class="row">
+                    <div class="col calc-btn">7</div>
+                    <div class="col calc-btn">8</div>
+                    <div class="col calc-btn">9</div>
+                    <div class="col calc-btn calc-op">*</div>
+                </div>
+                <div class="row">
+                    <div class="col calc-btn">4</div>
+                    <div class="col calc-btn">5</div>
+                    <div class="col calc-btn">6</div>
+                    <div class="col calc-btn calc-op">-</div>
+                </div>
+                <div class="row">
+                    <div class="col calc-btn">1</div>
+                    <div class="col calc-btn">2</div>
+                    <div class="col calc-btn">3</div>
+                    <div class="col calc-btn calc-op">+</div>
+                </div>
+                <div class="row">
+                    <div class="col calc-btn">0</div>
+                    <div class="col calc-btn">.</div>
+                    <div class="col calc-btn calc-op" id="calc-back"><img src="https://i.imgur.com/VUqIb8o.png"/></div>
+                    <div class="col calc-btn calc-op">=</div>
+                </div>
+
+            </div>
+        </div>
+
         <div id="notif-backdrop"></div>
         <div id="notification">
             <p> <span>Sorry, app is currently unavailable. </span>
-                <img src="https://img.icons8.com/material-outlined/35/000000/broken-phone.png" >
+                <!-- <img src="https://img.icons8.com/material-outlined/35/000000/broken-phone.png" > -->
+                <img src="https://cdn.discordapp.com/attachments/934959330833358878/936115631131099146/icons8-broken-phone.gif" />
             </p>
         </div>
     </div>
@@ -165,7 +268,7 @@
         <div class="row app-row">
             <div class="col app-icon app-sc" app-target="snapchat-view" app-name="Snapchat"></div>
             <div class="col app-icon app-discord" app-target="discord-view" app-name="Discord"></div>
-            <div class="col app-icon app-msgs" app-name="iMessage"></div>
+            <div class="col app-icon app-msgs" app-target="imsg-view" app-name="iMessage"></div>
         </div>
         <div class="row app-row">
             <div class="col app-icon app-tiktok" app-name="Tiktok"></div>
@@ -181,7 +284,7 @@
         <div id="screen2" class="screen-container">
             <div class="row app-row">
                 <div class="col app-icon app-notes" app-name="Notes"></div>
-                <div class="col app-icon app-appstore" app-name="App"></div>
+                <div class="col app-icon app-appstore" app-name="App Store"></div>
                 <div class="col app-icon app-amazon" app-name="test"></div>
             </div>
             <div class="row app-row">
@@ -197,7 +300,7 @@
                 <div class="col app-icon app-clock" app-name="Clock"></div>
             </div>
             <div class="row app-row">
-                <div class="col app-icon app-calculator" app-name="Calculator"></div>
+                <div class="col app-icon app-calculator" app-target="calc-view" app-name="Calculator"></div>
                 <div class="col"></div>
                 <div class="col"></div>
             </div>
@@ -241,17 +344,17 @@
     <div class="textwmar"> 
         <p>
             <span id="notebook-line1"></span> <br>
-            <span id="appsVisited-title">Let's visit at least 5 apps</span> <br>
+            <span id="appsVisited-title"></span> <br>
             <span id="appsVisited"></span> <br><br><br><br><br>
-            <span id="appsCouldntVisit-title">Couldn't visit these apps, for some reason</span> <br>
+            <span id="appsCouldntVisit-title"></span> <br>
             <span id="appsCouldntVisit"></span> <br><br><br><br><br>
 
-            <span id="choiceTime">
+            <!-- <span id="choiceTime">
                 <span id="choiceText">I think the phone belongs to...</span> <br> <br>
                 <span id="choice1"> Danny Fenton</span> 
+                <span id="choiceConj"> or</span> 
                 <span id="choice2"> Danny Phantom</span> 
-                <span id="choice2"> Choice 3</span> 
-            </span>
+            </span> -->
 
         </p>
         <p class="sticky-container">
