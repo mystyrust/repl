@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
     var appsVisisted = []  
     var appsCouldntVisit = []
     
@@ -144,18 +143,16 @@ $(document).ready(function() {
         return false // done writing
     }
 
+    // calculator stuff
     $("#calc-view").on('viewingApp', () => {
         $(".calc-top").scrollTop($(".calc-history").height())
     })
 
-    // var currExp = $(".calc-current .calc-exp")
-    
     $(".calc-btn").click(event => {
         var currExp = $(".calc-current .calc-exp")
         var currAns = $(".calc-current .calc-ans")
 
         var btnPressed = event.currentTarget.innerHTML
-        $(".calc-top").scrollTop($(".calc-history").height())
 
         // add to current expression displayed on screen
         if (btnPressed != '=' && !event.currentTarget.attributes["id"]) 
@@ -170,19 +167,14 @@ $(document).ready(function() {
                 // currExp.html(currExp.html() + btnPressed)
             } else {
                 // add to history, clear current expression
-                // $(".calc-history").html($(".calc-history").html() + expression)
                 $(".calc-history").html($(".calc-history").html() + $(".calc-current").html())
                 $(".calc-current p").html("")
             }
             // add new expression
             currExp.html(btnPressed)
         }
-        // add to history, clear current expression, add new expression
-        // else if (currAns[0].innerHTML.trim()) {
-
-        // } 
         // eval expression
-        else if (event.currentTarget.attributes["id"] && event.currentTarget.attributes["id"].value == "calc-back" && )
+        else if (event.currentTarget.attributes["id"] && event.currentTarget.attributes["id"].value == "calc-back")
         {
             // erase previous one 
             var newExp = currExp.html().substr(0, currExp.html().length-1).trim()
@@ -190,23 +182,26 @@ $(document).ready(function() {
         }
         else if (btnPressed == '=')
         {
-            // $(".calc-history").html($(".calc-history").html() + $(".calc-current").html())
-            // $(".calc-current .calc-exp").html("")
             var toEval = currExp[0].innerHTML
-            var answer = ""
-            try {
-                answer = eval(toEval)
-            } catch (exc) {
-                answer = "NaN"
+            if (currExp[0].innerHTML != "1 + 1")
+            {
+                var answer = ""
+                try {
+                    answer = eval(toEval)
+                } catch (exc) {
+                    answer = "NaN"
+                }
+                currAns.html(answer)
             }
-            currAns.html(answer)
+            else {
+                // $(".calc-bottom").css({ opacity: 0 })
+                $(".calc-functions").css({ width: "0px" })
+                // $(".calc-bottom").toggle()
+                // setTimeout(() => {  $(".calc-bottom").toggle() }, 1000)
+
+                // $(".calc-priv").css({ width: "257px" })
+            }
         }
-
-
-        // console.log( event.currentTarget.innerHTML, currExp[0].innerHTML)
-        // $(".calc-history").html($(".calc-history").html() + $(".calc-current").html())
-        
+        $(".calc-top").scrollTop($(".calc-history").height() + $(".calc-current").height())
     })
-    
-      
 })

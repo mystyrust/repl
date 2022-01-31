@@ -506,6 +506,7 @@
     /* background-color: brown; */
     background-image: url(https://i.imgur.com/bCYDKPS.jpg?1);
     margin-top: 10px;
+    background-repeat: no-repeat;
     /* min-width: 300px;
     max-width: 400px; */
     border-radius: 20px;
@@ -531,7 +532,7 @@
 #notebook-keepOut {
     position: absolute;
     top: 100px;
-    width: 400px;
+    width: 388px;
     z-index: 8;
 }
 
@@ -552,7 +553,7 @@
     filter: drop-shadow(2px 4px 6px black);
 }
 
-.textwmar p {
+.textwmar p:not(.sticky-container) {
     /* position: absolute; */
     /* top: 106px; */
         /* height: 100%; */
@@ -605,6 +606,10 @@
     cursor: pointer;
     color: white;
     background-color: black;
+}
+
+#youtube-view {
+    background: white;
 }
 
 /* .titletext , #notebook-line1 {
