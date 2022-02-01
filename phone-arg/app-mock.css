@@ -2084,6 +2084,19 @@ margin-top:0px;
 }
 .gallery-item-child {
   width: 257px;
+  color: white;
 }
 
+.gallery-item-child.note {
+  background: purple;
+  height: 400px;
+  padding: 10px;
+  margin: 10px;
+  width: 239px;
+  /* overflow-y: scroll; */
+}
+
+.gallery-scroller {
+  margin-top: 400px !important;
+}
 /* ------------------------------------------------- */
