@@ -1,7 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     // drag on desktop // https://htmldom.dev/drag-to-scroll/
 
-    const ele = document.getElementsByClassName("app-container")[0]
+    const parentElement = document.getElementsByClassName("app-container")[0] // parent element
+    const childSelector = ".screen-container" // class name that all child scrollables share
+    const pillbugSelector = ".scroller div" // class / selector that all child pillbugs share
+
+    const makeScrollableAndGrabable = (ele, childSelector, pillbugSelector) => { 
     ele.style.cursor = 'grab';
 
     let pos = { top: 0, left: 0, x: 0, y: 0 };
@@ -11,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var parent = ele.getBoundingClientRect()
         var width = ele.getBoundingClientRect().width
         
-        var isVisible = Math.abs(screen.left - parent.left) < width
+        var isVisible = Math.abs(screen.left - parent.left) < (width-10)
         return isVisible;
     }
 
@@ -55,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ----------------------------------------//
 
     // ease scroll within container -- pill bug click // https://stackoverflow.com/a/51005649 method 1
-    $(".scroller div").click(event => {
+    $(pillbugSelector).click(event => {
         var targetId = event.target.attributes['scroll-target'].value;
         var target = $("#"+targetId)[0]
         var container = ele
@@ -106,18 +110,26 @@ document.addEventListener('DOMContentLoaded', function () {
     
     function easeInOutQuad(t){ return t<.5 ? 2*t*t : -1+(4-2*t)*t };
 
-    
-
-    $(".app-container").on( 'scroll', function(event){
-        $(".scroller div").css({ background: 'slategray' })
-        $(".screen-container").each((index, screen) => { 
+    $(ele).on('scroll', function(event){
+        $(pillbugSelector).css({ background: 'slategray' })
+        $(childSelector).each((index, screen) => { 
             if (isScrolledIntoView(screen))
             {
-                $($(".scroller div")[index]).css({ background: 'white' })
+                $($(pillbugSelector)[index]).css({ background: 'white' })
             }
         })
 
     });
+
+    }
+
+    makeScrollableAndGrabable(parentElement, childSelector, pillbugSelector)
+    
+    // gallery app
+    makeScrollableAndGrabable($("#gallery-view")[0], ".gallery-item" , ".gallery-scroller div")
+
+    // private gallery behind the fake calculator app 
+    makeScrollableAndGrabable($(".calc-priv")[0], ".privGallery-item" , ".privGallery-scroller div")
 
     //  $(".home-btn").click((event) => {
     //     var container = $(".app-container")[0]

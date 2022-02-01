@@ -183,8 +183,8 @@ $(document).ready(function() {
         else if (btnPressed == '=')
         {
             var toEval = currExp[0].innerHTML
-            if (currExp[0].innerHTML != "1 + 1")
-            {
+            // if (currExp[0].innerHTML != "1 + 1")
+            // {
                 var answer = ""
                 try {
                     answer = eval(toEval)
@@ -192,16 +192,31 @@ $(document).ready(function() {
                     answer = "NaN"
                 }
                 currAns.html(answer)
-            }
-            else {
+            // }
+            // else {
+            if (currExp[0].innerHTML == "1 + 1") {
                 // $(".calc-bottom").css({ opacity: 0 })
                 $(".calc-functions").css({ width: "0px" })
-                // $(".calc-bottom").toggle()
+                $(".calc-bottom").toggle()
+                setTimeout(() => { 
+                    // stuff that should appear on the private screen
+                    $(".privGallery-scroller").css({ position: "absolute" }) 
+                    $(".privGallery-goback").css({ opacity: 1 })
+                }, 500)
                 // setTimeout(() => {  $(".calc-bottom").toggle() }, 1000)
 
                 // $(".calc-priv").css({ width: "257px" })
             }
         }
         $(".calc-top").scrollTop($(".calc-history").height() + $(".calc-current").height())
+    })
+
+    $(".privGallery-goback").click(event => {
+        // go back to the public / simple calc
+        $(".calc-functions").css({ width: "257px" })
+        $(".calc-bottom").toggle()
+
+        $(".privGallery-scroller").css({ position: "relative" }) 
+        $(".privGallery-goback").css({ opacity: 0 })
     })
 })

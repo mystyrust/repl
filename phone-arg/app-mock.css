@@ -911,7 +911,8 @@
   display: inline-block;
   height: 457px;
   width: 257px;
-  background-color: lime;
+  background-color: black;
+  overflow-x: scroll !important;
 }
 
 .calc-functions {
@@ -2077,17 +2078,17 @@ margin-top:0px;
   overflow-x: scroll !important;
   display: flex;
 }
-.gallery-item {
+.gallery-item, .privGallery-item {
   display: table-cell;
   vertical-align: middle;
   height: 457px;
 }
-.gallery-item-child {
+.gallery-item-child, .privGallery-item-child {
   width: 257px;
   color: white;
 }
 
-.gallery-item-child.note {
+.gallery-item-child.note, .privGallery-item-child.note {
   background: purple;
   height: 400px;
   padding: 10px;
@@ -2098,5 +2099,21 @@ margin-top:0px;
 
 .gallery-scroller {
   margin-top: 400px !important;
+}
+
+.privGallery-scroller {
+  margin-top: -22px !important;
+  position: relative;
+}
+
+.privGallery-goback {
+/* from icons8 */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    opacity: 0;
+    transition: all 0.5s;
+    /* display: none; */
 }
 /* ------------------------------------------------- */
