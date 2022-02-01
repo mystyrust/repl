@@ -122,6 +122,20 @@ $(document).ready(function() {
     setTime()
     setInterval(setTime, 60*1000)
 
+    // alarm hack haha
+    $(".alarm-switch").click(event => {
+        var parent = event.currentTarget.parentElement
+        var parentNode = $(event.currentTarget.parentElement)
+        if (parent.classList.contains("alarm-on"))
+        {
+            parentNode.removeClass("alarm-on").addClass("alarm-off")
+        } 
+        else if (parent.classList.contains("alarm-off"))
+        {
+            parentNode.removeClass("alarm-off").addClass("alarm-on")
+        }
+    })
+
     // to do make this a promise or thenable
     function writing(destination, fullStr, writtenStr)
     {

@@ -2163,19 +2163,23 @@ margin-top:0px;
 }
 
 .alarm-obj {
-  background: gray;
-  margin: 9px;
-  border-radius: 20px;
-  padding: 10px;
   position: relative;
+  padding: 0px 5px 10px 9px;
+  border-bottom: #373e3e solid thin;
+  margin: 0 5px;
 }
 
 .alarm-label {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 .alarm-time {
-  font-size: 30px;
+  font-size: 40px;
+  margin-bottom: -10px;
+}
+
+.alarm-time span {
+  font-size: 20px;
 }
 
 .alarm-freq {
@@ -2185,22 +2189,58 @@ margin-top:0px;
   bottom: 14px;
 }
 
-.alarm-switch img {
+.alarm-switch {
+  /* background-image: url(https://i.imgur.com/wpWJpUY.png); */
+  height: 40px;
   width: 40px;
+  background-size: contain;
   position: absolute;
   right: 10px;
-  top: 5px;
+  top: 17px;
+  cursor: pointer;
 }
 
-.alarm-sched:before {
+.alarm-off {
+  color: gray;
+}
+
+.alarm-on {
+  color: white;
+}
+
+.alarm-on .alarm-label {
+  color: lightgray;
+}
+
+.alarm-off .alarm-switch {
+  background-image: url(https://i.imgur.com/wpWJpUY.png);
+}
+
+.alarm-on .alarm-switch {
+  background-image: url(https://i.imgur.com/GR098TW.png);
+}
+
+.alarm-footer-img {
+  width: 257px;
+  /* position: absolute; */
+  position: sticky;
+  bottom: 0px;
+}
+
+.alarm-header-img {
+  width: 257px;
+  padding: 10px;
+  margin-bottom: -34px;
+}
+
+/* .alarm-sched:before {
   content: '.';
   position: absolute;
   font-size: 20px;
   width: 9px;
-  /* height: 100px; */
   text-align: center;
   top: -20;
-}
+} */
 
 .alarm-header {
   padding: 15px;
