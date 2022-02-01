@@ -117,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         })
 
-     });
+    });
 
     //  $(".home-btn").click((event) => {
     //     var container = $(".app-container")[0]

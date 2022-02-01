@@ -2074,6 +2074,16 @@ margin-top:0px;
 
 #gallery-view {
   background: black;
+  overflow-x: scroll !important;
+  display: flex;
+}
+.gallery-item {
+  display: table-cell;
+  vertical-align: middle;
+  height: 457px;
+}
+.gallery-item-child {
+  width: 257px;
 }
 
 /* ------------------------------------------------- */
