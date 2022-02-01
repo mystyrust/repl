@@ -2116,6 +2116,10 @@ margin-top:0px;
     transition: all 0.5s;
     /* display: none; */
 }
+
+.privGallery-goback:hover {
+  filter: drop-shadow(2px 4px 6px black);
+}
 /* ------------------------------------------------- */
 /* ------------image hacks for amazon and app store-------------------- */
 
@@ -2149,4 +2153,66 @@ margin-top:0px;
 }
 
 
+/* ------------------------------------------------- */
+/* ----------------alarms, clock view--------------- */
+
+#clock-view {
+  background: black;
+  color: white;
+  position: relative;
+}
+
+.alarm-obj {
+  background: gray;
+  margin: 9px;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.alarm-label {
+  font-size: 10px;
+}
+
+.alarm-time {
+  font-size: 30px;
+}
+
+.alarm-freq {
+  font-size: 14px;
+  position: absolute;
+  right: 8px;
+  bottom: 14px;
+}
+
+.alarm-switch img {
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
+
+.alarm-sched:before {
+  content: '.';
+  position: absolute;
+  font-size: 20px;
+  width: 9px;
+  /* height: 100px; */
+  text-align: center;
+  top: -20;
+}
+
+.alarm-header {
+  padding: 15px;
+  font-size: 14px;
+    /* text-align: left; */
+}
+
+.alarm-icons {
+  float: right;
+}
+
+.alarm-icons img {
+  height: 25px;
+}
 /* ------------------------------------------------- */

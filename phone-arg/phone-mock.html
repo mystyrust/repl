@@ -744,6 +744,38 @@
             <img src="https://cdn.discordapp.com/attachments/835971371828903953/937927129113432084/Untitled_Artwork.png" />
         </div>
 
+        <div class="app-screen" id="clock-view">
+            <div class="alarm-header">
+                <span>Alarms</span>
+                <span class="alarm-icons">
+                    <img src="https://i.imgur.com/a1fBcFP.png" />
+                    <img src="https://i.imgur.com/n9YnBXY.png" />
+                </span>
+            </div>
+            <div class="alarm-obj">
+                <div class="alarm-label">Alarm label</div>
+                <div class="alarm-time">1:11 PM</div>
+                <div class="alarm-freq">
+                    <span> S M T W T F S</span>
+                </div>
+                <div class="alarm-switch"><img src="https://i.imgur.com/q63qHbh.png" /></div>
+            </div>
+            <div class="alarm-obj">
+                <div class="alarm-label">Alarm label</div>
+                <div class="alarm-time">1:11 PM</div>
+                <div class="alarm-freq">
+                    <span class="alarm-sched"> S </span>
+                    <span> M </span>
+                    <span> T </span>
+                    <span> W </span>
+                    <span> T </span>
+                    <span> F </span>
+                    <span> S </span>
+                </div>
+                <div class="alarm-switch"><img src="https://i.imgur.com/GR098TW.png"/> </div>
+            </div>
+        </div>
+
         <div id="notif-backdrop"></div>
         <div id="notification">
             <p> <span>Sorry, app is currently unavailable. </span>
@@ -787,7 +819,7 @@
             <div class="row app-row">
                 <div class="col app-icon app-Gdrive" app-name="Google Drive"></div>
                 <div class="col app-icon app-Gmaps" app-target="google-maps-view" app-name="Google Maps"></div>
-                <div class="col app-icon app-clock" app-name="Clock"></div>
+                <div class="col app-icon app-clock" app-target="clock-view" app-name="Clock"></div>
             </div>
             <div class="row app-row">
                 <div class="col app-icon app-calculator" app-target="calc-view" app-name="Calculator"></div>
