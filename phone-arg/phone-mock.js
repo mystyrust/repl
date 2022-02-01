@@ -11,9 +11,6 @@ $(document).ready(function() {
         $(".app-screen-view > div:not(#notification, #notif-backdrop )")
             .css({ height: "0px", width: "0px" , opacity: 0, "pointer-events": "none"  })
         closeNotification()
-        // var container = $(".app-container")[0]
-        // var screen1 = $("#screen1")[0]
-        // scrollToElm(container, screen1)
     })
 
     $(".app-icon").click((event) => {
@@ -38,7 +35,6 @@ $(document).ready(function() {
             var displayedText =  $("#appsVisited").html();
             var textToDisplay = appsVisisted.join(", ")
             writing($("#appsVisited"), textToDisplay, displayedText)
-            // $("#appsVisited").html(appsVisisted.join(", "))
         } 
         else if (!appScreen && appName && !appsCouldntVisit.includes(appName.value))
         {
@@ -47,11 +43,7 @@ $(document).ready(function() {
             {
                 const text = "Couldn't visit these apps, for some reason"
                 writing($("#appsCouldntVisit-title"), text, "")
-                // $("#appsCouldntVisit-title").css({ display : "inline" })
-                
             }
-
-            // $("#appsCouldntVisit").html(appsCouldntVisit.join(", "))
 
             var displayedText =  $("#appsCouldntVisit").html();
             var textToDisplay = appsCouldntVisit.join(", ")
@@ -157,14 +149,12 @@ $(document).ready(function() {
         // add to current expression displayed on screen
         if (btnPressed != '=' && !event.currentTarget.attributes["id"]) 
         {
-            // var expression = currExp.html()
             if (!currAns[0].innerHTML.trim()) { // 
                 if (event.currentTarget.classList.contains("calc-op"))
                 {
                     btnPressed = " " + btnPressed + " "
                 }
                 btnPressed = currExp.html() + btnPressed
-                // currExp.html(currExp.html() + btnPressed)
             } else {
                 // add to history, clear current expression
                 $(".calc-history").html($(".calc-history").html() + $(".calc-current").html())
@@ -183,17 +173,15 @@ $(document).ready(function() {
         else if (btnPressed == '=')
         {
             var toEval = currExp[0].innerHTML
-            // if (currExp[0].innerHTML != "1 + 1")
-            // {
-                var answer = ""
-                try {
-                    answer = eval(toEval)
-                } catch (exc) {
-                    answer = "NaN"
-                }
-                currAns.html(answer)
-            // }
-            // else {
+        
+            var answer = ""
+            try {
+                answer = eval(toEval)
+            } catch (exc) {
+                answer = "NaN"
+            }
+            currAns.html(answer)
+       
             if (currExp[0].innerHTML == "1 + 1") {
                 // $(".calc-bottom").css({ opacity: 0 })
                 $(".calc-functions").css({ width: "0px" })

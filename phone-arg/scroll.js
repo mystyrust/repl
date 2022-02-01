@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // drag on desktop // https://htmldom.dev/drag-to-scroll/
-
+    // i am so sorry for this unholy mess of plain js and jquery, 
+    // i copy / pasted a couple snippets i found online (credited in comments) + added my own edits and....yeah
+    
     const parentElement = document.getElementsByClassName("app-container")[0] // parent element
     const childSelector = ".screen-container" // class name that all child scrollables share
     const pillbugSelector = ".scroller div" // class / selector that all child pillbugs share
 
     const makeScrollableAndGrabable = (ele, childSelector, pillbugSelector) => { 
+    // drag while on desktop // https://htmldom.dev/drag-to-scroll/
     ele.style.cursor = 'grab';
 
     let pos = { top: 0, left: 0, x: 0, y: 0 };
@@ -63,12 +65,12 @@ document.addEventListener('DOMContentLoaded', function () {
         var targetId = event.target.attributes['scroll-target'].value;
         var target = $("#"+targetId)[0]
         var container = ele
-        scrollToElm(container, target, 400)
+        scrollToElm(container, target)
 
         // color the pill bugs accordingly
     })
     
-    function scrollToElm(container, elm, duration){
+    function scrollToElm(container, elm){
         var pos = getRelativePos(elm);
         scrollTo(container, pos.left , 0.4);  // duration in seconds
     }
@@ -131,15 +133,8 @@ document.addEventListener('DOMContentLoaded', function () {
     // private gallery behind the fake calculator app 
     makeScrollableAndGrabable($(".calc-priv")[0], ".privGallery-item" , ".privGallery-scroller div")
 
-    //  $(".home-btn").click((event) => {
-    //     var container = $(".app-container")[0]
-    //     var screen1 = $("#screen1")[0]
-    //     scrollToElm(container, screen1)
-    // })
-
-
-    //  --------------------img scroller for map?-----------------------------------
-    // https://stackoverflow.com/questions/35252249/move-drag-pan-and-zoom-object-image-or-div-in-pure-js
+//  --------------------img scroller for map?-----------------------------------
+// https://stackoverflow.com/questions/35252249/move-drag-pan-and-zoom-object-image-or-div-in-pure-js
      
     var img_ele = null,
       x_cursor = 0,
