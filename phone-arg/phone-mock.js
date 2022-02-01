@@ -8,9 +8,11 @@ $(document).ready(function() {
     }
 
     $(".home-btn").click((event) => {
+        $(".app-screen").trigger("closingApp")
         $(".app-screen-view > div:not(#notification, #notif-backdrop )")
             .css({ height: "0px", width: "0px" , opacity: 0, "pointer-events": "none"  })
         closeNotification()
+        // $(".scroller div").first().trigger('click')
     })
 
     $(".app-icon").click((event) => {
@@ -134,6 +136,22 @@ $(document).ready(function() {
         }
         return false // done writing
     }
+
+    // fake calculator on the app store
+    $("#app-store-view").on('viewingApp closingApp', event => {
+        if (event.type == "viewingApp")
+        {
+            setTimeout(() => $(".app-open").css({ display: "block" }) , 1000)
+        } else if (event.type == "closingApp")
+        {
+            $(".app-open").css({ display: "none" })
+        }
+    })
+
+    $(".app-open").click(event => {
+        $(".home-btn").trigger('click')
+        $(".app-calculator").trigger('click')
+    })
 
     // calculator stuff
     $("#calc-view").on('viewingApp', () => {

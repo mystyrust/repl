@@ -735,6 +735,15 @@
             </div>
         </div>
 
+        <div class="app-screen" id="app-store-view">
+            <p class="app-open">Open</p>
+            <img src="https://cdn.discordapp.com/attachments/835971371828903953/937937236098428979/Untitled_Artwork.png" />
+        </div>
+
+        <div class="app-screen" id="amazon-view">
+            <img src="https://cdn.discordapp.com/attachments/835971371828903953/937927129113432084/Untitled_Artwork.png" />
+        </div>
+
         <div id="notif-backdrop"></div>
         <div id="notification">
             <p> <span>Sorry, app is currently unavailable. </span>
@@ -765,8 +774,8 @@
         <div id="screen2" class="screen-container">
             <div class="row app-row">
                 <div class="col app-icon app-notes" app-name="Notes"></div>
-                <div class="col app-icon app-appstore" app-name="App Store"></div>
-                <div class="col app-icon app-amazon" app-name="Amazon"></div>
+                <div class="col app-icon app-appstore" app-target="app-store-view" app-name="App Store"></div>
+                <div class="col app-icon app-amazon" app-target="amazon-view" app-name="Amazon"></div>
             </div>
             <div class="row app-row">
                 <div class="col app-icon app-settings" app-name="Settings"></div>
@@ -782,7 +791,7 @@
             </div>
             <div class="row app-row">
                 <div class="col app-icon app-calculator" app-target="calc-view" app-name="Calculator"></div>
-                <div class="col"></div>
+                <div class="col app-icon app-health" app-name="Health"></div>
                 <div class="col"></div>
             </div>
         </div>

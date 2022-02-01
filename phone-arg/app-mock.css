@@ -2117,3 +2117,36 @@ margin-top:0px;
     /* display: none; */
 }
 /* ------------------------------------------------- */
+/* ------------image hacks for amazon and app store-------------------- */
+
+#amazon-view img, #app-store-view img {
+  width: 257px;
+}
+
+.app-open {
+  text-align: center;
+  position: absolute;
+  z-index: 2;
+  right: 98px;
+  top: 73px;
+  background: #0278fb;
+  color: white;
+  font-size: 12px;
+  width: 47px;
+  border-radius: 10px;
+  display: none;
+}
+
+.app-open:hover {
+  border: black solid thin;
+  top: 72px;
+  filter: drop-shadow(2px 4px 6px black);
+  cursor: pointer;
+}
+
+#app-store-view {
+  position: relative;
+}
+
+
+/* ------------------------------------------------- */
