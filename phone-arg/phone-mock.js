@@ -173,7 +173,7 @@ $(document).ready(function() {
     $("#app-store-view").on('viewingApp closingApp', event => {
         if (event.type == "viewingApp")
         {
-            setTimeout(() => $(".app-open").css({ display: "block" }) , 1000)
+            setTimeout(() => $(".app-open").css({ display: "block" }) , 500)
         } else if (event.type == "closingApp")
         {
             $(".app-open").css({ display: "none" })
