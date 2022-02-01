@@ -745,12 +745,6 @@
         </div>
 
         <div class="app-screen" id="clock-view">
-            <!-- <div class="alarm-header">
-                <span>Alarms</span>
-                <span class="alarm-icons">
-                    <img src="https://i.imgur.com/a1fBcFP.png" />
-                </span>
-            </div> -->
             <img class="alarm-header-img"src="https://i.imgur.com/BujuIQ1.png" />
             <div class="alarm-header">Other</div>
             <div class="alarm-obj alarm-off">
@@ -779,6 +773,34 @@
                 <div class="alarm-switch"></div>
             </div>
             <img class="alarm-footer-img" src="https://i.imgur.com/rmmhGqi.png" />
+        </div>
+
+        <div class="app-screen" id="notes-view">
+            <div class="notes-list">
+                <p class=notes-list-header1>
+                    Notes
+                    <img src="https://i.imgur.com/R5iKSnH.png" />
+                </p>
+                <div class="note-preview" note-target="note1">
+                    <span class="note-title">notes title</span>
+                    <span class="note-text1">notes beginning</span>
+                </div>
+                <div class="note-preview" note-target="note2">
+                    <span class="note-title">notes title</span>
+                    <span class="note-text1">notes beginning</span>
+                </div>
+            </div>
+
+            <div class="notes-item" id="note1">
+                <div class="note-goback"></div>
+                <div class="note-item-title">Note1</div>
+                <div class="note-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+            <div class="notes-item" id="note2">
+                <div class="note-goback"></div>
+                <div class="note-item-title">Note2</div>
+                <div class="note-item-content">ctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
         </div>
 
         <div id="notif-backdrop"></div>
@@ -810,7 +832,7 @@
         </div>
         <div id="screen2" class="screen-container">
             <div class="row app-row">
-                <div class="col app-icon app-notes" app-name="Notes"></div>
+                <div class="col app-icon app-notes" app-target="notes-view" app-name="Notes"></div>
                 <div class="col app-icon app-appstore" app-target="app-store-view" app-name="App Store"></div>
                 <div class="col app-icon app-amazon" app-target="amazon-view" app-name="Amazon"></div>
             </div>

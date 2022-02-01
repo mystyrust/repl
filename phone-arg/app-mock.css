@@ -153,13 +153,24 @@
 /* https://archiveofourown.org/works/26534413/chapters/74599071 */
 /* with edits */
 
+.channel {
+  position: sticky;
+  top: 0;
+  background: #36393f;
+}
+
+.darkmode > div:last-child {
+  position: sticky;
+  bottom: 0;
+}
+
 /* The overall discord module */
 .discord {
     /* max-width: 710px; */
     /* margin: 2em auto; */
-    padding-bottom: 1.286em;
+    /* padding-bottom: 1.286em; */
     font-family: "Whitney", "Helvetica Neue", "Lucida Grande", "Lucida Sans Unicode", "GNU Unifont", Verdana, Helvetica, Arial, sans-serif;
-    border-radius: 8px;
+    /* border-radius: 8px; */
     position: relative;
     box-shadow: 0 0 8px #aaaa;
     width: 257px;
@@ -518,12 +529,13 @@
     font-size: 1.35em;
     font-weight: 600;
     text-align: center;
-    line-height: 0.925em;
+    line-height: 11px;
     display: inline-block;
     width: 13px;
     height: 13px;
     margin-left: 8px;
     border-radius: 100%;
+    margin-top: 4px;
   }
   .darkmode > div:last-child > p:last-child::before {
     background: #b9bbbe;
@@ -942,10 +954,10 @@
   }
   
   .mapImg {
-    overflow: hidden;
     background: white;
     height: 500px;
-    width: 500px;
+    overflow: scroll;
+    position: relative;
   }
   
   .btn-holder-zoomin {
@@ -2255,4 +2267,107 @@ margin-top:0px;
 .alarm-icons img {
   height: 25px;
 }
+/* ------------------------------------------------- */
+/* ---------------notes mock----------------------- */
+
+#notes-view, .notes-list {
+  background: #f2f1f6;
+}
+
+#notes-view {
+  display: flex;
+  flex-flow: row wrap;
+  flex-direction: column;
+}
+
+.notes-list {
+  
+  height: 457px;
+  width: 257px;
+  display: inline-block;
+  transition: all 1s;
+}
+
+.notes-list-header1 {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 20px 0px 0px 15px;
+}
+
+.notes-list-header1 img {
+  width: 247px;
+  margin-left: -9px;
+  height: 43px;
+  margin-bottom: -8px;
+}
+
+.note-preview {
+  background: white;
+  padding: 10px 10px 10px 20px;
+  border-bottom: #dcdcdc solid thin;
+  font-size: 13px;
+  cursor: pointer;
+  margin: 0px 10px;
+}
+
+.note-preview:first-of-type {
+  border-top-left-radius: 13px;
+  border-top-right-radius: 13px;
+}
+.note-preview:last-of-type {
+  border-bottom-left-radius: 13px;
+  border-bottom-right-radius: 13px;
+}
+
+.note-title {
+  display: block;
+  font-weight: 700;
+}
+.note-text1 {
+  color: #929292;
+}
+
+.notes-item {
+  background: white;
+  transition: all 1s;
+  height: 457px;
+  width: 0px;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: auto;
+  font-size: 13px;
+  display: inline-block;
+  transition: all 1s;
+  position: relative;
+  /* padding: 30px 15px; */
+}
+
+.note-goback {
+  background-image: url(https://i.imgur.com/IXolUFd.png);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  left: 10px;
+  background-size: cover;
+}
+
+.note-goback:hover {
+  filter: drop-shadow(2px 4px 6px black);
+  cursor: pointer;
+  border: black thin solid;
+  border-radius: 100%;
+  padding: 7px;
+}
+
+.note-item-title {
+  font-size: 30px;
+  font-weight: 500;
+  padding: 30px 15px;
+}
+
+.note-item-content {
+  /* padding-top: 20px; */
+  padding: 0px 10px 5px 10px;
+}
+
 /* ------------------------------------------------- */

@@ -55,6 +55,24 @@ $(document).ready(function() {
     
     })
 
+    $(".note-preview").click(event => {
+        console.log({ event })
+        var note = event.currentTarget.attributes['note-target'];
+        if (note)
+        {
+            var noteId = note.value;
+
+            $("#"+noteId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "visible"  })
+            $(".notes-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
+        }
+    })
+
+    $(".note-goback").click(event => {
+        $(event.currentTarget.parentElement).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
+        $(".notes-list").css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
+    })
+
+    // phone nav (to and from contacts list) -- mimic for notes, componentize?
     $(".contact").click(event => {
         var contact = event.currentTarget.attributes['contact-target'];
         // console.log(event.currentTarget, contact)
@@ -72,11 +90,11 @@ $(document).ready(function() {
     })
 
     $(".header-chevron").click(event => {
-        // console.log(event)
         $(event.currentTarget.parentElement.parentElement).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
         $(".phone-list").css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
     })
 
+    // notebook transitions 
     $(".notebook-cover").one('click', event => {
         // i wish i knew how to chain these timed events better, like using .then or await
         // this isnt great or even best practice but its good enough for me

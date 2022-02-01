@@ -153,6 +153,8 @@
     height: 457px;
     /* height: 0px; */
     /* background-color: pink; */
+    /* border: thin white solid;
+    box-sizing: content-box; */
     pointer-events: none;
     width: 257px;
     z-index: 10;
