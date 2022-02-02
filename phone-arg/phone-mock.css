@@ -369,38 +369,30 @@
 
 /* ---------- scrollbar overrides ---------- */
 
-
-/* width */
-/* #calc-view::-webkit-scrollbar {
-    width: 2px;
-  } */
-  
-  /* Track */
-#calc-view::-webkit-scrollbar-track {
-    display: none;
-  }
-
   /* Handle */
-#calc-view::-webkit-scrollbar-thumb {
+/* #calc-view::-webkit-scrollbar-thumb {
     border-radius: 10px;
-}
+} */
 
 /* width */
-.app-container::-webkit-scrollbar {
+.app-container::-webkit-scrollbar,
+#calc-view::-webkit-scrollbar,
+#gallery-view::-webkit-scrollbar {
     /* width: 20px; */
     width: 0px;
   }
   
   /* Track */
-.app-container::-webkit-scrollbar-track {
+.app-container::-webkit-scrollbar-track,
+#calc-view::-webkit-scrollbar-track,
+#gallery-view::-webkit-scrollbar-track {
     display: none;
   }
 
   /* Handle */
-.app-container::-webkit-scrollbar-thumb {
-    /* background: red;
-    border-radius: 10px;
-    max-height: 30px */
+.app-container::-webkit-scrollbar-thumb,
+#calc-view::-webkit-scrollbar-thumb,
+#gallery-view::-webkit-scrollbar-thumb {
     display: none;
 }
 

@@ -676,18 +676,17 @@
   }
 
   .phone {
-    /* max-width: 300px; */
     height: 457px;
-    /* height: 0px; */
     width: 0px;
-    /* width: 257px; */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    display: table;
+    /* display: table; */
     margin: auto;
     font-size: 13px;
     display: inline-block;
     transition: all 1s;
-
+    opacity: 0;
+    overflow: auto;
+    position: relative;
   }
 
   .header {
@@ -721,6 +720,7 @@
     padding-right: 6.5px;
     /* height: 457px; */
     margin-bottom: 0px;
+    /* position: relative; */
   }
 
   .breply {
@@ -2338,8 +2338,16 @@ margin-top:0px;
   display: inline-block;
   transition: all 1s;
   position: relative;
+  opacity: 0;
+  overflow: auto;
   /* padding: 30px 15px; */
 }
+
+/* .notes-item div {
+  position: relative;
+  opacity: 0;
+  overflow: auto;
+} */
 
 .note-goback {
   background-image: url(https://i.imgur.com/IXolUFd.png);

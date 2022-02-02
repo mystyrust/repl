@@ -55,44 +55,64 @@ $(document).ready(function() {
     
     })
 
-    $(".note-preview").click(event => {
-        console.log({ event })
-        var note = event.currentTarget.attributes['note-target'];
-        if (note)
-        {
-            var noteId = note.value;
+    // notes app nav 
+    // $(".note-preview").click(event => {
+    //     console.log({ event })
+    //     var note = event.currentTarget.attributes['slide-target'];
+    //     if (note)
+    //     {
+    //         var noteId = note.value;
 
-            $("#"+noteId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "visible"  })
-            $(".notes-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
-        }
-    })
+    //         $("#"+noteId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "visible"  })
+    //         $(".notes-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
+    //     }
+    // })
 
-    $(".note-goback").click(event => {
-        $(event.currentTarget.parentElement).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
-        $(".notes-list").css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
-    })
+    // $(".note-goback").click(event => {
+    //     $(event.currentTarget.parentElement).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
+    //     $(".notes-list").css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
+    // })
 
     // phone nav (to and from contacts list) -- mimic for notes, componentize?
-    $(".contact").click(event => {
-        var contact = event.currentTarget.attributes['contact-target'];
-        // console.log(event.currentTarget, contact)
-        if (contact)
-        {
-            var contactId = contact.value;
+    // $(".contact").click(event => {
+    //     var contact = event.currentTarget.attributes['slide-target'];
+    //     if (contact)
+    //     {
+    //         var contactId = contact.value;
             
-            $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "visible"  })
-            // $(".phone-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "visible"  })
-            // setTimeout( () => {
-            $(".phone-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
-                // $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible"  })
-            // }, 1000)
-        }
-    })
+    //         $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "visible"  })
+    //         $(".phone-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
 
-    $(".header-chevron").click(event => {
-        $(event.currentTarget.parentElement.parentElement).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
-        $(".phone-list").css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
-    })
+    //     }
+    // })
+
+    // $(".header-chevron").click(event => {
+    //     $(event.currentTarget.parentElement.parentElement).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
+    //     $(".phone-list").css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
+    // })
+
+    const slideFromListToItem = (childClickSelector, relativeChildElement, listSelector, gobackSelector) => { 
+        $(childClickSelector).click(event => {
+            var contact = event.currentTarget.attributes['slide-target'];
+            if (contact)
+            {
+                var contactId = contact.value;
+                
+                $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "auto"  })
+                $(listSelector).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
+    
+            }
+        })
+    
+        $(gobackSelector).click(event => {
+            const relativeChild = eval(relativeChildElement)
+            $(relativeChild).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
+            $(listSelector).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
+        })
+    }
+
+    slideFromListToItem(".contact", "event.currentTarget.parentElement.parentElement", ".phone-list", ".header-chevron")
+    slideFromListToItem(".note-preview", "event.currentTarget.parentElement", ".notes-list", ".note-goback")
 
     // notebook transitions 
     $(".notebook-cover").one('click', event => {
@@ -161,8 +181,6 @@ $(document).ready(function() {
         {
             writtenStr += fullStr[writtenStr.length];
             destination.html(writtenStr)
-            // setTimeout(() => { destination.html(toWrite) }, 500)
-            // return setTimeout(() => writeOut(destination, fullStr, writtenStr), 50)
             setTimeout(() => writing(destination, fullStr, writtenStr), 50)
             return true
         }
@@ -241,9 +259,6 @@ $(document).ready(function() {
                     $(".privGallery-scroller").css({ position: "absolute" }) 
                     $(".privGallery-goback").css({ opacity: 1 })
                 }, 500)
-                // setTimeout(() => {  $(".calc-bottom").toggle() }, 1000)
-
-                // $(".calc-priv").css({ width: "257px" })
             }
         }
         $(".calc-top").scrollTop($(".calc-history").height() + $(".calc-current").height())
