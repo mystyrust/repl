@@ -1,7 +1,20 @@
 $(document).ready(function() {
     var appsVisisted = []  
     var appsCouldntVisit = []
+    var unlockedSecretEnding = false;
     
+    const unlockSecretEnding = () => {
+        // unlocked both choices already, havent printed the option for choice 3 yet
+        if (appsVisisted.length >= 5 && $("#choice3")[0].innerText.length == 0 && unlockedSecretEnding)
+        {
+            const choiceConj2 = " or "
+            const choice3 = "...both??"
+
+            writing($("#choiceConj2"), choiceConj2, "")
+            setTimeout(() => writing($("#choice3 span"), choice3, ""), ((choiceConj2.length + choice3.length + 2) * 50) )
+        }
+    }
+
     const closeNotification = () => {
         $("#notification").css({ height: "0px", opacity: 0, "pointer-events": "none" })
         $("#notif-backdrop").css({ opacity: 0 })
@@ -15,6 +28,8 @@ $(document).ready(function() {
         // $(".scroller div").first().trigger('click')
     })
 
+    // track which apps could / couldnt be visited on the notebook, 
+    // notify user if app cannot be visited 
     $(".app-icon").click((event) => {
         var appScreen = event.target.attributes['app-target'];
         var appName = event.target.attributes['app-name'];
@@ -59,18 +74,25 @@ $(document).ready(function() {
         }
 
         // once you go to 5 (visitable) apps, present the reader with the choice
-        if (appsVisisted.length == 5)
+        if (appsVisisted.length == 5 && $("#choiceText")[0].innerHTML.length == 0)
         {
             const choiceText = "I think the phone belongs to..."
             const choice1 = "Danny Fenton"
-            const choiceConj = "  or  "
+            const choiceConj = " or "
             const choice2 = "Danny Phantom"
 
             writing($("#choiceText"), choiceText, "")
 
-            setTimeout(() => writing($("#choice1"), choice1, ""), ((choiceText.length + 1) * 50) )
-            setTimeout(() => writing($("#choiceConj"), choiceConj, ""), ((choiceText.length + choiceConj.length + 2) * 50) )
-            setTimeout(() => writing($("#choice2"), choice2, ""), ((choiceText.length + choiceConj.length + choice2.length + 3) * 50) )
+            setTimeout(() => writing($("#choice1 span"), choice1, ""), ((choiceText.length + 1) * 50) )
+            setTimeout(() => writing($("#choiceConj"), choiceConj, ""), ((choiceText.length + choice1.length + 2) * 50) )
+            setTimeout(() => writing($("#choice2 span"), choice2, ""), ((choiceText.length + choice1.length + choiceConj.length + 3) * 50) )
+          
+            setTimeout(unlockSecretEnding, (choiceText.length + choice1.length + choiceConj.length + choice2.length + 4) * 50)
+        } 
+        else if (appsVisisted.length > 5)
+        {
+            // unlocked both choices already, havent printed the option for choice 3 yet
+            unlockSecretEnding()
         }
     })
 
@@ -247,7 +269,9 @@ $(document).ready(function() {
                     $(".privGallery-scroller").css({ position: "absolute" }) 
                     $(".privGallery-goback").css({ opacity: 1 })
                 }, 500)
-                setTimeout(() => $("#calc-view").trigger("secretEnding"), 2000)
+                unlockedSecretEnding = true
+                $(".app-icon").trigger("secretEnding")
+                // setTimeout(() => $("#calc-view").trigger("secretEnding"), 2000)
             }
         }
         $(".calc-top").scrollTop($(".calc-history").height() + $(".calc-current").height())
@@ -262,7 +286,5 @@ $(document).ready(function() {
         $(".privGallery-goback").css({ opacity: 0 })
     })
 
-    $("#calc-view").on('secretEnding', () => {
-        console.log("secret ending unlocked!")
-    })
+    $(".app-icon").on('secretEnding', unlockSecretEnding)
 })

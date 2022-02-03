@@ -71,6 +71,8 @@
     line-height: 25px;
     color: #000000;
     font-family: helvetica neue, helvetica, arial, sans-serif;
+    min-height: 500px;
+    padding: 5px 10px;
   }
 
   .bullet-outside {

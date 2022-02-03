@@ -554,18 +554,36 @@
     filter: drop-shadow(2px 4px 6px black);
 }
 
-.textwmar p:not(.sticky-container) {
+/* .textwmar p:not(.sticky-container) { */
     /* position: absolute; */
     /* top: 106px; */
         /* height: 100%; */
     /* width: 100%; */
     /* position: relative; */
-    min-height: 500px;
-    padding: 5px 10px;
+    /* min-height: 500px;
+    padding: 5px 10px; */
     /* width: 300px;
     min-width: 357px;
     display: inline-block; */
+/* } */
+
+/* #appsVisited-contianer, #appsCouldntVisit-container, #choiceTime {
+    margin-bottom: 0px;
+    height: 150px;
+} */
+
+.textwmar p {
+    margin-bottom: 0px
 }
+
+#appsVisited-contianer {
+    height: 150px;
+}
+
+#appsCouldntVisit-container {
+    height: 100px;
+}
+
 #appsVisited {
     display: inline-block;
     width: 75%;
@@ -574,10 +592,6 @@
 #appsVisited-title, #appsCouldntVisit-title, #choiceText{
     text-decoration: underline;
     text-decoration-thickness: 2.5px;
-}
-
-#appsCouldntVisit-title, #choiceText {
-    /* display: none; */
 }
 
 #appsCouldntVisit {
@@ -591,18 +605,48 @@
     width: 100%;
 }
 
-#choice1 span:hover, 
-#choice2 span:hover, 
-#choice3 span:hover {
+#choiceTime p {
+    display: inline;
+}
+
+#choiceConj, #choiceConj2 {
+    padding: 0px 10px;
+}
+
+#choice1 img {
+    width: 102px;
+    height: 40px;
+    position: absolute;
+    margin-left: -102px;
+    margin-top: -7px;
+    opacity: 0;
+    filter: brightness(0);
+}
+
+#choice2 img {
+    /* display: none; */
+    width: 115px;
+    height: 40px;
+    position: absolute;
+    opacity: 0;
+    margin-left: -115px;
+    margin-top: -6px;
+    filter: brightness(0);
+}
+
+#choice3 img {
+    width: 55px;
+    height: 40px;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -7px;
+    opacity: 0;
+    filter: brightness(0);
+}
+
+#choice1 img:hover, #choice2 img:hover, #choice3 img:hover {
+    opacity: 1;
     cursor: pointer;
-    /* color: white; */
-    /* background-color: black; */
-    background-image: url(https://i.imgur.com/rHCcinh.png);
-    /* width: 91px; */
-    /* height: 13px; */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 /* #choice1, #choice2, #choice3 {
