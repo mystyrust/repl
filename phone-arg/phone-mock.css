@@ -95,6 +95,7 @@
     top: 92px;
     z-index: 13;
     pointer-events: none;
+    opacity: 0.7;
 }
 
 .phone-smear {
@@ -106,6 +107,7 @@
     pointer-events: none;
     bottom: 100;
     margin-left: 39px;
+    opacity: 0.7;
 }
 
 .phone-splatter {
@@ -118,6 +120,7 @@
     top: 250;
     margin-left: 39px;
     filter: hue-rotate(162deg) brightness(3.5);
+    opacity: 0.7;
 }
 
 
@@ -599,14 +602,19 @@
 }
 
 #choiceTime {
-    display: inline-block;
+    /* display: inline-block; */
     text-align: left;
     /* width: 366px; */
+    display: none;
     width: 100%;
 }
 
-#choiceTime p {
+#choiceTime p:not(#choice3) {
     display: inline;
+}
+
+#choice3 {
+    display: none;
 }
 
 #choiceConj, #choiceConj2 {

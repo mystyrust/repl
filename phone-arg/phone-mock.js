@@ -5,8 +5,10 @@ $(document).ready(function() {
     
     const unlockSecretEnding = () => {
         // unlocked both choices already, havent printed the option for choice 3 yet
-        if (appsVisisted.length >= 5 && $("#choice3")[0].innerText.length == 0 && unlockedSecretEnding)
+        if (appsVisisted.length >= 5 && $("#choice3")[0].innerText.trim().length == 0 && unlockedSecretEnding)
         {
+            $("#choice3").css({ display: "inline" })
+
             const choiceConj2 = " or "
             const choice3 = "...both??"
 
@@ -76,6 +78,8 @@ $(document).ready(function() {
         // once you go to 5 (visitable) apps, present the reader with the choice
         if (appsVisisted.length == 5 && $("#choiceText")[0].innerHTML.length == 0)
         {
+            $("#choiceTime").css({ display: "inline-block" })
+
             const choiceText = "I think the phone belongs to..."
             const choice1 = "Danny Fenton"
             const choiceConj = " or "
@@ -153,11 +157,11 @@ $(document).ready(function() {
 
         setTimeout(() => { 
             writing($("#notebook-line1"), notebookLine1, "")
-        }, 1700 + ((titleText.length + 1) * 50))
+        }, 1700 + ((titleText.length + 2) * 50))
 
         setTimeout(() => { 
             writing($("#appsVisited-title"), appsVisitedTitle, "")
-        }, 1700 + ((titleText.length + notebookLine1.length + +2) * 50))
+        }, 1700 + ((titleText.length + notebookLine1.length + +4) * 50))
     })
 
     const setTime = () => {
@@ -270,7 +274,7 @@ $(document).ready(function() {
                     $(".privGallery-goback").css({ opacity: 1 })
                 }, 500)
                 unlockedSecretEnding = true
-                $(".app-icon").trigger("secretEnding")
+                $("#calc-view").trigger("secretEnding")
                 // setTimeout(() => $("#calc-view").trigger("secretEnding"), 2000)
             }
         }
@@ -286,5 +290,5 @@ $(document).ready(function() {
         $(".privGallery-goback").css({ opacity: 0 })
     })
 
-    $(".app-icon").on('secretEnding', unlockSecretEnding)
+    $("#calc-view").on('secretEnding', unlockSecretEnding)
 })

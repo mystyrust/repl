@@ -789,6 +789,7 @@
 
   .contact {
     cursor: pointer;
+    color: #777777;
     /* pointer-events: visible; */
     padding: 15px 8px;
     display: grid;
@@ -808,10 +809,10 @@
     height: 47px;
     width: 257px;
   }
-
+/* 
   .contact-title { 
 
-  }
+  } */
 
   .contact p {
     width: 100%;
@@ -2000,6 +2001,7 @@ margin-top:0px;
 
 #gmail-view {
   background: white;
+  color: #777777;
 }
 
 .gmail {
@@ -2065,7 +2067,7 @@ margin-top:0px;
 }
 
 .gmail-search {
-  border: black thin solid;
+  border: #777777 thin solid;
   border-radius: 23px;
   padding: 5px 5px 5px 12px;
   margin: 10;
@@ -2536,7 +2538,7 @@ table
   position: relative;
 }
 .fadeout::before {
-  content: '';
+  /* content: ''; */
   width: 100%;
   height: 100%;
   position: absolute;
