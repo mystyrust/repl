@@ -586,12 +586,26 @@
 
 #choiceTime {
     display: inline-block;
-    text-align: center;
+    text-align: left;
     /* width: 366px; */
     width: 100%;
 }
 
-#choice1, #choice2, #choice3 {
+#choice1 span:hover, 
+#choice2 span:hover, 
+#choice3 span:hover {
+    cursor: pointer;
+    /* color: white; */
+    /* background-color: black; */
+    background-image: url(https://i.imgur.com/rHCcinh.png);
+    /* width: 91px; */
+    /* height: 13px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* #choice1, #choice2, #choice3 {
     padding: 10px;
     margin-bottom: 15px;
     border: black;
@@ -601,17 +615,13 @@
 
 #choice2, #choice3 {
     margin-left: 15px;
-}
+} */
 
-#choice1:hover, #choice2:hover, #choice3:hover {
+/* #choice1:hover, #choice2:hover, #choice3:hover {
     cursor: pointer;
     color: white;
     background-color: black;
-}
-
-#youtube-view {
-    background: white;
-}
+} */
 
 /* .titletext , #notebook-line1 {
     font-family: 'Waiting for the Sunrise';

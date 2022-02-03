@@ -24,13 +24,14 @@ $(document).ready(function() {
             $("#"+appScreenId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible"  })
             $("#"+appScreenId).trigger("viewingApp")
 
-            event.preventDefault()
+            // event.preventDefault() // why was this here again?
         } else {
             $("#notification").css({ height: "457px" , opacity: 1, "pointer-events": "visible" })
             $("#notif-backdrop").css({ opacity: 0.5 })
             $("#notification").on('click', closeNotification)
         }
 
+        // track in the notebook if you could / couldnt visit the app
         if (appScreen && appName && !appsVisisted.includes(appName.value))
         {
             appsVisisted.push(appName.value);
@@ -45,52 +46,35 @@ $(document).ready(function() {
             {
                 const text = "Couldn't visit these apps, for some reason"
                 writing($("#appsCouldntVisit-title"), text, "")
-            }
 
-            var displayedText =  $("#appsCouldntVisit").html();
-            var textToDisplay = appsCouldntVisit.join(", ")
-            writing($("#appsCouldntVisit"), textToDisplay, displayedText)
+                var displayedText =  $("#appsCouldntVisit").html();
+                var textToDisplay = appsCouldntVisit.join(", ")
+                setTimeout(() => writing($("#appsCouldntVisit"), textToDisplay, displayedText), ((text.length  + 1 )* 50) )
+            }
+            else {
+                var displayedText =  $("#appsCouldntVisit").html();
+                var textToDisplay = appsCouldntVisit.join(", ")
+                writing($("#appsCouldntVisit"), textToDisplay, displayedText)
+            }
         }
 
-    
+        // once you go to 5 (visitable) apps, present the reader with the choice
+        if (appsVisisted.length == 5)
+        {
+            const choiceText = "I think the phone belongs to..."
+            const choice1 = "Danny Fenton"
+            const choiceConj = "  or  "
+            const choice2 = "Danny Phantom"
+
+            writing($("#choiceText"), choiceText, "")
+
+            setTimeout(() => writing($("#choice1"), choice1, ""), ((choiceText.length + 1) * 50) )
+            setTimeout(() => writing($("#choiceConj"), choiceConj, ""), ((choiceText.length + choiceConj.length + 2) * 50) )
+            setTimeout(() => writing($("#choice2"), choice2, ""), ((choiceText.length + choiceConj.length + choice2.length + 3) * 50) )
+        }
     })
 
-    // notes app nav 
-    // $(".note-preview").click(event => {
-    //     console.log({ event })
-    //     var note = event.currentTarget.attributes['slide-target'];
-    //     if (note)
-    //     {
-    //         var noteId = note.value;
-
-    //         $("#"+noteId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "visible"  })
-    //         $(".notes-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
-    //     }
-    // })
-
-    // $(".note-goback").click(event => {
-    //     $(event.currentTarget.parentElement).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
-    //     $(".notes-list").css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
-    // })
-
-    // phone nav (to and from contacts list) -- mimic for notes, componentize?
-    // $(".contact").click(event => {
-    //     var contact = event.currentTarget.attributes['slide-target'];
-    //     if (contact)
-    //     {
-    //         var contactId = contact.value;
-            
-    //         $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "visible"  })
-    //         $(".phone-list").css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
-
-    //     }
-    // })
-
-    // $(".header-chevron").click(event => {
-    //     $(event.currentTarget.parentElement.parentElement).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
-    //     $(".phone-list").css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
-    // })
-
+    // menu of items with each item visitable -- horizontal slide in / out (not perfect... but meh)
     const slideFromListToItem = (childClickSelector, relativeChildElement, listSelector, gobackSelector) => { 
         $(childClickSelector).click(event => {
             var contact = event.currentTarget.attributes['slide-target'];
@@ -100,19 +84,18 @@ $(document).ready(function() {
                 
                 $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "auto"  })
                 $(listSelector).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
-    
             }
         })
     
         $(gobackSelector).click(event => {
             const relativeChild = eval(relativeChildElement)
             $(relativeChild).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
-            $(listSelector).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden"  })
+            $(listSelector).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "auto"  })
         })
     }
 
-    slideFromListToItem(".contact", "event.currentTarget.parentElement.parentElement", ".phone-list", ".header-chevron")
-    slideFromListToItem(".note-preview", "event.currentTarget.parentElement", ".notes-list", ".note-goback")
+    slideFromListToItem(".contact", "event.currentTarget.parentElement.parentElement", ".phone-list", ".header-chevron") // iMessage
+    slideFromListToItem(".note-preview", "event.currentTarget.parentElement", ".notes-list", ".note-goback") // notes app 
 
     // notebook transitions 
     $(".notebook-cover").one('click', event => {
@@ -137,19 +120,23 @@ $(document).ready(function() {
             $("#notebook-keepOut").css({ opacity: 1 }) 
         }, 1500)
 
+        const titleText = "Who does this phone belong to?"
+        const notebookLine1 = "Let's keep track of all the apps I visited on the phone"
+        const appsVisitedTitle = "Let's visit at least 5 apps"
+
+        // attempt to enforce sequential order / timing...
         setTimeout( () => { 
-            writing($(".titletext"), "Who does this phone belong to?", "")
+            writing($(".titletext"), titleText, "")
         }, 1700)
 
         setTimeout(() => { 
-            writing($("#notebook-line1"), "Let's keep track of all the apps I visited on the phone", "")
-        }, 3500)
+            writing($("#notebook-line1"), notebookLine1, "")
+        }, 1700 + ((titleText.length + 1) * 50))
 
         setTimeout(() => { 
-            writing($("#appsVisited-title"), "Let's visit at least 5 apps", "")
-        }, 5500)
+            writing($("#appsVisited-title"), appsVisitedTitle, "")
+        }, 1700 + ((titleText.length + notebookLine1.length + +2) * 50))
     })
-
 
     const setTime = () => {
         var date = new  Date()
@@ -175,7 +162,7 @@ $(document).ready(function() {
     })
 
     // to do make this a promise or thenable
-    function writing(destination, fullStr, writtenStr)
+    const writing = (destination, fullStr, writtenStr) =>
     {
         if (writtenStr.length < fullStr.length)
         {
@@ -185,13 +172,14 @@ $(document).ready(function() {
             return true
         }
         return false // done writing
+        // im not sure the returns really help with anything here....rip....
     }
 
     // fake calculator on the app store
     $("#app-store-view").on('viewingApp closingApp', event => {
         if (event.type == "viewingApp")
         {
-            setTimeout(() => $(".app-open").css({ display: "block" }) , 500)
+            setTimeout(() => $(".app-open").css({ display: "block" }) , 1000)
         } else if (event.type == "closingApp")
         {
             $(".app-open").css({ display: "none" })
@@ -259,6 +247,7 @@ $(document).ready(function() {
                     $(".privGallery-scroller").css({ position: "absolute" }) 
                     $(".privGallery-goback").css({ opacity: 1 })
                 }, 500)
+                setTimeout(() => $("#calc-view").trigger("secretEnding"), 2000)
             }
         }
         $(".calc-top").scrollTop($(".calc-history").height() + $(".calc-current").height())
@@ -271,5 +260,9 @@ $(document).ready(function() {
 
         $(".privGallery-scroller").css({ position: "relative" }) 
         $(".privGallery-goback").css({ opacity: 0 })
+    })
+
+    $("#calc-view").on('secretEnding', () => {
+        console.log("secret ending unlocked!")
     })
 })

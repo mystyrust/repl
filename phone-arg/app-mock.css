@@ -685,8 +685,9 @@
     display: inline-block;
     transition: all 1s;
     opacity: 0;
-    overflow: auto;
+    overflow: hidden;
     position: relative;
+    pointer-events: none;
   }
 
   .header {
@@ -1406,6 +1407,9 @@ border-radius: 20px;
   /* -------------------- youtube ----------------------- */
 /* mock by jihn https://codepen.io/jihnari/pen/oNWxLPO */
 
+#youtube-view {
+  background: white;
+}
 /*universal*/
 .wrapper {
   position: relative;
@@ -2339,7 +2343,8 @@ margin-top:0px;
   transition: all 1s;
   position: relative;
   opacity: 0;
-  overflow: auto;
+  overflow: hidden;
+  pointer-events: none;
   /* padding: 30px 15px; */
 }
 
