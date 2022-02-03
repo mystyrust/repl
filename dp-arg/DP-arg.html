@@ -1,0 +1,1016 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/> -->
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./scroll.js"></script>
+<script type="text/javascript" src="./phone-mock.js"></script>
+<link href="./phone-mock.css" rel="stylesheet" />
+<link href="./paper.css" rel="stylesheet" />
+<link href="./app-mock.css" rel="stylesheet" />
+
+<div class="phone-arg">
+<!-- <div class="row"> -->
+<!-- <div class="col"> -->
+
+<div class="phone-container">
+    <div class="home-btn"></div>
+    <div class="phone-img"></div>
+    <div class="phone-wallpaper"></div>
+    <img src="https://i.imgur.com/x5OkG01.png" class="phone-crack"/>
+    <!-- <img src="https://i.imgur.com/WGnAPWV.png?1" class="phone-smear" /> -->
+    <img src="https://i.imgur.com/mHadlFO.png" class="phone-splatter" />
+    
+    <div class="phone-status-backdrop"></div>
+    <div class="phone-status">
+        <span id="time"></span>
+        <span class="status-icon">
+            <!-- <img src="https://i.imgur.com/pWTq2eW.png" /> -->
+            <img src="https://i.imgur.com/5PdMObS.png" />
+            <img src="https://i.imgur.com/ZSfMbFj.png" />
+        </span>
+    </div>
+
+    <div class="app-screen-view">
+        <div class="app-screen" id="snapchat-view">
+            
+            <div class="snp-box"><p></p>
+                <div class="snp-header">
+                <img class="snp-avatar" src="https://i.imgur.com/T4kUTXn.png" />
+                <span class="snp-contact">Team 7</span>
+                </div>
+                <div class="snp-body">
+                
+                <div class="snp-timestamp"><p>14 june, 2019</p></div>
+                
+                <p><span class="snp-name-yellow">sakura</span><br />
+                <span class="snp-msg-yellow">hello everyone!</span><br />
+                <br />
+                <span class="snp-name-red">naruto</span><br />
+                <span class="snp-msg-red">sakura-chan, see we're perfect for each other!</span><br />
+                <img class="snp-img-red" src="https://i.imgur.com/cS8zaCw.png" /><br />
+                <br />
+                <span class="snp-name-green">kakashi</span><br />
+                <span class="snp-msg-green">did you just cut me off?!</span><br />
+                <br />
+                <span class="snp-name-blue">sasuke</span><br />
+                <span class="snp-msg-blue">hmpf</span><br />
+                <br />
+                </p>
+                
+                <div class="snp-timestamp"><p>20 june, 2019</p></div>
+                
+                <p><span class="snp-name-red">naruto</span><br />
+                <span class="snp-msg-red">i-i didn't mean to kakashi-sensei!</span><br />
+                </p>
+                </div>
+                <div class="snp-bottom">&nbsp;</div>
+            </div>
+                
+        </div>
+        
+        <div class="app-screen" id="discord-view">
+            <div class="discord darkmode">
+
+                <!-- CHANNEL HEADER -->
+                <div class="channel">
+                    <p><span class="hash">#</span><span class="channelname">channel</span></p>
+                </div>
+            
+                <!-- THE ACTUAL MESSAGES (each new user's messages in a separate block) -->
+                <div class="message">
+                    <!-- USER ICON (the first p tag in every div) -->
+                    <p><img src="https://archiveofourown.org/images/skins/iconsets/default/icon_user.png" /></p>
+                    <!-- MESSAGE (username & timestamp in first line, successive messages separated with br tags -->
+                    <p>
+                        <span class="name role1">user number 1</span> <span class="hide">(</span><span class="timestamp">Yesterday at 11:49 PM</span><span class="hide">)</span><br />
+                        text, plus extra image<br />
+                        <img src="https://i.gyazo.com/2055e3d6d1df280abcd8ceff77f7b59e.jpg" class="large" />
+                    </p>
+                </div>
+            
+                <!-- DATE DIVIDER -->
+                <div class="dateline">
+                    <p>March 12, 2021</p>
+                </div>
+            
+                <div class="message">
+                    <p><img src="https://archiveofourown.org/images/skins/iconsets/default/icon_user.png" /></p>
+                    <p>
+                        <span class="name">numero dos</span> <span class="hide">(</span><span class="timestamp">Today at 1:32 AM</span><span class="hide">)</span><br />
+                        a test of a sample text message that is in fact rather long, perhaps taking up multiple lines, even; it should be a great help in checking if this code is working correctly, no? <span class="edited">(edited)</span>
+                    </p>
+                </div>
+            
+                <div class="message">
+                    <p><img src="https://archiveofourown.org/images/skins/iconsets/default/icon_user.png" /></p>
+                    <p>
+                        <span class="name role10">numero dos</span> <span class="hide">(</span><span class="timestamp">Today at 1:34 AM</span><span class="hide">)</span><br />
+                        and here's a <a>link</a> along with a <a class="ping">@ping</a>, for good measure!
+                    </p>
+                </div>
+            
+                <div class="message">
+                    <p><img src="https://media1.tenor.com/images/2d13ede25b31d946284eaa3b8a4e6b31/tenor.gif?itemid=11990658" /></p>
+                    <p>
+                        <span class="name role10">numero tres</span> <span class="hide">(</span><span class="timestamp">MM/DD/YYYY</span><span class="hide">)</span><br />
+                        <a href="https://tenor.com/view/cat-love-huge-hug-big-gif-11990658">https://tenor.com/view/cat-love-huge-hug-big-gif-11990658</a><br /><img src="https://media1.tenor.com/images/2d13ede25b31d946284eaa3b8a4e6b31/tenor.gif?itemid=11990658" />
+                    </p>
+                </div>
+            
+                <!-- FILE UPLOAD AND TYPING LINE -->
+                <div>
+                    <!-- TYPING LINE: if you want this left empty, replace the text "hey, ... names" with "Message #your-channel-here", and make the p tag's class "placeholder". See lightmode for example of this -->
+                    <p><span class="hide">[Typing: </span></p>
+                </div>
+            
+        </div>            
+        </div>
+
+        <div class="app-screen" id="imsg-view">
+            <div class="phone-list">
+                <div class="contact-header"></div>
+                <!-- <div class="contact-title">Messages</div> -->
+                
+                <div class="contact" slide-target="contact1">
+                    <p><img src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="contact-name">Mom</span> 
+                        <span class="contact-time">Saturday</span> <br>
+                        <span class="contact-msg">text, plus extra image </span>
+                    </p>
+                </div>
+                <div class="contact" slide-target="contact2">
+                    <p><img src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="contact-name">Dad</span> 
+                        <span class="contact-time">Saturday</span> <br>
+                        <span class="contact-msg">text, plus extra image </span>
+                    </p>
+                </div>
+                <div class="contact">
+                    <p><img src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="contact-name">Contact Name</span> 
+                        <span class="contact-time">Saturday</span> <br>
+                        <span class="contact-msg">text, plus extra image </span>
+                    </p>
+                </div>
+            </div>
+
+            <div class="phone" id="contact1">
+            <p class="messagebody">
+                <span class="header">Mom</span>
+                <span class="header-chevron"></span>
+                <br /><br />
+                <span class="time"><b>Yesterday</b> 10:15 PM</span><br />
+                <span class="text">Can you call me as soon as you get this message?</span><br />
+                <span class="time"><b>Today</b> 9:05 AM</span><br />
+                <span class="text">Hello?</span><br />
+                <span class="text">Are you going to answer me?</span><br />
+                <span class="breply">iOS reply</span><br><br>
+                <span class="breply">iOS reply</span><br><br>
+                <span class="breply">iOS reply</span><br><br>
+                <span class="time"><b>Yesterday</b> 10:15 PM</span><br />
+                <span class="text">Can you call me as soon as you get this message?</span><br />
+                <span class="time"><b>Today</b> 9:05 AM</span><br />
+                <span class="text">Hello?</span><br />
+                <span class="text">Are you going to answer me?</span><br />
+                <span class="breply">iOS reply</span><br><br>
+                <span class="breply">iOS reply</span><br><br>
+                <span class="breply">iOS reply</span><br><br>
+                </p>
+            </div>
+
+            <div class="phone" id="contact2">
+                <p class="messagebody">
+                    <span class="header">Dad</span>
+                    <span class="header-chevron"></span>
+                    <br /><br />
+                    <span class="time"><b>Yesterday</b> 10:15 PM</span><br />
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    <span class="breply">iOS reply</span><br><br>
+                    </p>
+            </div>
+        </div>
+
+        <div class="app-screen" id="calc-view">
+            <div class="calc-functions">
+            <div class="calc-top">
+                <div class="calc-history">
+                    <p class="calc-exp">1 + 1</p>
+                    <p class="calc-ans">2</p>
+                    <p class="calc-exp">1 + 1</p>
+                    <p class="calc-ans">2</p>
+                    <p class="calc-exp">1 + 1</p>
+                    <p class="calc-ans">2</p>
+                </div>
+                <div class="calc-current">
+                    <p class="calc-exp">1</p>
+                    <p class="calc-ans"></p>
+                </div>
+            </div>
+            <div class="calc-bottom container">
+                <div class="row">
+                    <div class="col calc-btn calc-op">(</div>
+                    <div class="col calc-btn calc-op">)</div>
+                    <div class="col calc-btn calc-op">√</div>
+                    <div class="col calc-btn calc-op">/</div>
+                </div>
+                <div class="row">
+                    <div class="col calc-btn">7</div>
+                    <div class="col calc-btn">8</div>
+                    <div class="col calc-btn">9</div>
+                    <div class="col calc-btn calc-op">*</div>
+                </div>
+                <div class="row">
+                    <div class="col calc-btn">4</div>
+                    <div class="col calc-btn">5</div>
+                    <div class="col calc-btn">6</div>
+                    <div class="col calc-btn calc-op">-</div>
+                </div>
+                <div class="row">
+                    <div class="col calc-btn">1</div>
+                    <div class="col calc-btn">2</div>
+                    <div class="col calc-btn">3</div>
+                    <div class="col calc-btn calc-op">+</div>
+                </div>
+                <div class="row">
+                    <div class="col calc-btn">0</div>
+                    <div class="col calc-btn">.</div>
+                    <div class="col calc-btn calc-op" id="calc-back"><img src="https://i.imgur.com/VUqIb8o.png"/></div>
+                    <div class="col calc-btn calc-op">=</div>
+                </div>
+
+            </div>
+            </div>
+            <div class="calc-priv">
+                <img src="https://i.imgur.com/qKl4Utl.png" class="privGallery-goback"/>
+                <div class="privGallery-wrapper">
+                    <div id="privGallery-item1" class="privGallery-item"><div class="privGallery-item-child note">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </div> </div>
+                    <div id="privGallery-item2" class="privGallery-item"><img class="privGallery-item-child" src="https://i.imgur.com/mmblOnK.png" /></div>
+                    <div id="privGallery-item3" class="privGallery-item"><img class="privGallery-item-child" src="https://i.imgur.com/w6K18vF.jpg" /></div>
+                    <div id="privGallery-item4" class="privGallery-item"><img class="privGallery-item-child" src="https://i.imgur.com/JdMhgLJ.png" /></div>
+                </div>
+                <div class="privGallery-scroller">
+                    <div scroll-target="privGallery-item1"></div>
+                    <div scroll-target="privGallery-item2"></div> 
+                    <div scroll-target="privGallery-item3"></div> 
+                    <div scroll-target="privGallery-item4"></div> 
+                </div>
+            </div>
+        </div>
+
+        <div class="app-screen" id="google-maps-view">
+            <img class="map-search" src="https://i.imgur.com/s5nxLax.png" />
+            <div class="mapImg">
+                <img ondragstart="return false" id="drag-img" src="https://i.imgur.com/j20VOPH.png" />
+            </div>
+            <span class="btn-holder-zoomin"><img id="zoomin" src="https://i.imgur.com/57w4BNW.png" /></span>
+            <span class="btn-holder-zoomout"><img id="zoomout" src="https://i.imgur.com/1gkGQNx.png" /> </span>
+        </div>
+
+        <div class="app-screen" id="reddit-view">
+            <div class="rd-font">
+                <!-- intro -->
+                <p class="rd-name">r/LookingForOpinion</p>
+                <p class="rd-small padding-left-20"><strong>houstonj1209 </strong> <span class="rd-gray-text">· 22h ago </span></p>
+                <p class="rd-header">Forced quirk suppression/removal? </p>
+                  <p>
+                What does everyone else think about forced quirk suppression? I mean, obviously Prelude is pretty radical, but does he have a point? Wouldn't the truest equality be to remove everyone's quirk, for everyone to have the same base? 
+                  </p>
+                <p class ="rd-div1">
+                  <span class="rd-bubble"><img class="rd-arrow-up" src="https://github.com/jihnari/QAB/raw/main/img/rd-arrow.jpg"> <span class="rd-arrow-text"> 353</span> <img class="rd-arrow-down" src="https://github.com/jihnari/QAB/raw/main/img/rd-arrow.jpg"></img></span> <span class="rd-bubble"> <img class="rd-arrow-up" src="https://github.com/jihnari/QAB/raw/main/img/rd-comment.jpg"></img><span class="rd-arrow-text"> 30 </span></span>
+                  </p>
+                  <p class="rd-sortby"><strong>30 Comments</strong> sorted by <strong>Best</strong><span class="rd-down-arrow"></span> </p>
+                <!-- <p class=rd-signup-box>Login or sign up to leave a comment</p> -->
+                
+                
+                <!-- comment -->
+                <p class="rd-vr rd-div2"> <span class=rd-small><strong>preReflecting </strong><span class="rd-gray-text"> 10h</span></span><span class="rd-elispes">...</span> <br/>
+                I'll probably be downvoted to hell, but this is what I've been thinking too. edit: Guess I'm not as alone as I thought...
+                <br/><img class="rd-vote" src="https://github.com/jihnari/QAB/raw/main/img/rd-vote-reply.jpg"></img>
+                
+                <!-- comment -->
+                <p class="rd-vr rd-div2"> <span class=rd-small><strong>reg_g_4 </strong><span class="rd-gray-text"> 19h </span></span><span class="rd-elispes">...</span> <br/>
+                I don't disagree that we could "level the playing field" if everyone's quirks were taken out of the equation, but what are you going to do? Forcefully take away quirks people were BORN with? 
+                <br/><img class="rd-vote" src="https://github.com/jihnari/QAB/raw/main/img/rd-vote-reply.jpg"></img>
+                <p class ="rd-div2">
+                
+                
+                <!-- comment w/ reply -->
+                <span class=rd-small><strong> Shuttai </strong><span class="rd-gray-text"> 4h </span></span> <br/>
+                People would find things to discriminate about even without quirks. Think about skin color, ethnicity, sex, height, IQ. I don't mean to speak directly against Prelude's personal ideals, but IMO removing people's quirks will in no way make the world a better place. All you're doing is trying to take away something that most people identify, consciously or unconsciously, as an integral part of themselves. 
+                <br/><br/>
+                I've had the opportunity to personally interview people who have unfortunately lost their quirk due to various circumstances. The majority of them are listless and have difficulty concentrating. Difficulty holding down a job. They often develop depression and some fall into suicidal idealization. This INCLUDES people who were documented as saying quirk didn't really matter to them, and that even before they lost it they didn't use it much. They claimed they wouldn't, and didn't, miss their quirk. 
+                <br/><br/>
+                I'm also not saying people without quirks are useless; I'm saying that quirks are embedded in DNA, and removing the quirk from a person can have INCREDIBLY unknown and unintended side effects, and that this is a much more complicated issue than people have recently been making it out to be. 
+                <br/>
+                  <img class="rd-vote" src="https://github.com/jihnari/QAB/raw/main/img/rd-vote-reply.jpg"></img>
+                <span class="rd-vr1"> <span class="rd-small"><span class="rd-op">houstonj1209</span><span class="rd-gray-text"> 2h</span></span> <br/>
+                OMG IT'S YOU <br/>
+                IT'S QUIRK JESUS IN THE FLESH 
+                <br/><img class="rd-vote" src="https://github.com/jihnari/QAB/raw/main/img/rd-vote-reply.jpg">
+                
+                  <span class="rd-vr1"> <span class="rd-small"><strong>Shuttai </strong><span class="rd-gray-text"> 2h</span></span> <br/>
+                I am begging you, please stop calling me that 
+                <br/><img class="rd-vote" src="https://github.com/jihnari/QAB/raw/main/img/rd-vote-reply.jpg"></img><br/>
+                
+                <span class="rd-small"><strong>WhaleSong32</strong><span class="rd-gray-text"> 2h </span></span> <br/>
+                QUIRK JESUS HAS SPOKEN 
+                <br/><img class="rd-vote" src="https://github.com/jihnari/QAB/raw/main/img/rd-vote-reply.jpg"></img><br/>
+                
+                
+                <span class="rd-small"><strong>worm_with_legs</strong><span class="rd-gray-text"> 2h </span></span> <br/>
+                LONG LIVE QUIRK JESUS
+                <br/><img class="rd-vote" src="https://github.com/jihnari/QAB/raw/main/img/rd-vote-reply.jpg"></img>
+                
+                </span>
+                
+                <span class="rd-small"><strong>officialbimbo</strong><span class="rd-gray-text"> 3h </span></span> <br/>
+                QUIRK JESUS HAS SPOKEN 
+                <br/><img class="rd-vote" src="https://github.com/jihnari/QAB/raw/main/img/rd-vote-reply.jpg"></img><br/>
+                <span class=rd-small><b>12 more replies</b></span>
+                </span>
+                </p>
+                
+                <!-- outro -->
+                <p class="rd-view-box">VIEW All 30 COMMENTS</p>
+            </div>
+        </div>
+
+        <div class="app-screen" id="twitter-view">
+            <div class="tw-profile-container">
+                <p class="tw-banner">
+                    <span><img class="tw-banner-avatar" src="https://i.imgur.com/3Wci28o.png"></span>
+                </p>
+            
+                <p class="tw-profile-opts">
+                    <span><img src="https://img.icons8.com/ios-glyphs/30/000000/dots-loading--v1.png"/></span>
+                    <span><img src="https://img.icons8.com/material-outlined/30/000000/mail.png"/></span>
+                    <span class="tw-follow">Follow</span>
+                </p>
+            
+                <p class="tw-profile-bio">
+                    <span class="tw-profile-username"> dani phantom  </span> <br />
+                    <span class="tw-profile-handle">@danielleven </span> <br />
+                    <span class="tw-profile-info">just surfing the world wide weab</span> <br />
+                    <span class="tw-profile-stats"><img src="https://img.icons8.com/windows/25/000000/calendar.png"/> 
+                        <span>Joined Jan 2020</span> </span> <br />
+                    <span class="tw-profile-handle">Not followed by anyone you're following</span>
+                </p>
+            
+                <div class="tw-profile-tabs">
+                    <p><span class="tw-selected">Tweets</span>
+                    <span>Tweets & Replies</span>
+                    <span>Media</span>
+                    <span>Likes</span></p>
+                </div>
+                
+                <div class="fadeout">
+                    <div class="new-tw tw-profile-tweet">
+                        <div class="new-twUser"> <p>
+                            <img class="new-twAvatar" src="https://i.imgur.com/3Wci28o.png">
+                            <span>dani phantom<br/>
+                            <span class="new-twHandle">@danielleven</span></span>
+                            <img class="new-twFollow" src="https://img.icons8.com/ios-glyphs/30/000000/dots-loading--v1.png">
+                        </p>
+                        </div>
+                        <div class="new-twText">Anime goal: to watch all of one piece - yes I've already seen all of jojos very bizarre much adventure</div>
+                        <div class="new-twStats"> ❤ 9 <span class="new-twTime">Jan 2, 2021</span></div>
+                    </div>
+                    
+                    <div class="new-tw tw-profile-tweet">
+                        <div class="new-twUser"> <p>
+                            <img class="new-twAvatar" src="https://i.imgur.com/3Wci28o.png">
+                            <span>dani phantom<br/>
+                            <span class="new-twHandle">@danielleven</span></span>
+                            <img class="new-twFollow" src="https://img.icons8.com/ios-glyphs/30/000000/dots-loading--v1.png">
+                        </p>
+                        </div>
+                        <div class="new-twText">Travel goal: to jojo pose in every real world country that every jojo has ever jojo posed - and to have a more bizarre adventure than all the jojos</div>
+                        <div class="new-twStats"> ❤ 10 <span class="new-twTime">Oct 25, 2020</span></div>
+                    </div>
+                    
+                    <div class="new-tw tw-profile-tweet">
+                        <div class="new-twUser"> <p>
+                            <img class="new-twAvatar" src="https://i.imgur.com/3Wci28o.png">
+                            <span>dani phantom<br/>
+                            <span class="new-twHandle">@danielleven</span></span>
+                            <img class="new-twFollow" src="https://img.icons8.com/ios-glyphs/30/000000/dots-loading--v1.png">
+                        </p>
+                        </div>
+                        <div class="new-twText">FoundFamily found family fOUND FAMILY thinking about found family good trope good soup</div>
+                        <div class="new-twStats"> ❤ 17 <span class="new-twTime">July 13, 2020</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-screen" id="youtube-view">
+            
+            <div class="yt-font">
+
+            <div class="wrapper">
+            <div> <img class="yt-vid-img" src="https://media.comicbook.com/2020/03/hawks-1212728.jpeg"></div>  
+            <div class=yt-red-line-50></div>  
+            <!-- <div class=hold-audio><audio class=testaudio src="https://archive.org/download/oalc-part-iii-podfic-ch-01/OaLC%20Part%20III%20-%20Ch%2001.mp3" controls="controls" crossorigin="anonymous" preload="metadata"></audio></div> -->
+            </div>
+            
+
+            <p class="yt-title-shift"> <span class="yt-title">Hawks is the best and here's why</span> <br/>
+            <span class="yt-views-text">1M views </span></p>
+            <p></p>
+
+            <p class=shift-up><img class=stay src="https://cdn.discordapp.com/attachments/387318898174984195/853499033146753024/Screenshot_20210612-215104_YouTube_Blue.jpg"></p>
+            <p class=shift-up><span class=yt-stats> 190k </span><span class=yt-stats> 200</span></p>
+
+            <p class="yt-border-top-bottom-gray clear2"><span class="yt-sub-button">SUBSCRIBE</span>
+            <span class="left dot"></span>
+            <span class=left><strong>Hawksluver123</strong><br/><span class="text-color-lgray text-size-8">200k subscribers</span></span>
+            </p> 
+            
+            <p class="yt-border-top-bottom-gray yt-bg-gray">
+            Remember to keep comments respectful and to follow our <span class=yt-link><a href="https://support.google.com/youtube/answer/9288567?hl=en">Community Guidelines</a></span></p>
+
+            <p> Comments <span class=text-gray>1k</span></p>
+            <p class="yt-comment"><span class="yt-floatdot"></span><span class="yt-add-comment"> <br/>Add a public comment...</span></p>
+            
+                <p class="yt-comment">
+            <span class="yt-floatdot"></span>
+            <span class="stay-block"><span class="text-color-lgray text-size-8">midoriya &middot; 2 months ago</span><br/>
+            hawks ISNT that great :/<br/><br/>
+            <br/>100 REPLIES</span>
+            </p>
+
+                <p class="yt-comment">
+            <span class="yt-floatdot"></span>
+            <span class="stay-block"><span class="text-color-lgray text-size-8">midoriya &middot; 2 months ago</span><br/>
+            hawks isnt that great :/<br/><br/>
+            <br/>100 REPLIES</span>
+            </p>
+            
+            <p class="clear"></p><p class="yt-comment">
+            <span class="yt-floatdot"></span><span class="stay-block"><span class="text-color-lgray text-size-8">Takeshi Tarou &middot; 6 months ago</span><br/>
+            yum ;) but do we have the same problem we had before where wrapping text breaks things? ugh, we do. <br/><br/>
+            <br/>356 REPLIES</span>
+            </p>
+                <p class="clear"></p><p class="yt-comment">
+            <span class="yt-floatdot"></span><span class="stay-block"><span class="text-color-lgray text-size-8">Takeshi Tarou &middot; 6 months ago</span><br/>
+            yum ;) but do we have the same problem we had before where wrapping text breaks things? ugh, we do. <br/><br/>
+            <br/>356 REPLIES</span>
+            </p>
+            
+            
+            </div>
+
+
+        </div>
+
+        <div class="app-screen" id="tumblr-view">
+            <div class="tungle">
+                <p class="tunglebody">
+                <span class="tungleurl">phyripo </span><img class="reblog" src="http://i.imgur.com/AEaCuxO.png" /><span class="reblogurl"> kuchlkastl7</span>
+                <span class="reblogorigin">
+                <span class="reblogheader">
+                <img class="reblogicon" src="http://i.imgur.com/UwnKlXj.jpg" /> <span class="sourceurl">battle-tosti</span>
+                </span>
+                <span class="reblogtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </span>
+                
+                </span>
+                
+                <span class="reblogorigin">
+                <span class="reblogheader">
+                <img class="reblogicon" src="http://i.imgur.com/9z4Us0g.jpg" /> <span class="sourceurl">kuchlkastl7</span>
+                </span>
+                <span class="reblogtext">
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                </span>
+                
+                </span>
+                <span class="tungletags">
+                <span class="tungletag">Source: battle-tosti</span>
+                </span>
+                <span class="tungletags">
+                <span class="tungletag">#here is a tag</span><span class="tungletag">#and here is Another Tag</span> <span class="tungletag">#tags tags tags tags tags tags tagstagstagstagstags</span>
+                </span>
+                
+                <span class="tunglenotes">
+                3,035,204 notes
+                </span>
+                
+                <img class="tungleicons" src="http://i.imgur.com/LWKqh4u.png" />
+                </p></div>
+
+            <div class="tungle">
+
+                <p class="tunglebody">
+                
+                <span class="tungleurl">phyripo</span>
+                
+                <span class="tunglechat">
+                <span class="tungleline"><strong>Lorem ipsum:</strong> dolor sit amet</span>
+                <span class="tungleline"><strong>consectetur:</strong> adipiscing elit</span>
+                <span class="tungleline"><strong>sed do eiusmod tempor:</strong> incididunt ut </span>
+                <span class="tungleline"><strong>labore:</strong> et dolore magna aliqua</span>
+                </span>
+                
+                <span class="tungletags">
+                <span class="tungletag">#here is a tag</span><span class="tungletag">#and here is Another Tag</span> <span class="tungletag">#tags tags tags tags tags tags tagstagstagstagstags</span>
+                </span>
+                
+                <span class="tunglenotes">
+                3,035,204 notes
+                </span>
+                
+                <img class="tungleicons" src="http://i.imgur.com/LWKqh4u.png" />
+                </p></div>
+
+            <div class="tungle">
+
+                    <p class="tunglebody">
+                    
+                    <span class="tungleurl">phyripo</span>
+                    
+                    <span class="tungleask">
+                    <span class="tungleasker"><b>kuchlkastl7</b> asked:</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?
+                    <span class="tungleasktip"></span></span><img class="tungleaskicon" src="http://i.imgur.com/9z4Us0g.jpg" />
+                    
+                    <span class="tungletext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </span>
+                    
+                    </span>
+                    
+                    <span class="tungletags">
+                    <span class="tungletag">#here is a tag</span><span class="tungletag">#and here is Another Tag</span> <span class="tungletag">#tags tags tags tags tags tags tagstagstagstagstags</span>
+                    </span>
+                    
+                    <span class="tunglenotes">
+                    3,035,204 notes
+                    </span>
+                    
+                    <img class="tungleicons" src="http://i.imgur.com/LWKqh4u.png" />
+                </p></div>
+        
+            <div class="tungle">
+
+                    <p class="tunglebody">
+                    
+                    <span class="tungleurl">phyripo</span>
+                    
+                    <img class="tungleimg" src="http://i.imgur.com/UwnKlXj.jpg" />
+                    
+                    <span class="tungletext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </span>
+                    
+                    <span class="tungletext">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </span>
+                    
+                    <span class="tungletags">
+                    <span class="tungletag">#here is a tag</span><span class="tungletag">#and here is Another Tag</span> <span class="tungletag">#tags tags tags tags tags tags tagstagstagstagstags</span>
+                    </span>
+                    
+                    <span class="tunglenotes">
+                    3,035,204 notes
+                    </span>
+                    
+                    <img class="tungleicons" src="http://i.imgur.com/LWKqh4u.png" />
+                </p></div>
+            
+            <div class="tungle">
+
+                    <p class="tunglebody">
+                    
+                    <span class="tungleurl">phyripo</span>
+                    
+                    <img class="tungleimg" src="http://i.imgur.com/UwnKlXj.jpg" />
+                    <img class="tungleimg" src="http://i.imgur.com/UwnKlXj.jpg" />
+                    
+                    <span class="tungletext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </span>
+                    
+                    <span class="tungletext">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </span>
+                    
+                    <span class="tungletags">
+                    <span class="tungletag">#here is a tag</span><span class="tungletag">#and here is Another Tag</span> <span class="tungletag">#tags tags tags tags tags tags tagstagstagstagstags</span>
+                    </span>
+                    
+                    <span class="tunglenotes">
+                    3,035,204 notes
+                    </span>
+                    
+                    <img class="tungleicons" src="http://i.imgur.com/LWKqh4u.png" />
+                </p></div>
+
+            <div class="tungle">
+
+                    <p class="tunglebody">
+                    
+                    <span class="tungleurl">phyripo</span>
+                    
+                    <img class="tungletwo_one" src="http://i.imgur.com/UwnKlXj.jpg" />
+                    <img class="tungletwo_two" src="http://i.imgur.com/A8HG5M2.jpg" />
+                    <img class="tungletwo_three" src="http://i.imgur.com/A8HG5M2.jpg" />
+                    <img class="tungletwo_four" src="http://i.imgur.com/UwnKlXj.jpg" />
+                    <img class="tunglethree_one" src="http://i.imgur.com/UwnKlXj.jpg" />
+                    <img class="tunglethree_two" src="http://i.imgur.com/A8HG5M2.jpg" />
+                    <img class="tunglethree_three" src="http://i.imgur.com/UwnKlXj.jpg" />
+                    
+                    <span class="tungletext">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </span>
+                    
+                    <span class="tungletext">
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </span>
+                    
+                    <span class="tungletags">
+                    <span class="tungletag">#here is a tag</span><span class="tungletag">#and here is Another Tag</span> <span class="tungletag">#tags tags tags tags tags tags tagstagstagstagstags</span>
+                    </span>
+                    
+                    <span class="tunglenotes">
+                    3,035,204 notes
+                    </span>
+                    
+                    <img class="tungleicons" src="http://i.imgur.com/LWKqh4u.png" />
+                </p></div>
+      
+        </div>
+
+        <div class="app-screen" id="gmail-view">
+            <div>
+                <div class="gmail-search">
+                    <img class="gmail-menu1" src="https://i.imgur.com/19Pg8u8.png" />
+                    <span>Search in mail</span>
+                </div>
+                <span class="gmail-inbox">Inbox</span>
+                <div class="gmail gmail-unread">
+                    <p><img class="gmail-pic" src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="gmail-name">Announcement: Grades</span> 
+                        <span class="gmail-time">1 day ago</span> <br>
+                        <span class="gmail-msg">Google </span> <br />
+                        <span class="gmail-msg">Mr. Falluca posted: "students, please check your grades on your classroom settings."</span>
+                        <img class="gmail-star" src="https://i.imgur.com/l7638gy.png" />
+                    </p>
+                </div>
+                <div class="gmail gmail-unread">
+                    <p><img class="gmail-pic" src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="gmail-name">Edward Lancer</span> 
+                        <span class="gmail-time">1 day ago</span> <br>
+                        <span class="gmail-msg"> Homework extension </span> <br />
+                        <span class="gmail-msg"> Mr. Fenton, as per our conversation, your... </span>
+                        <img class="gmail-star" src="https://i.imgur.com/toPFmcy.png" />
+                    </p>
+                </div>
+                <div class="gmail gmail-unread">
+                    <p><img class="gmail-pic" src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="gmail-name">Edward Lancer</span> 
+                        <span class="gmail-time">1 day ago</span> <br>
+                        <span class="gmail-msg">Test Reschedule </span> <br />
+                        <span class="gmail-msg"> Your test is rescheduled for next week. This is your last... </span>
+                        <img class="gmail-star" src="https://i.imgur.com/toPFmcy.png" />
+                    </p>
+                </div>
+                <div class="gmail">
+                    <p><img class="gmail-pic" src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="gmail-name">CraigsList</span> 
+                        <span class="gmail-time">1 day ago</span> <br>
+                        <span class="gmail-msg">Cengage Chemistry </span> <br />
+                        <span class="gmail-msg">yeh i got the book i can sell for $10 </span>
+                        <img class="gmail-star" src="https://i.imgur.com/l7638gy.png" />
+                    </p>
+                </div>
+                <div class="gmail gmail-unread">
+                    <p><img class="gmail-pic" src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="gmail-name">Amazon</span> 
+                        <span class="gmail-time">1 day ago</span> <br>
+                        <span class="gmail-msg">Your favorite item is out of stock </span> <br />
+                        <span class="gmail-msg">The item you favorited, "Cengage Chemistry" is out of...</span>
+                        <img class="gmail-star" src="https://i.imgur.com/l7638gy.png" />
+                    </p>
+                </div>
+                <div class="gmail">
+                    <p><img class="gmail-pic" src="https://i.imgur.com/Uvpu8pv.png" /></p>
+                    <p>
+                        <span class="gmail-name">Lance Thunder</span> 
+                        <span class="gmail-time">1 day ago</span> <br>
+                        <span class="gmail-msg">Interview </span> <br />
+                        <span class="gmail-msg">Thank you for confirming for your Channel 7 evening interview next week!</span>
+                        <img class="gmail-star" src="https://i.imgur.com/l7638gy.png" />
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-screen" id="gallery-view">
+            <div class="gallery-wrapper">
+                <!-- <div id="gallery-item1" class="gallery-item"><div class="gallery-item-child note">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." </div> </div> -->
+                <div id="gallery-item2" class="gallery-item"><img class="gallery-item-child" src="https://i.imgur.com/mmblOnK.png" /></div>
+                <div id="gallery-item3" class="gallery-item"><img class="gallery-item-child" src="https://i.imgur.com/w6K18vF.jpg" /></div>
+                <div id="gallery-item4" class="gallery-item"><img class="gallery-item-child" src="https://i.imgur.com/JdMhgLJ.png" /></div>
+            </div>
+            <div class="gallery-scroller">
+                <!-- <div scroll-target="gallery-item1"></div> -->
+                <div scroll-target="gallery-item2"></div> 
+                <div scroll-target="gallery-item3"></div> 
+                <div scroll-target="gallery-item4"></div> 
+            </div>
+        </div>
+
+        <div class="app-screen" id="app-store-view">
+            <p class="app-open">Open</p>
+            <img src="https://cdn.discordapp.com/attachments/835971371828903953/937937236098428979/Untitled_Artwork.png" />
+        </div>
+
+        <div class="app-screen" id="amazon-view">
+            <img src="https://cdn.discordapp.com/attachments/835971371828903953/937927129113432084/Untitled_Artwork.png" />
+        </div>
+
+        <div class="app-screen" id="clock-view">
+            <img class="alarm-header-img"src="https://i.imgur.com/BujuIQ1.png" />
+            <div class="alarm-header">Other</div>
+            <div class="alarm-obj alarm-off">
+                <div class="alarm-time">1:11 <span>PM</span></div>
+                <div class="alarm-label">Alarm label, every Xday</div>
+                <div class="alarm-switch"></div>
+            </div>
+            <div class="alarm-obj alarm-on">
+                <div class="alarm-time">1:11 <span>PM</span></div>
+                <div class="alarm-label">Alarm label, every Xday</div>
+                <div class="alarm-switch"></div>
+            </div>
+            <div class="alarm-obj alarm-on">
+                <div class="alarm-time">1:11 <span>PM</span></div>
+                <div class="alarm-label">Alarm label, every Xday</div>
+                <div class="alarm-switch"></div>
+            </div>
+            <div class="alarm-obj alarm-on">
+                <div class="alarm-time">1:11 <span>PM</span></div>
+                <div class="alarm-label">Alarm label, every Xday</div>
+                <div class="alarm-switch"></div>
+            </div>
+            <div class="alarm-obj alarm-on">
+                <div class="alarm-time">1:11 <span>PM</span></div>
+                <div class="alarm-label">Alarm label, every Xday</div>
+                <div class="alarm-switch"></div>
+            </div>
+            <img class="alarm-footer-img" src="https://i.imgur.com/rmmhGqi.png" />
+        </div>
+
+        <div class="app-screen" id="notes-view">
+            <div class="notes-list">
+                <p class=notes-list-header1>
+                    Notes
+                    <img src="https://i.imgur.com/R5iKSnH.png" />
+                </p>
+                <div class="note-preview" slide-target="note1">
+                    <span class="note-title">Note1</span>
+                    <span class="note-text1">notes beginning</span>
+                </div>
+                <div class="note-preview" slide-target="note2">
+                    <span class="note-title">Note2</span>
+                    <span class="note-text1">notes beginning</span>
+                </div>
+            </div>
+
+            <div class="notes-item" id="note1">
+                <div class="note-goback"></div>
+                <div class="note-item-title">Note1</div>
+                <div class="note-item-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+            <div class="notes-item" id="note2">
+                <div class="note-goback"></div>
+                <div class="note-item-title">Note2</div>
+                <div class="note-item-content">Note2Note2Note2Note2Note2 Note2 Note2 Note2ctbore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+            </div>
+        </div>
+
+        <div class="app-screen" id="chrome-view">
+            
+            <div class=ch-header>
+                <span class=ch-title>History</span> 
+                <image class=ch-search-icon src=https://cdn.discordapp.com/attachments/387318898174984195/935395771820421170/Screenshot_20220124-204826_Chrome.jpg></image>
+                
+                <p class=ch-sub-header>Clear browsing data...</p>
+              </div>
+              
+              <p class=ch-date> Today - Sept 12, 20X4 </p>
+              
+              <div class="fadeout">
+              <div class="ch-table">
+              <div class=ch-row>
+                <div class=ch-dot-cell><span class=ch-dot></span></div>
+              <div class=ch-site-cell>
+                <span class=ch-page-name> from a thing that will run of the page hopefully</span> 
+                <span class=ch-page-link>www.link.com</span>
+              </div>
+              <div class=ch-x-cell>
+              <image class=ch-x src="https://cdn.discordapp.com/attachments/387318898174984195/935395771606528030/Screenshot_20220124-204841_Chrome.jpg"/></image>
+              </div>
+                </div>
+              
+              <div class=ch-row>
+              <div class=ch-dot-cell><span class=ch-dot></span></div>
+              <div class=ch-site-cell>
+                <span class=ch-page-name> normal thing</span> 
+                <span class=ch-page-link>www.link.com</span>
+              </div>
+              <div class=ch-x-cell>
+              <image class=ch-x src="https://cdn.discordapp.com/attachments/387318898174984195/935395771606528030/Screenshot_20220124-204841_Chrome.jpg"/></image>
+              </div>
+              </div>
+              
+              <div class=ch-row>
+              <div class=ch-dot-cell><span class=ch-dot></span></div>
+              <div class=ch-site-cell>
+                <span class=ch-page-name> from a thing that will run of the page hopefully, see it works! yay!</span> 
+                <span class=ch-page-link>www.different.link.com</span>
+              </div>
+              <div class=ch-x-cell>
+              <image class=ch-x src="https://cdn.discordapp.com/attachments/387318898174984195/935395771606528030/Screenshot_20220124-204841_Chrome.jpg"/></image>
+              </div>
+              </div>
+              
+              <div class=ch-row>
+              <div class=ch-dot-cell><span class=ch-dot></span></div>
+              <div class=ch-site-cell>
+                <span class=ch-page-name> from a thing that will run of the page hopefully</span> 
+                <span class=ch-page-link>www.link.com</span>
+              </div>
+              <div class=ch-x-cell>
+              <image class=ch-x src="https://cdn.discordapp.com/attachments/387318898174984195/935395771606528030/Screenshot_20220124-204841_Chrome.jpg"/></image>
+              </div>
+              </div>
+              
+              <div class=ch-row>
+              <div class=ch-dot-cell><span class=ch-dot></span></div>
+              <div class=ch-site-cell>
+                <span class=ch-page-name> from a thing that will run of the page hopefully</span> 
+                <span class=ch-page-link>www.link.com</span>
+              </div>
+              <div class=ch-x-cell>
+              <image class=ch-x src="https://cdn.discordapp.com/attachments/387318898174984195/935395771606528030/Screenshot_20220124-204841_Chrome.jpg"/></image>
+              </div>
+              </div>
+              
+              <div class=ch-row>
+              <div class=ch-dot-cell><span class=ch-dot></span></div>
+              <div class=ch-site-cell>
+                <span class=ch-page-name> from a thing that will run of the page hopefully</span> 
+                <span class=ch-page-link>www.link.com</span>
+              </div>
+              <div class=ch-x-cell>
+              <image class=ch-x src="https://cdn.discordapp.com/attachments/387318898174984195/935395771606528030/Screenshot_20220124-204841_Chrome.jpg"/></image>
+              </div>
+              </div>
+              
+              <div class=ch-row>
+              <div class=ch-dot-cell><span class=ch-dot></span></div>
+              <div class=ch-site-cell>
+                <span class=ch-page-name> from a thing that will run of the page hopefully</span> 
+                <span class=ch-page-link>www.link.com</span>
+              </div>
+              <div class=ch-x-cell>
+              <image class=ch-x src="https://cdn.discordapp.com/attachments/387318898174984195/935395771606528030/Screenshot_20220124-204841_Chrome.jpg"/></image>
+              </div>
+              </div>
+              </div>
+              </div>
+        </div>
+
+        <div id="notif-backdrop"></div>
+        <div id="notification">
+            <p> <span>Sorry, app is currently unavailable. </span>
+                <!-- <img src="https://img.icons8.com/material-outlined/35/000000/broken-phone.png" > -->
+                <img src="https://cdn.discordapp.com/attachments/934959330833358878/936115631131099146/icons8-broken-phone.gif" />
+            </p>
+        </div>
+    </div>
+
+    <div class="app-container">
+        <div id="screen1" class="screen-container">
+        <div class="row app-row">
+            <div class="col app-icon app-sc" app-target="snapchat-view" app-name="Snapchat"></div>
+            <div class="col app-icon app-discord" app-target="discord-view" app-name="Discord"></div>
+            <div class="col app-icon app-msgs" app-target="imsg-view" app-name="iMessage"></div>
+        </div>
+        <div class="row app-row">
+            <div class="col app-icon app-tiktok" app-name="Tiktok"></div>
+            <div class="col app-icon app-youtube" app-target="youtube-view" app-name="Youtube"></div>
+            <div class="col app-icon app-ig" app-name="Instagram"></div>
+        </div>
+        <div class="row app-row">
+            <div class="col app-icon app-tumblr" app-target="tumblr-view" app-name="Tumblr"></div>
+            <div class="col app-icon app-twitter" app-target="twitter-view" app-name="Twitter"></div>
+            <div class="col app-icon app-gmail" app-target="gmail-view" app-name="Gmail"></div>
+        </div>
+        </div>
+        <div id="screen2" class="screen-container">
+            <div class="row app-row">
+                <div class="col app-icon app-notes" app-target="notes-view" app-name="Notes"></div>
+                <div class="col app-icon app-appstore" app-target="app-store-view" app-name="App Store"></div>
+                <div class="col app-icon app-amazon" app-target="amazon-view" app-name="Amazon"></div>
+            </div>
+            <div class="row app-row">
+                <div class="col app-icon app-settings" app-name="Settings"></div>
+                <div class="col app-icon app-reddit" app-target="reddit-view" app-name="Reddit"></div>
+                <div class="col app-icon app-gallery" app-target="gallery-view" app-name="Gallery"></div>
+            </div>
+        </div>
+        <div id="screen3" class="screen-container">
+            <div class="row app-row">
+                <div class="col app-icon app-Gdrive" app-name="Google Drive"></div>
+                <div class="col app-icon app-Gmaps" app-target="google-maps-view" app-name="Google Maps"></div>
+                <div class="col app-icon app-clock" app-target="clock-view" app-name="Clock"></div>
+            </div>
+            <div class="row app-row">
+                <div class="col app-icon app-calculator" app-target="calc-view" app-name="Calculator"></div>
+                <div class="col app-icon app-health" app-name="Health"></div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+        <div class="scroller">
+            <div scroll-target="screen1"></div>
+            <div scroll-target="screen2"></div> 
+            <div scroll-target="screen3"></div> 
+        </div>
+    </div>
+    
+    <div class="screen-buttons">
+        <!-- width: 273px; -->
+        <div class="row app-row">
+            <div class="col app-icon app-chrome" app-target="chrome-view" app-name="Chrome"></div>
+            <div class="col app-icon app-phone" app-name="Phone"></div>
+            <div class="col app-icon app-camera" app-name="Camera"></div>
+        </div>
+       
+    </div>
+</div>
+
+<div class="phone-checklist">
+    <img src="https://i.imgur.com/wj9i2Jk.png?1" class="notebook-spiral"/>
+    <div class="notebook-cover"> 
+        <div id="notebook-prompt">Open Notebook =></div> 
+        <!-- <img src="https://i.imgur.com/9XzowJB.png" /> -->
+        <img src="https://i.imgur.com/tb5XnjE.png" id="notebook-topsecret"/>
+        <img src="https://i.imgur.com/kqz8XvI.png" id="notebook-badge"/>
+        <img src="https://i.imgur.com/duvTVz4.png" id="notebook-keepOut" />
+    </div>
+
+    <table class="paper">
+    <tbody><tr><td>
+
+    <div class="header-paper">
+    <p class="titletext"></p>
+    </div>
+
+    <div class="textwmar"> 
+        <span id="notebook-line1"></span> <br> <br>
+        <p id="appsVisited-contianer">
+            <span id="appsVisited-title"></span> <br>
+            <span id="appsVisited"></span> 
+        </p> <br>
+        <p id="appsCouldntVisit-container">
+            <span id="appsCouldntVisit-title"></span> <br>
+            <span id="appsCouldntVisit"></span> 
+        </p> <br>
+        <div id="choiceTime">
+            <!-- <span id="choiceTime"> -->
+            <span id="choiceText"></span> <br> <br>
+            <p id="choice1"> <span></span> <img src="https://i.imgur.com/rHCcinh.png" /> </p>
+            <span id="choiceConj"></span>
+            <p id="choice2"> <span></span> <img src="https://i.imgur.com/rHCcinh.png" />  </p>
+            <span id="choiceConj2"></span>
+            <p id="choice3"> <span></span> <img src="https://i.imgur.com/rHCcinh.png" />  </p>
+            <!-- </span> -->
+        </div>
+        <!-- <p class="sticky-container">
+            <span class="sticky">Jazz stop taking notes and come make tiktoks with us.</span>
+            <span class="sticky sticky2">Jazz stop taking notes and come make tiktoks with us.</span>
+        </p> -->
+    </div>
+    </td></tr></tbody></table>
+</div>
+<!-- </div> -->
+
+<!-- </div> -->
+</div>
