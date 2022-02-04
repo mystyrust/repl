@@ -1280,7 +1280,7 @@ the last thing we might wanna do here is use the fadeout function and place the 
 }
 
 .tw-profile-stats {
-  display: inline-flex;
+  /* display: inline-flex; */
   padding-bottom: 1em;
 }
 
@@ -1347,9 +1347,9 @@ the last thing we might wanna do here is use the fadeout function and place the 
   border-bottom: #1da1f3 3px solid;
 }
 
-.tw-profile-container div.fadeout {
+/* .tw-profile-container div.fadeout {
   color: #777777;
-}
+} */
 
 .tw-profile-container div.new-twText {
   padding: 7px 3px;
@@ -1387,6 +1387,8 @@ border-radius: 20px;
   .new-twStats {
     width: 100%;
     opacity: 0.6;
+    display: flex;
+    justify-content: space-between;
     }
 
     .new-twFollow {
@@ -1454,7 +1456,7 @@ width:100%;
   color: #b1b1b3;
 }
 .text-color-lgray {
-  color: #b1b1b3;
+  color: gray;
 }
 .text-size-12{
   font-size:1.2em;
@@ -1508,6 +1510,33 @@ margin-top:-10px;
 
 
 /*youtube*/
+
+.yt-desc {
+  margin: -10px 7px 6px 7px;
+  display: inline-block;
+}
+
+.yt-danny {
+  background-image: url(https://i.imgur.com/wSvoYQS.png);
+}
+
+.yt-dash {
+  background-image: url(https://i.imgur.com/zyTnqD5.png);
+}
+
+.yt-tucker {
+  background-image: url(https://i.imgur.com/KhS2BAv.png);
+}
+
+.yt-paulie {
+  background-image: url(https://i.imgur.com/XUilq3k.png);
+}
+
+.yt-techluver {
+  background-image: url(https://i.imgur.com/RvjZZi1.png);
+  background-size: contain;
+}
+
 .yt-font{
 font-family: 'Roboto', sans-serif;
 font-size: 12px;
@@ -1517,7 +1546,7 @@ font-size: 12px;
   width:100%;
   height:5px;
   background:linear-gradient(to right, red 50%,rgba(246,246,246,.3) 50%);  
-  bottom:4px;
+  bottom:0px;
 }
 .yt-red-line-30 {
   position:absolute;
@@ -1598,6 +1627,7 @@ font-size: 12px;
 }
 
 .yt-floatdot{
+  background-size: contain;
   float:left;
   margin-left:8px;
   height: 40px;
@@ -1710,12 +1740,12 @@ margin-top:0px;
   }
   
   .tungletag {
-    margin-left: 12px;
+    margin-right: 12px;
   }
   
-  .tungletag:first-of-type {
+  /* .tungletag:first-of-type {
     margin-left: 0px;
-  }
+  } */
   
   .tunglenotes {
     font-size: 14px;
@@ -1730,7 +1760,7 @@ margin-top:0px;
     height: 45px;
     width: auto;
     float: right;
-    margin-right: 10px;
+    margin-right: -7px;
   }
 
   .tungleimg {
@@ -1843,8 +1873,8 @@ margin-top:0px;
     position: relative;
     padding: 15px 14px 18px;
     display: inline-block;
-    margin-top: 15px;
-    margin-left: 20px;
+    margin-top: 4px;
+    margin-left: 16px;
     line-height: 21px;
     font-size: 14px;
     width: 80%;
@@ -1866,11 +1896,11 @@ margin-top:0px;
   .tungleaskicon {
     display: inline-block;
     float: right;
-    height: 37px;
-    width: 37px;
-    margin-top: 15px;
+    height: 21px;
+    width: 20px;
+    margin-top: 12px;
     border-radius: 2px;
-    margin-right: 15px;
+    margin-right: 7px;
   }
   
   .tungleasker {
@@ -1981,6 +2011,7 @@ margin-top:0px;
   display: inline-block;
   margin-top: 10px;
   margin-left: 20px;
+  padding-right: 5px;
   margin-bottom: 10px;
   line-height: 21px;
   font-size: 14px;
@@ -2107,9 +2138,11 @@ margin-top:0px;
 }
 
 .gallery-item-child.note, .privGallery-item-child.note {
-  background: purple;
-  height: 400px;
-  padding: 10px;
+  background: white;
+  color: black;
+  font-size: 14px;
+  height: 326px;
+  padding: 10px 10px 10px 10px;
   margin: 10px;
   width: 239px;
   /* overflow-y: scroll; */

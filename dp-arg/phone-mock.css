@@ -95,7 +95,7 @@
     top: 92px;
     z-index: 13;
     pointer-events: none;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .phone-smear {
@@ -107,7 +107,7 @@
     pointer-events: none;
     bottom: 100;
     margin-left: 39px;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
 .phone-splatter {
@@ -416,7 +416,7 @@
     height: 12px;
     background: slategray;
     border-radius: 20px;
-    margin: 0 20px;
+    margin: 0 10px;
     border-style: solid;
     border-width: thin;
 }
