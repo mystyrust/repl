@@ -1389,12 +1389,22 @@ border-radius: 20px;
     opacity: 0.6;
     display: flex;
     justify-content: space-between;
+    padding: 0px 10px;
     }
 
     .new-twFollow {
       float: right;
-      margin-top: -25px;
+      margin-top: -20px;
       /* margin-right: 10px; */
+    }
+
+    .new-twFollow img {
+      margin-left: 50px;
+    }
+
+    .new-twTime {
+      font-size: 10px;
+      color: gray;
     }
   
 
