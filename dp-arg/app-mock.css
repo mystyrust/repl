@@ -705,6 +705,9 @@
     text-align: center;
     text-transform: capitalize;
     display: table;
+    position: sticky;
+    top: 0;
+    z-index: 5;
   }
 
   .header-chevron {
@@ -1717,7 +1720,7 @@ margin-top:0px;
   .tungletext {
     display: inline-block;
     margin-top: 15px;
-    margin-left: 20px;
+    margin-left: 10px;
     line-height: 21px;
     font-size: 14px;
     width: 92%;
@@ -1885,7 +1888,7 @@ margin-top:0px;
     padding: 15px 14px 18px;
     display: inline-block;
     margin-top: 4px;
-    margin-left: 16px;
+    margin-left: 10px;
     line-height: 21px;
     font-size: 14px;
     width: 80%;
@@ -1976,7 +1979,7 @@ margin-top:0px;
   position: relative;
   line-height: 25px;
   padding-top: 15px;
-  padding-left: 20px;
+  padding-left: 10px;
   width: 96%;
   display: inline-block;
   border-top: 1px solid #e7e7e7;

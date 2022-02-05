@@ -101,13 +101,19 @@ $(document).ready(function() {
     })
 
     // menu of items with each item visitable -- horizontal slide in / out (not perfect... but meh)
-    const slideFromListToItem = (childClickSelector, relativeChildElement, listSelector, gobackSelector) => { 
+    const slideFromListToItem = (childClickSelector, relativeChildElement, listSelector, gobackSelector, childClassSelector) => { 
         $(childClickSelector).click(event => {
             var contact = event.currentTarget.attributes['slide-target'];
             if (contact)
             {
                 var contactId = contact.value;
-                
+
+                 // close all other ones? 
+                 // refactor w this logic in place
+                if (childClassSelector)
+                { 
+                    $(childClassSelector).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden"})
+                }
                 $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "auto"  })
                 $(listSelector).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
             }
@@ -120,7 +126,7 @@ $(document).ready(function() {
         })
     }
 
-    slideFromListToItem(".contact", "event.currentTarget.parentElement.parentElement", ".phone-list", ".header-chevron") // iMessage
+    slideFromListToItem(".contact", "event.currentTarget.parentElement.parentElement", ".phone-list", ".header-chevron", ".phone") // iMessage
     slideFromListToItem(".note-preview", "event.currentTarget.parentElement", ".notes-list", ".note-goback") // notes app 
 
     // notebook transitions 
