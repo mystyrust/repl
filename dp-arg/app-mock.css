@@ -1709,7 +1709,7 @@ margin-top:0px;
     font-weight: 700;
     font-size: 14px;
     margin-top: 50px;
-    margin-left: 20px;
+    margin-left: 10px;
     line-height: 20px;
     height: 20px;
   }
@@ -1746,7 +1746,7 @@ margin-top:0px;
     margin-top: 15px;
     line-height: 20px;
     position: relative;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   
   .tungletag {
@@ -1763,14 +1763,15 @@ margin-top:0px;
     color: #8f8f8f;
     line-height: 45px;
     position: relative;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   
   .tungleicons {
-    height: 45px;
-    width: auto;
+    height: auto;
+    width: 120px;
     float: right;
     margin-right: -7px;
+    margin-top: 6px;
   }
 
   .tungleimg {
@@ -1934,7 +1935,7 @@ margin-top:0px;
   padding-bottom: 0px;
   padding-left: 3px;
   margin-top: 15px;
-  margin-left: 20px;
+  margin-left: 10px;
 }
 
 .tungleline {
@@ -2020,7 +2021,7 @@ margin-top:0px;
 .reblogtext {
   display: inline-block;
   margin-top: 10px;
-  margin-left: 20px;
+  margin-left: 10px;
   padding-right: 5px;
   margin-bottom: 10px;
   line-height: 21px;
