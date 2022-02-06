@@ -146,7 +146,7 @@ $(document).ready(function() {
 
         setTimeout( () => { 
             // bring back all notebook decorations that should peek out from behind
-            $("#notebook-keepOut").css({ opacity: 1 }) 
+            $("#notebook-keepOut").css({ opacity: 1, width: "348px" }) 
         }, 1500)
 
         const titleText = "Who does this phone belong to?"
