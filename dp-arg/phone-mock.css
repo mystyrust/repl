@@ -584,7 +584,12 @@
     margin-bottom: 0px
 }
 
-#appsVisited-contianer {
+#nb-line1-container {
+    height: 50px;
+}
+
+/* i will not fix this typo... */
+#appsVisited-contianer { 
     height: 150px;
 }
 

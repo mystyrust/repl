@@ -608,9 +608,9 @@
   
   /* Alignment and colors for typing bar */
   .discord > div:last-child {
-    margin: 0 2.5%;
+    /* margin: 0 2.5%; */
     padding: 11px;
-    border-radius: 8px;
+    /* border-radius: 8px; */
   }
   .darkmode > div:last-child { background: #40444b; }
   .lightmode > div:last-child { background: #ebedef; }
@@ -884,6 +884,22 @@
     border-right: 6.5px solid #e5e5ea;
     border-bottom-right-radius: 13px 6.5px;
   }
+
+  /* groupchat imgs */
+.image-danny-kidnapped {
+  float: left;
+  margin: 0 0 0.5em;
+  border-radius: 1em;
+  width: 50%;
+  min-height: 75%;
+  clear: both;
+  position: relative;
+  background-image: url("https://i.imgur.com/E03bHT9.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  padding-top: 41%;
+}
 
   .time {
     /* min-width: 295px; */
