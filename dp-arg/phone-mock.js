@@ -25,7 +25,7 @@ $(document).ready(function() {
     $(".home-btn").click((event) => {
         $(".app-screen").trigger("closingApp")
         $(".app-screen-view > div:not(#notification, #notif-backdrop )")
-            .css({ height: "0px", width: "0px" , opacity: 0, "pointer-events": "none"  })
+            .css({ height: "0px", width: "0px" , opacity: 0, "pointer-events": "none" , border: "none" })
         closeNotification()
         // $(".scroller div").first().trigger('click')
     })
@@ -38,7 +38,7 @@ $(document).ready(function() {
         if (appScreen)
         {
             var appScreenId = appScreen.value;
-            $("#"+appScreenId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible"  })
+            $("#"+appScreenId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", border: "thin black solid", "box-sizing": " content-box" })
             $("#"+appScreenId).trigger("viewingApp")
 
             // event.preventDefault() // why was this here again?

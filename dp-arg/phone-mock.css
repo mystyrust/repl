@@ -165,7 +165,7 @@
     z-index: 10;
     top: 99px;
     position: absolute;
-    margin: -7px 7px 0px 54px;
+    margin: -7px 7px 0px 53px;
 }
 
 .app-icon {
@@ -379,16 +379,8 @@
     border-radius: 10px;
 } */
 
-/* width */
-.app-container::-webkit-scrollbar,
-#calc-view::-webkit-scrollbar,
-#gallery-view::-webkit-scrollbar {
-    /* width: 20px; */
-    width: 0px;
-  }
-
   /* firefox */
-.app-container, #calc-view, #gallery-view
+.app-container, .app-screen
 {
   scrollbar-width: none;
 }
@@ -397,16 +389,10 @@
 /* .app-container::-webkit-scrollbar-track,
 #calc-view::-webkit-scrollbar-track,
 #gallery-view::-webkit-scrollbar-track { */
-::-webkit-scrollbar-track {
+.app-container::-webkit-scrollbar
+.app-screen::-webkit-scrollbar {
     display: none;
   }
-
-  /* Handle */
-.app-container::-webkit-scrollbar-thumb,
-#calc-view::-webkit-scrollbar-thumb,
-#gallery-view::-webkit-scrollbar-thumb {
-    display: none;
-}
 
 .scroller, .gallery-scroller, .privGallery-scroller {
     position: absolute;

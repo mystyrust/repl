@@ -528,6 +528,7 @@
     padding: 0 2px;
     font-weight: 500;
     transition-duration: .05s;
+    text-decoration: none;
   }
   .lightmode a.ping,
   .lightmode a.ping:link {
@@ -936,7 +937,7 @@
   .contact img {
     border-radius: 100%;
     width: 40px;
-    border: black solid thin;
+    /* border: black solid thin; */
   }
 
   /* .contact-name {
@@ -1040,7 +1041,7 @@
   height: 457px;
   width: 257px;
   background-color: black;
-  overflow-x: scroll !important;
+  overflow-x: auto !important;
 }
 
 .calc-functions {
@@ -1790,6 +1791,7 @@ font-size: 12px;
 }
 .yt-title-shift{
 margin-top:0px;
+margin-left: 5px;
 }
 
 .yt-border-top-bottom-gray.clear2 {
@@ -2255,9 +2257,15 @@ margin-top:0px;
 
 #gallery-view {
   background: black;
-  overflow-x: scroll !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
   display: flex;
 }
+
+.gallery-wrapper {
+  height: 457px;
+}
+
 .gallery-item, .privGallery-item {
   display: table-cell;
   vertical-align: middle;
