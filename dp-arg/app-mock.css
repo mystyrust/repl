@@ -1,7 +1,7 @@
 
 /* ------------------ snapchat mock ------------------*/
 /* from https://archiveofourown.org/works/26777200 */
-/* might use images from / remix with https://archiveofourown.org/works/24273862/chapters/58503859as well  */
+/* might use images from / remix with https://archiveofourown.org/works/24273862/chapters/58503859 as well  */
 
 .snp-box {
   /* max-width: 500px;
@@ -23,6 +23,7 @@
 
 .snp-avatar {
   width: 40px;
+  height: 40px;
   border-radius: 50%;
   float: left;
   margin-top: -10px;
@@ -130,6 +131,93 @@
   /* height: 0px; */
 }
 
+.snap {
+	display: table;
+	box-sizing: border-box;
+	border-radius: 4px;
+	border: 1px solid rgba(0,0,0, 0.15);
+	background: rgba(255,255,255, 0.3);
+	color: black;
+  width: 226px;
+}
+
+/* Image part */
+.snap:before {
+	display: table-cell;
+	content: "";
+	width: 3rem;
+	background-repeat: no-repeat;
+	background-size: auto 1rem;
+	background-position: center;
+}
+
+/* Text part */
+.snap:after {
+	display: table-cell;
+	font-weight: bold;
+	padding: 0.5rem;
+	padding-left: 0;
+}
+
+
+/* Hidden backup */
+.snap i {
+	display: none;
+}
+
+/*
+ * Opened
+ */
+.snap.opened:after {
+	content: "Opened";
+}
+/* Outgoing (arrow) */
+.out.snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_red.png");}
+.out.snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_purple.png");}
+.out.snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/opened_blue.png");}
+/* Incoming (arrow) */
+.in.snap.opened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_red.png");}
+.in.snap.opened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_purple.png");}
+.in.snap.opened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/viewed_blue.png");}
+
+/*
+ * Unopened
+ */
+.snap.unopened:after {
+	content: "Delivered";
+}
+/* Outgoing (arrow) */
+.out.snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_red.png");}
+.out.snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_purple.png");}
+.out.snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/sent_blue.png");}
+/* Incoming (box) */
+.in.snap.unopened:after {
+	content: "Tap to view";
+}
+.in.snap.unopened:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_red.png");}
+.in.snap.unopened.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_purple.png");}
+.in.snap.unopened.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/received_blue.png");}
+
+/*
+ * Screenshot
+ */
+.snap.screenshot:after {
+	content: "Screenshot!";
+}
+.snap.screenshot:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_red.png");}
+.snap.screenshot.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_purple.png");}
+.snap.screenshot.blue:before {  background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/screenshot_blue.png");}
+
+/*
+ * Replay
+ */
+.snap.replay:after {
+	content: "Replay!";
+}
+.snap.replay:before {       background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_red.png");}
+.snap.replay.purple:before {background-image: url("https://raw.githubusercontent.com/Azdaema/AO3-Skin_Messaging/master/Snapchat/icons/replay_purple.png");}
+
+
 /* ::-webkit-scrollbar {
   width: 10px;
 } */
@@ -162,6 +250,29 @@
 .darkmode > div:last-child {
   position: sticky;
   bottom: 0;
+}
+
+.pinged-you, .pinged-you:hover {
+  background-color: #494440 !important;
+  border-left: 3px solid #f0ab42;
+  padding: 1.5px 16px 1.5px 13px!important;
+}
+
+.reaction {
+  padding: 3px 8px 3px 6px;
+  margin-right: 1px;
+  border-radius: 30%;
+  background: #303136;
+  display: inline-block;
+}
+
+.reaction-yours {
+  border: 1px solid #5d68ce;
+  padding: 2px 5px 1px 5px;
+  margin-right: 4px;
+  border-radius: 30%;
+  background: #3c4159;
+  display: inline-block;
 }
 
 /* The overall discord module */
@@ -792,7 +903,7 @@
 
   .contact {
     cursor: pointer;
-    color: #777777;
+    color: darkslategray;
     /* pointer-events: visible; */
     padding: 15px 8px;
     display: grid;
@@ -1363,6 +1474,10 @@ the last thing we might wanna do here is use the fadeout function and place the 
   margin-top: -21px;
 }
 
+.new-twText img {
+  width: 230px;
+}
+
 /*Avatars are automatically formatted to be circles*/
 .new-twAvatar {
 width: 40px;
@@ -1530,7 +1645,7 @@ margin-top:-10px;
 }
 
 .yt-danny {
-  background-image: url(https://i.imgur.com/wSvoYQS.png);
+  background-image: url(https://i.imgur.com/EVnRxtv.png);
 }
 
 .yt-dash {
@@ -1973,6 +2088,7 @@ margin-top:0px;
 .reblog {
   height: 15px;
   width: auto;
+  margin-bottom: 5px;
 }
 
 .reblogheader {

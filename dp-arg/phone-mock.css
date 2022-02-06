@@ -472,7 +472,7 @@
 .phone-checklist {
     display: inline-flex;
     position: relative;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     overflow: visible;
 }
 
