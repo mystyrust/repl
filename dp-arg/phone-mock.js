@@ -37,7 +37,8 @@ $(document).ready(function() {
         var appName = event.target.attributes['app-name'];
         if (appScreen)
         {
-            var appScreenId = appScreen.value;
+            $(".home-btn").trigger("click") // close any "open" apps already
+            var appScreenId = appScreen.value
             $("#"+appScreenId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", border: "thin black solid", "box-sizing": " content-box" })
             $("#"+appScreenId).trigger("viewingApp")
 
