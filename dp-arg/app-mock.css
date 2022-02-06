@@ -783,7 +783,7 @@
     width: 257px;
     display: inline-block;
     transition: all 1s;
-    overflow: "hidden" ;
+    overflow: auto;
   }
 
   .phone {
@@ -2451,7 +2451,7 @@ margin-top:0px;
 }
 
 .notes-list {
-  
+  overflow: auto;
   height: 457px;
   width: 257px;
   display: inline-block;
