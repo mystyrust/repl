@@ -180,9 +180,9 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     }
     
-    document.getElementById('drag-img').addEventListener('mousedown', start_drag);
-    document.getElementsByClassName('mapImg')[0].addEventListener('mousemove', while_drag);
-    document.getElementsByClassName('mapImg')[0].addEventListener('mouseup', stop_drag);
+    // document.getElementById('drag-img').addEventListener('mousedown', start_drag);
+    // document.getElementsByClassName('mapImg')[0].addEventListener('mousemove', while_drag);
+    // document.getElementsByClassName('mapImg')[0].addEventListener('mouseup', stop_drag);
 
 
 });
