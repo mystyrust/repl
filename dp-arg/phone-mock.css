@@ -9,7 +9,9 @@
     width: 364px;
     height: 732px;
     display: inline-flex;
+    position: relative;
     margin-bottom: -120px;
+    margin-top: -20px;
 }
 
 .screen-container {
@@ -145,7 +147,7 @@
     display: flex;
     flex-flow: row wrap;
     flex-direction: column;
-    overflow-x: scroll;
+    overflow-x: auto;
     scroll-snap-type: x mandatory;
     height: 546px;
     z-index: 1;
@@ -308,7 +310,7 @@
     height: 0px;
     z-index: 11;
     transition: height 1s, width 1s, opacity 1s;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 
@@ -384,11 +386,18 @@
     /* width: 20px; */
     width: 0px;
   }
+
+  /* firefox */
+.app-container, #calc-view, #gallery-view
+{
+  scrollbar-width: none;
+}
   
   /* Track */
-.app-container::-webkit-scrollbar-track,
+/* .app-container::-webkit-scrollbar-track,
 #calc-view::-webkit-scrollbar-track,
-#gallery-view::-webkit-scrollbar-track {
+#gallery-view::-webkit-scrollbar-track { */
+::-webkit-scrollbar-track {
     display: none;
   }
 
@@ -501,8 +510,9 @@
     position: absolute;
     z-index: 25;
     /* margin-right: 20px; */
-    /* margin-left: 33px; */
+    margin-left: 8px;
     margin-top: 6px;
+    width: 325px;
     /* top: 0; */
 }
 

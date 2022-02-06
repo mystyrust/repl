@@ -1059,7 +1059,7 @@
   .mapImg {
     height: 457px;
     width: 257px;
-    overflow: scroll;
+    overflow: auto;
   }
 
   #drag-img {
@@ -1072,7 +1072,7 @@
   .mapImg {
     background: white;
     height: 500px;
-    overflow: scroll;
+    overflow: auto;
     position: relative;
   }
   
@@ -2276,7 +2276,7 @@ margin-top:0px;
   padding: 10px 10px 10px 10px;
   margin: 10px;
   width: 239px;
-  /* overflow-y: scroll; */
+  overflow-y: auto;
 }
 
 .gallery-scroller {
