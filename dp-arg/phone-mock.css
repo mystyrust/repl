@@ -380,7 +380,7 @@
 } */
 
   /* firefox */
-.app-container, .app-screen, .calc-priv 
+.app-container, .app-screen, .calc-priv, .phone
 {
   scrollbar-width: none;
 }
@@ -392,9 +392,11 @@
 .app-container::-webkit-scrollbar,
 .app-screen::-webkit-scrollbar, 
 .calc-priv::-webkit-scrollbar,
+.phone:-webkit-scrollbar,
 .app-container::-webkit-scrollbar-track,
-.app-screen::-webkit-scrollbar-track ,
-.calc-priv::-webkit-scrollbar-track {
+.app-screen::-webkit-scrollbar-track,
+.calc-priv::-webkit-scrollbar-track,
+.phone:-webkit-scrollbar-track {
     display: none;
     width: 0px;
   }
