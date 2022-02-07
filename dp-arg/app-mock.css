@@ -987,7 +987,7 @@
 .calc-top {
   background-color: gray;
   height: 30%;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .calc-bottom {
