@@ -112,7 +112,7 @@ $(document).ready(function() {
                 // close all other ones? 
                 $(childClassSelector).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden"})
                 
-                $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "auto"  })
+                $("#"+contactId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible" , overflow: "hidden auto"  })
                 $(listSelector).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none"})
             }
         })
@@ -120,7 +120,7 @@ $(document).ready(function() {
         $(gobackSelector).click(event => {
             // const relativeChild = eval(relativeChildElement)
             $(childClassSelector).css({ height: "457px" , width: "0px", opacity: 0, "pointer-events": "none", overflow: "hidden" })
-            $(listSelector).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "auto"  })
+            $(listSelector).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", overflow: "hidden auto"  })
         })
     }
 

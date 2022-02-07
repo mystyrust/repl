@@ -990,7 +990,8 @@
 .calc-top {
   background-color: gray;
   height: 30%;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 .calc-bottom {
@@ -1080,7 +1081,7 @@
   .mapImg {
     height: 457px;
     width: 257px;
-    overflow: auto;
+    overflow: scroll;
   }
 
   #drag-img {
