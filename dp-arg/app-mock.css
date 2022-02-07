@@ -1061,7 +1061,7 @@
   height: 457px;
   width: 257px;
   background-color: black;
-  overflow-x: auto !important;
+  /* overflow-x: auto !important; */
   overflow-y: hidden;
 }
 
@@ -2278,7 +2278,7 @@ margin-left: 5px;
 
 #gallery-view {
   background: black;
-  overflow-x: auto !important;
+  /* overflow-x: auto !important; */
   overflow-y: hidden !important;
   display: flex;
 }

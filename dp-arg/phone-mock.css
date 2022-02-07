@@ -396,16 +396,20 @@
 .app-container::-webkit-scrollbar-track,
 .app-screen::-webkit-scrollbar-track,
 .calc-priv::-webkit-scrollbar-track,
-.phone:-webkit-scrollbar-track {
+.phone:-webkit-scrollbar-track,
+.app-container::-webkit-scrollbar-thumb,
+.app-screen::-webkit-scrollbar-thumb ,
+.calc-priv::-webkit-scrollbar-thumb,
+.phone::-webkit-scrollbar-thumb  {
     display: none;
     width: 0px;
   }
 
   /* Handle */
-.app-container::-webkit-scrollbar-thumb,
+/* .app-container::-webkit-scrollbar-thumb,
 .app-screen::-webkit-scrollbar-thumb {
     display: none;
-}
+} */
 
 .scroller, .gallery-scroller, .privGallery-scroller {
     position: absolute;
