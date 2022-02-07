@@ -380,7 +380,7 @@
 } */
 
   /* firefox */
-.app-container, .app-screen
+.app-container, .app-screen, .calc-priv 
 {
   scrollbar-width: none;
 }
@@ -391,8 +391,10 @@
 #gallery-view::-webkit-scrollbar-track { */
 .app-container::-webkit-scrollbar,
 .app-screen::-webkit-scrollbar, 
+.calc-priv::-webkit-scrollbar,
 .app-container::-webkit-scrollbar-track,
-.app-screen::-webkit-scrollbar-track {
+.app-screen::-webkit-scrollbar-track ,
+.calc-priv::-webkit-scrollbar-track {
     display: none;
     width: 0px;
   }

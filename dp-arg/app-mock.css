@@ -784,7 +784,8 @@
     width: 257px;
     display: inline-block;
     transition: all 1s;
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .phone {
@@ -930,6 +931,8 @@
     width: 97%;
     margin: 0 auto;
     border-top: gray solid thin;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .contact-header {
@@ -1058,6 +1061,7 @@
   width: 257px;
   background-color: black;
   overflow-x: auto !important;
+  overflow-y: hidden;
 }
 
 .calc-functions {
