@@ -1073,11 +1073,11 @@
   /* -------------------google maps ----------------------- */
   /* map made by https://ghostgothgeek.tumblr.com/post/626561443001778176/map-of-amity-park */
 
-  .mapImg {
+  /* .mapImg {
     height: 457px;
     width: 257px;
     overflow: auto;
-  }
+  } */
 
   #drag-img {
     cursor: move;

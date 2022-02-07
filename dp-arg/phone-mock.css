@@ -380,7 +380,7 @@
 } */
 
   /* firefox */
-.app-container, .app-screen
+.app-container, .app-screen, .phone-list, .phone, .calc-priv, #gallery-view
 {
   scrollbar-width: none;
 }
@@ -391,15 +391,28 @@
 #gallery-view::-webkit-scrollbar-track { */
 .app-container::-webkit-scrollbar,
 .app-screen::-webkit-scrollbar, 
+.phone-list::-webkit-scrollbar,
+.phone::-webkit-scrollbar,
+.calc-priv::-webkit-scrollbar,
+#gallery-view::-webkit-scrollbar ,
+.app-screen::-webkit-scrollbar-track ,
 .app-container::-webkit-scrollbar-track,
-.app-screen::-webkit-scrollbar-track {
+.phone-list::-webkit-scrollbar-track,
+.phone::-webkit-scrollbar-track,
+.calc-priv::-webkit-scrollbar-track,
+#gallery-view::-webkit-scrollbar-track  {
     display: none;
     width: 0px;
   }
 
   /* Handle */
-.app-container::-webkit-scrollbar-thumb,
-.app-screen::-webkit-scrollbar-thumb {
+  .app-screen::-webkit-scrollbar-thumb ,
+  .app-container::-webkit-scrollbar-thumb,
+  .phone-list::-webkit-scrollbar-thumb,
+  .phone::-webkit-scrollbar-thumb,
+  .calc-priv::-webkit-scrollbar-thumb,
+   #gallery-view::-webkit-scrollbar-thumb  
+{
     display: none;
 }
 
