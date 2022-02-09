@@ -43,3 +43,8 @@ margin-top: -1em;
 }
 
 /* todo -- hide end notes , style notebook img and placement  */
+/* overriding an ao3 class hahah */
+.jump {
+    display: none;
+}
+

@@ -9,11 +9,12 @@ $(document).ready(function() {
         {
             $("#choice3").css({ display: "inline" })
 
-            const choiceConj2 = " or "
+            // const choiceConj2 = " or "
             const choice3 = "...both??"
 
-            writing($("#choiceConj2"), choiceConj2, "")
-            setTimeout(() => writing($("#choice3 span"), choice3, ""), ((choiceConj2.length + choice3.length + 2) * 50) )
+            // writing($("#choiceConj2"), choiceConj2, "")
+            // setTimeout(() => writing($("#choice3 span"), choice3, ""), ((choiceConj2.length + choice3.length + 2) * 50) )
+            writing($("#choice3 span"), choice3, "")
         }
     }
 
