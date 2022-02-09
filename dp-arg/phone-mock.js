@@ -3,6 +3,22 @@ $(document).ready(function() {
     var appsVisisted = []  
     var appsCouldntVisit = []
     var unlockedSecretEnding = false;
+
+    var ficLink = ""
+
+    // handle redirects based on clicked ending
+    $("#choice1").click(() => {
+        console.log("end-fenton")
+        // window.parent.location.href = ficLink + "#end-fenton"
+    })
+    $("#choice2").click(() => {
+        console.log("end-phantom")
+        // window.parent.location.href = ficLink + "#end-phantom"
+    })
+    $("#choice3").click(() => {
+        console.log("end-both")
+        // window.parent.location.href = ficLink + "#end-both"
+    })
     
     const unlockSecretEnding = () => {
         // unlocked both choices already, havent printed the option for choice 3 yet
@@ -182,7 +198,7 @@ $(document).ready(function() {
         }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
     })
 
-    // $(".notebook-cover").trigger('click')
+    // setTimeout(() => { $(".notebook-cover").trigger('click') }, 500)
 
     const setTime = () => {
         var date = new  Date()
