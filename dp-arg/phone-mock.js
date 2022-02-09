@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     var appsVisisted = []  
     var appsCouldntVisit = []
     var unlockedSecretEnding = false;
@@ -130,6 +131,12 @@ $(document).ready(function() {
 
     // notebook transitions 
     $(".notebook-cover").one('click', event => {
+
+        var notebookPos = $(".phone-checklist")[0].getBoundingClientRect()
+        var phonePos = $(".phone-container")[0].getBoundingClientRect()
+        
+        $("body").scrollTop(notebookPos.top)
+
         // i wish i knew how to chain these timed events better, like using .then or await
         // this isnt great or even best practice but its good enough for me
         $(".notebook-cover").css({ transform: "rotateX(90deg) scale(1.15)" })
@@ -167,7 +174,15 @@ $(document).ready(function() {
         setTimeout(() => { 
             writing($("#appsVisited-title"), appsVisitedTitle, "")
         }, 1700 + ((titleText.length + notebookLine1.length + +4) * 50))
+
+        setTimeout(() => {
+            // set phone visible
+            $(".phone-container").css({ opacity: 1 })
+            $("body").scrollTop(phonePos.top) // scroll to the phone now
+        }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
     })
+
+    $(".notebook-cover").trigger('click')
 
     const setTime = () => {
         var date = new  Date()

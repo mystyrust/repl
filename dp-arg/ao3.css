@@ -42,6 +42,11 @@ display: block;
 margin-top: -1em;
 }
 
+.phone-checklist-img {
+    width: 336px;
+    height: 620px;
+}
+
 /* todo -- hide end notes , style notebook img and placement  */
 /* overriding an ao3 class hahah */
 .jump {
