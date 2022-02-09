@@ -42,14 +42,41 @@ display: block;
 margin-top: -1em;
 }
 
-.phone-checklist-img {
-    width: 338px;
-    height: 603px;
-}
-
 /* todo -- hide end notes , style notebook img and placement  */
 /* overriding an ao3 class hahah */
 .jump {
     display: none;
 }
 
+/* css specific for iframe bait */
+
+
+.phone-arg {
+    display: flex;
+}
+
+.phone-arg img {
+    width: 338px;
+    cursor: pointer;
+}
+
+.phone-container {
+    width: 364px;
+    height: 732px;
+    display: inline-flex;
+    position: relative;
+    margin-bottom: -120px;
+    margin-top: -20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.phone-img {
+    background-image: url(https://i.imgur.com/fL9NBiz.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 364px;
+    height: 732px;
+    position: absolute;
+    margin-bottom: -120px;
+}
