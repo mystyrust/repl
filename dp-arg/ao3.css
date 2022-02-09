@@ -49,34 +49,24 @@ margin-top: -1em;
 }
 
 /* css specific for iframe bait */
-
-
-.phone-arg {
-    display: flex;
-}
-
-.phone-arg img {
+.overflow-top {
+    height: 6000px;
+    top: -900px;
+    z-index: 20;
+    overflow: initial;
+    line-height: 1.125;
+  }
+  
+  .overflow-top p {
+    /* max-width: 160px;
+    padding-top: 100px; */
+    position: sticky;
+    top: 0;
+  }
+  
+  .overflow-top img {
+    display: block;
+    margin: 0 auto;
     width: 338px;
     cursor: pointer;
-}
-
-.phone-container {
-    width: 364px;
-    height: 732px;
-    display: inline-flex;
-    position: relative;
-    margin-bottom: -120px;
-    margin-top: -20px;
-    opacity: 0;
-    transition: opacity 1s;
-}
-
-.phone-img {
-    background-image: url(https://i.imgur.com/fL9NBiz.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 364px;
-    height: 732px;
-    position: absolute;
-    margin-bottom: -120px;
-}
+  }
