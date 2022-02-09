@@ -500,7 +500,7 @@ body {
     margin-bottom: 200px;
 }
 
-#notebook-prompt {
+.notebook-prompt {
     cursor: pointer;
     text-decoration: underline;
     background: black;
@@ -517,7 +517,7 @@ body {
     z-index: 10;
 }
 
-#notebook-prompt:hover {
+.notebook-prompt:hover {
     filter: drop-shadow(2px 4px 6px black);
 }
 
@@ -558,14 +558,14 @@ body {
     transform: rotateX(90deg) scale(1.15);
 }
 
-#notebook-keepOut {
+.notebook-keepOut {
     position: absolute;
     top: 100px;
     width: 338px;
     z-index: 8;
 }
 
-#notebook-topsecret {
+.notebook-topsecret {
     position: absolute;
     width: 258px;
     left: 25px;
@@ -574,7 +574,7 @@ body {
     filter: drop-shadow(2px 4px 6px black);
 }
 
-#notebook-badge {
+.notebook-badge {
     position: absolute;
     width: 130px;
     bottom: 100px;

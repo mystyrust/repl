@@ -155,7 +155,7 @@ $(document).ready(function() {
 
         setTimeout( () => { 
             // bring back all notebook decorations that should peek out from behind
-            $("#notebook-keepOut").css({ opacity: 1, width: "348px" }) 
+            $(".notebook-keepOut").css({ opacity: 1, width: "348px" }) 
         }, 1500)
 
         const titleText = "Who does this phone belong to?"
@@ -182,7 +182,7 @@ $(document).ready(function() {
         }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
     })
 
-    $(".notebook-cover").trigger('click')
+    // $(".notebook-cover").trigger('click')
 
     const setTime = () => {
         var date = new  Date()
