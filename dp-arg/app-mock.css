@@ -1495,6 +1495,10 @@ the last thing we might wanna do here is use the fadeout function and place the 
   width: 230px;
 }
 
+.new-twText a {
+  color: #0d6efd !important;
+}
+
 /*Avatars are automatically formatted to be circles*/
 .new-twAvatar {
 width: 40px;

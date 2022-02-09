@@ -1,4 +1,3 @@
-/* #chapters > div > div.root.default-tab */
 /* :not(p) */
 #workskin {
 /* z-index: 1000; */
@@ -39,12 +38,8 @@ padding: 0;
 #end-fenton:target ~ .end-fenton,
 #end-phantom:target ~ .end-phantom,
 #end-both:target ~ .end-both {
-/* #ask-elle:target ~ .ask-elle,
-#ask-sam:target ~ .ask-sam,
-#ask-jazz:target ~ .ask-jazz,
-#ask-tucker:target ~ .ask-tucker,
-#ask-none:target ~ .ask-none, */
-/* #vent:target ~ .vent { */
 display: block;
 margin-top: -1em;
 }
+
+/* todo -- hide end notes , style notebook img and placement  */
