@@ -4,20 +4,20 @@ $(document).ready(function() {
     var appsCouldntVisit = []
     var unlockedSecretEnding = false;
 
-    var ficLink = ""
+    var ficLink = "./ao3.html"
 
     // handle redirects based on clicked ending
     $("#choice1").click(() => {
         console.log("end-fenton")
-        // window.parent.location.href = ficLink + "#end-fenton"
+        window.parent.location.href = ficLink + "#end-fenton"
     })
     $("#choice2").click(() => {
         console.log("end-phantom")
-        // window.parent.location.href = ficLink + "#end-phantom"
+        window.parent.location.href = ficLink + "#end-phantom"
     })
     $("#choice3").click(() => {
         console.log("end-both")
-        // window.parent.location.href = ficLink + "#end-both"
+        window.parent.location.href = ficLink + "#end-both"
     })
     
     const unlockSecretEnding = () => {
@@ -198,7 +198,7 @@ $(document).ready(function() {
         }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
     })
 
-    // setTimeout(() => { $(".notebook-cover").trigger('click') }, 500)
+    setTimeout(() => { $(".notebook-cover").trigger('click') }, 300)
 
     const setTime = () => {
         var date = new  Date()
