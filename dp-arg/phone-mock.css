@@ -1,0 +1,718 @@
+body {
+    background-color: transparent;
+}
+
+.phone-arg {
+    /* text-align: center; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.phone-container {
+    width: 364px;
+    height: 732px;
+    display: inline-flex;
+    position: relative;
+    margin-bottom: -120px;
+    margin-top: -20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.screen-container {
+    width: 259px;
+    height: 532px;
+    margin-right: 60px;
+    /* scroll-snap-align: start; */
+    scroll-behavior: smooth;
+}
+
+.screen-buttons
+{
+    position: absolute;
+    margin-top: 455px;
+    margin-left: 54px;
+    cursor: pointer;
+}
+
+.screen-buttons:before {
+    content: '';
+    width: 258px;
+    height: 90px;
+    border-radius: 26px;
+    position: absolute;
+    background-color: slategray;
+    filter: opacity(0.5);
+}
+
+/* .screen-container:last-of-type { */
+#screen3 {
+    margin-right: 0px;
+    /* margin-left: 10px; */
+}
+
+.phone-img {
+    background-image: url(https://i.imgur.com/fL9NBiz.png);
+    /* background-size: 100% auto; */
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* max-width: 400px;
+    min-width: 300px; */
+    width: 364px;
+    height: 732px;
+    /* display: inline-flex; */
+    position: absolute;
+    margin-bottom: -120px;
+    /* display: table;
+    margin: 0 auto; */
+}
+
+.phone-wallpaper {
+        /* pointer-events: none; */
+    /* z-index: 1; */
+    height: 456px;
+    /* background-color: orange; */
+    /* background-image: none; */
+    /* width: 100%; */
+    width: 257px;
+    top: 92px;
+    margin-left: 54px;
+    /* margin: 0 8px; */
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(https://i.imgur.com/vqt7UbC.jpg);
+}
+
+.phone-wallpaper-img {
+    height: 456px;
+    /* background-color: orange; */
+    /* background-image: none; */
+    /* width: 100%; */
+    width: 257px;
+    top: 92px;
+    margin-left: 54px;
+    position: absolute;
+}
+
+.phone-crack {
+    width: 257px;
+    margin: 0 54px;
+    position: absolute;
+    top: 92px;
+    z-index: 13;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.phone-smear {
+    width: 257px;
+    margin: 0 54px;
+    position: absolute;
+    /* top: 103px; */
+    z-index: 13;
+    pointer-events: none;
+    bottom: 100;
+    margin-left: 39px;
+    opacity: 0.5;
+}
+
+.phone-splatter {
+    width: 257px;
+    margin: 0 54px;
+    position: absolute;
+    /* top: 103px; */
+    z-index: 13;
+    pointer-events: none;
+    top: 250;
+    margin-left: 39px;
+    filter: hue-rotate(162deg) brightness(3.5);
+    opacity: 0.7;
+}
+
+
+.app {
+    background-color: pink;
+    height: auto;
+    padding: 10px;
+    margin: 10px;
+}
+
+.app-row {
+    width: 282px;
+    padding: 12px;
+    height: 90px;
+}
+
+.app-container {
+    padding-top: 100px;
+    margin-left: 53px;
+    margin-top: 3px;
+    width: 259px;
+    display: flex;
+    flex-flow: row wrap;
+    flex-direction: column;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    height: 546px;
+    z-index: 1;
+    cursor: grab;
+}
+
+.app-screen-view {
+    height: 457px;
+    /* height: 0px; */
+    /* background-color: pink; */
+    /* border: thin white solid;
+    box-sizing: content-box; */
+    pointer-events: none;
+    width: 257px;
+    z-index: 10;
+    top: 99px;
+    position: absolute;
+    margin: -7px 7px 0px 53px;
+}
+
+.app-icon {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 98%;
+    height: 98%;
+}
+
+.app-icon:hover {
+    filter: drop-shadow(2px 4px 6px black);
+    width: 97%;
+    height: 97%;
+}
+
+.app-gmail {
+    background-image: url(https://i.imgur.com/vbcR6aY.png);
+}
+
+.app-sc {
+    background-image: url(https://i.imgur.com/Ayi48lm.png);
+}
+
+.app-discord {
+    background-image: url(https://i.imgur.com/bxH2JKD.png);
+}
+
+.app-phone {
+    background-image: url(https://i.imgur.com/us7Jh7G.png);
+}
+
+.app-msgs {
+    background-image: url(https://i.imgur.com/IgzbXzX.png);
+}
+
+.app-tiktok {
+    background-image: url(https://i.imgur.com/mMiEYyM.png);
+}
+
+.app-youtube {
+    background-image: url(https://i.imgur.com/4RJi358.png);
+}
+
+.app-ig {
+    background-image: url(https://i.imgur.com/Y7HGNP1.png);
+}
+
+.app-health {
+    background-image: url(https://i.imgur.com/zcrRNYo.png);
+    height: 97%;
+}
+
+.app-tumblr {
+    background-image: url(https://i.imgur.com/FbQwd7E.png);
+    height: 93%;
+    margin-top: 2px;
+}
+
+.app-twitter {
+    background-image: url(https://i.imgur.com/WyNPChT.png);
+}
+
+.app-amazon {
+    background-image: url(https://i.imgur.com/xavfj8F.png);
+}
+
+.app-appstore {
+    background-image: url(https://i.imgur.com/KdbNSPI.png);
+}
+
+.app-notes {
+    background-image: url(https://i.imgur.com/N8xUHdy.png);
+}
+
+.app-reddit {
+    background-image: url(https://i.imgur.com/S43qFL9.png);
+}
+
+.app-settings {
+    background-image: url(https://i.imgur.com/gkhOYnk.png);
+}
+
+.app-gallery {
+    background-image: url(https://i.imgur.com/5BS8t16.png);
+}
+
+.app-camera {
+    background-image: url(https://i.imgur.com/YRMrPnY.png);
+}
+
+.app-clock {
+    background-image: url(https://i.imgur.com/XpmJJFj.png);
+}
+
+.app-Gmaps {
+    background-image: url(https://i.imgur.com/CyWo14T.png);
+}
+
+.app-chrome {
+    height: 93%;
+    background-image: url(https://i.imgur.com/mmSJAyZ.png);
+}
+
+.app-Gdrive {
+    background-image: url(https://i.imgur.com/FjxTWVm.png);
+}
+
+.app-calculator {
+    background-image: url(https://i.imgur.com/NbSkEgT.png);
+}
+
+.col {
+    z-index: 3;
+}
+
+.home-btn {
+    position: absolute;
+    margin-left: 162px;
+    margin-top: 555px;
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: white;
+    opacity: 0.1;
+    height: 40px;
+    width: 40px;
+    z-index: 2;
+}
+
+.home-btn:hover {
+    filter: drop-shadow(2px 4px 6px black);
+    opacity: 0.3;
+}
+
+/* ----------individual apps ---------- */
+/* #snapchat-view { */
+
+.app-screen-view > div:not(#notification, #notif-backdrop) {
+    /* background-color: gold; */
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    z-index: 11;
+    transition: height 1s, width 1s, opacity 1s;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#snapchat-view {
+    background-color: white;
+}
+
+#notification {
+    /* background-color: gray; */
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    /* width: 0px; */
+    width: 257px;
+    height: 0px;
+    transition: height 1s, width 1s, opacity 0.7s;
+}
+
+#notification p {
+    color: black;
+    background-color: white;
+    padding: 10px;
+    margin: 35px;
+    margin: 20px;
+    padding: 10px;
+    filter: drop-shadow(2px 4px 6px black);
+    border-radius: 10px;
+    z-index: 11;
+    font-size: small;
+    display: flex;
+}
+
+#notification img {
+    float: right;
+    height: 35px;
+}
+#notif-backdrop {
+    position: absolute;
+    /* display: flex; */
+    background-color: gray;
+    /* filter: blur(10000px); */
+    opacity: 0;
+    /* z-index: 10; */
+    width: 257px;
+    height: 456px;
+    transition: opacity 0.1s;
+
+}
+/* #notification p:before {
+    content: "";
+    position: absolute;
+    background-color: gray;
+    filter: blur(10000px);
+    z-index: 10;
+    width: 257px;
+    height: 456px;
+    top: -195px;
+    margin-left: -30;
+  } */
+/* ---------- -------------- ---------- */
+
+/* ---------- scrollbar overrides ---------- */
+
+  /* Handle */
+/* #calc-view::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+} */
+
+  /* firefox */
+.app-container, .app-screen, .phone-list, .phone, .calc-priv, #gallery-view
+{
+  scrollbar-width: none;
+}
+  
+  /* Track */
+/* .app-container::-webkit-scrollbar-track,
+#calc-view::-webkit-scrollbar-track,
+#gallery-view::-webkit-scrollbar-track { */
+.app-container::-webkit-scrollbar,
+.app-screen::-webkit-scrollbar, 
+.phone-list::-webkit-scrollbar,
+.phone::-webkit-scrollbar,
+.calc-priv::-webkit-scrollbar,
+#gallery-view::-webkit-scrollbar ,
+.app-screen::-webkit-scrollbar-track ,
+.app-container::-webkit-scrollbar-track,
+.phone-list::-webkit-scrollbar-track,
+.phone::-webkit-scrollbar-track,
+.calc-priv::-webkit-scrollbar-track,
+#gallery-view::-webkit-scrollbar-track  {
+    display: none;
+    width: 0px;
+  }
+
+  /* Handle */
+  .app-screen::-webkit-scrollbar-thumb ,
+  .app-container::-webkit-scrollbar-thumb,
+  .phone-list::-webkit-scrollbar-thumb,
+  .phone::-webkit-scrollbar-thumb,
+  .calc-priv::-webkit-scrollbar-thumb,
+   #gallery-view::-webkit-scrollbar-thumb  
+{
+    display: none;
+}
+
+.scroller, .gallery-scroller, .privGallery-scroller {
+    position: absolute;
+    /* top: 92px; */
+    display: flex;
+    justify-content: center;
+    height: 25px;
+    width: 259px;
+    /* margin-left: 162px; */
+    margin-top: 338px;
+}
+
+.scroller div, .gallery-scroller div, .privGallery-scroller div {
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    background: slategray;
+    border-radius: 20px;
+    margin: 0 10px;
+    border-style: solid;
+    border-width: thin;
+}
+
+.scroller div:first-of-type, 
+.gallery-scroller div:first-of-type, 
+.privGallery-scroller div:first-of-type {
+    background: white;
+}
+
+/* ----------------- top status bar ------------------- */
+
+.phone-status-backdrop {
+    background: slategray;
+    height: 18px;
+    width: 257px;
+    position: absolute;
+    top: 91px;
+    margin-left: 54px;
+    opacity: 0.5;
+}
+
+.phone-status {
+    /* background: slategray; */
+    height: 18px;
+    width: 257px;
+    position: absolute;
+    top: 91px;
+    margin-left: 54px;
+}
+
+#time {
+    font-size: small;
+    color: white;
+    padding-left: 2px;
+}
+
+.status-icon {
+    height: 18px;
+    width: 18px;
+    display: inline-flex;
+    float: right;
+    filter: invert(1);
+    margin-right: 28px;
+}
+
+.status-icon img {
+    padding: 0px 3px
+}
+
+/* ------------------ checklist notebook stuff---------------------------- */
+
+.phone-checklist {
+    display: inline-flex;
+    position: relative;
+    /* margin-top: 25px; */
+    overflow: visible;
+    margin-bottom: 200px;
+}
+
+.notebook-prompt {
+    cursor: pointer;
+    text-decoration: underline;
+    background: black;
+    border-radius: 18px;
+    border-color: white;
+    border-style: solid;
+    color: white;
+    /* width: max-content; */
+    padding: 10px;
+    display: table;
+    margin: 270px auto 0 auto;
+    transform: translateY(50%);
+    position: relative;
+    z-index: 10;
+}
+
+.notebook-prompt:hover {
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.notebook-spiral {
+    position: absolute;
+    z-index: 25;
+    /* margin-right: 20px; */
+    margin-left: 8px;
+    margin-top: 6px;
+    width: 325px;
+    /* top: 0; */
+}
+
+.notebook-cover {
+    /* background-color: brown; */
+    background-image: url(https://i.imgur.com/bCYDKPS.jpg?1);
+    margin-top: 10px;
+    background-repeat: no-repeat;
+    /* min-width: 300px;
+    max-width: 400px; */
+    border-radius: 20px;
+    width: 100%;
+    height: 97%;
+    z-index: 20;
+    position: absolute;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+}
+
+.paper {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+}
+
+.notebook-cover-out {
+    transform: rotateX(90deg) scale(1.15);
+}
+
+.notebook-keepOut {
+    position: absolute;
+    top: 100px;
+    width: 338px;
+    z-index: 8;
+}
+
+.notebook-topsecret {
+    position: absolute;
+    width: 258px;
+    left: 25px;
+    top: 100px;
+    transform: rotateZ(20deg);
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+.notebook-badge {
+    position: absolute;
+    width: 130px;
+    bottom: 100px;
+    right: 30px;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+/* .textwmar p:not(.sticky-container) { */
+    /* position: absolute; */
+    /* top: 106px; */
+        /* height: 100%; */
+    /* width: 100%; */
+    /* position: relative; */
+    /* min-height: 500px;
+    padding: 5px 10px; */
+    /* width: 300px;
+    min-width: 357px;
+    display: inline-block; */
+/* } */
+
+/* #appsVisited-contianer, #appsCouldntVisit-container, #choiceTime {
+    margin-bottom: 0px;
+    height: 150px;
+} */
+
+.textwmar p {
+    margin-bottom: 0px
+}
+
+#nb-line1-container {
+    height: 50px;
+}
+
+/* i will not fix this typo... */
+#appsVisited-contianer { 
+    height: 150px;
+}
+
+#appsCouldntVisit-container {
+    height: 100px;
+}
+
+#appsVisited {
+    display: inline-block;
+    width: 75%;
+}
+
+#appsVisited-title, #appsCouldntVisit-title, #choiceText{
+    text-decoration: underline;
+    text-decoration-thickness: 2.5px;
+}
+
+#appsCouldntVisit {
+    text-decoration: line-through;
+}
+
+#choiceTime {
+    /* display: inline-block; */
+    text-align: left;
+    /* width: 366px; */
+    display: none;
+    width: 100%;
+}
+
+#choiceTime p:not(#choice3) {
+    display: inline;
+}
+
+#choice3 {
+    display: none;
+}
+
+#choiceConj, #choiceConj2 {
+    padding: 0px 10px;
+}
+
+#choice1 img {
+    width: 102px;
+    height: 40px;
+    position: absolute;
+    margin-left: -102px;
+    margin-top: -7px;
+    opacity: 0;
+    filter: brightness(0);
+}
+
+#choice2 img {
+    /* display: none; */
+    width: 115px;
+    height: 40px;
+    position: absolute;
+    opacity: 0;
+    margin-left: -115px;
+    margin-top: -6px;
+    filter: brightness(0);
+}
+
+#choice3 img {
+    width: 55px;
+    height: 40px;
+    position: absolute;
+    margin-left: -50px;
+    margin-top: -7px;
+    opacity: 0;
+    filter: brightness(0);
+}
+
+#choice1 img:hover, #choice2 img:hover, #choice3 img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#choice1 {
+    padding-left: 36px;
+}
+#choice3 {
+    padding-left: 116px;
+}
+/* #choice1, #choice2, #choice3 {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: black;
+    border-style: solid;
+    display: inline-block;
+}
+
+#choice2, #choice3 {
+    margin-left: 15px;
+} */
+
+/* #choice1:hover, #choice2:hover, #choice3:hover {
+    cursor: pointer;
+    color: white;
+    background-color: black;
+} */
+
+/* .titletext , #notebook-line1 {
+    font-family: 'Waiting for the Sunrise';
+} */
+/* ----------------------------------------------------------------------- */
+

@@ -1,0 +1,72 @@
+/* :not(p) */
+#workskin {
+/* z-index: 1000; */
+width: initial;
+overflow: inherit;
+/* max-width: 100%; */
+position: relative;
+}
+
+
+.white-overflow {
+border: none;
+right: 0;
+/* left: 0; */
+box-shadow: none;
+padding: 0 1.2em;
+box-sizing: border-box;
+position: absolute;
+z-index: 10;
+width: 100vw;
+margin-left: -50vw;
+left: 50%;
+padding: 0;
+}
+
+/* tabbing css */
+
+/* https://stackoverflow.com/questions/3354279/default-target-with-css */
+
+.tab, 
+.tab0,
+:target ~ .default-tab { display: none }
+
+.default-tab { display: block; }
+.root { margin-top: -1em !important; }
+
+#root:target ~ .root, /* start of ch */
+#end-fenton:target ~ .end-fenton,
+#end-phantom:target ~ .end-phantom,
+#end-both:target ~ .end-both {
+display: block;
+margin-top: -1em;
+}
+
+/* todo -- hide end notes , style notebook img and placement  */
+/* overriding an ao3 class hahah */
+.jump {
+    display: none;
+}
+
+/* css specific for iframe bait */
+.overflow-top {
+    height: 6000px;
+    top: -900px;
+    z-index: 20;
+    overflow: initial;
+    line-height: 1.125;
+  }
+  
+  .overflow-top p {
+    /* max-width: 160px;
+    padding-top: 100px; */
+    position: sticky;
+    top: 0;
+  }
+  
+  .overflow-top img {
+    display: block;
+    margin: 0 auto;
+    width: 338px;
+    cursor: pointer;
+  }
