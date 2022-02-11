@@ -928,6 +928,86 @@
     display: table;
     }
 
+    /* -----------------phone logs --------------------- */
+
+    #phone-view {
+      background-color: white;
+    }
+
+    .phone-recents {
+      font-weight: 700;
+      font-size: 24px;
+      margin-left: 25px;
+      margin-top: 10px;
+    }
+
+    .phone-log {
+      margin-top: 10px;
+      border-top: thin lightgray solid;
+      /* width: 90%; */
+      /* display: table; */
+      margin-left: 25px;
+      margin-right: 10px;
+      position: relative;
+    }
+
+    .phone-contact {
+      font-weight: 700;
+      /* margin-left: 10px; */
+      font-size: 13px;
+    }
+
+    .missed .phone-contact {
+      color: red;
+    }
+
+    .missed.phone-log:before {
+        content: url(https://img.icons8.com/ios-filled/15/000000/missed-call.png);
+        vertical-align: middle;
+        position: absolute;
+        margin-top: 3px;
+        /* padding-right: 20px; */
+        /* left: 7px; */
+        left: -18px;
+        opacity: 0.5;
+    }
+
+    .phone-type {
+      font-size: 11px;
+      /* margin-left: 10px; */
+      color: gray;
+    }
+
+    .phone-time {
+      float: right;
+      /* margin-right: 10px; */
+      margin-top: -29px;
+      font-size: 13px;
+      color: gray;
+    }
+
+    .phone-time:after {
+      /* content: ""; */
+      content: url(https://img.icons8.com/ios/13/000000/info--v1.png);
+      margin-left: 3px;
+      vertical-align: middle;
+    }
+
+    .phone-phooter {
+      background-image: url(https://i.imgur.com/QNrvwLS.png);
+      position: sticky;
+      bottom: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      height: 34px;
+      width: 257px;
+    }
+
+    .phone-log-container {
+      min-height: 423px;
+    }
+
+    /* ------------------------------------------------ */
 
     /* phone list */
 
