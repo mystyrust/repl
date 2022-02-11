@@ -4,8 +4,7 @@
     /* width: 97%; */
     /* width: -webkit-fill-available; */
     width: 336px;
-    -webkit-text-size-adjust: none;
-    text-size-adjust: none;
+    font-size-adjust: none;
     /* min-width: 300px;
     max-width: 400px;
     width: 97%; */
