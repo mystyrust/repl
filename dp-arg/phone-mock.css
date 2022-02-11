@@ -641,7 +641,9 @@ body {
 }
 
 #choiceTime p:not(#choice3) {
-    display: inline;
+    display: inline-block;
+    margin-bottom: 0px;
+    margin-top: 25px;
 }
 
 #choice3 {
