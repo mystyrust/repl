@@ -17,9 +17,9 @@ body {
     margin-bottom: -120px;
     margin-top: -20px;
     /* opacity: 0; */
-    -webkit-transition: -webkit-transform 1s;
-    -webkit-transition: transform 1s;
-    transition: all 1s;
+    -webkit-transition: -webkit-transform 2s;
+    -webkit-transition: transform 2s;
+    transition: all 2s;
     transform: translateY(-2000px);
     z-index: 30;
 }
