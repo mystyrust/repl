@@ -17,8 +17,8 @@ body {
     margin-bottom: -120px;
     margin-top: -20px;
     /* opacity: 0; */
-    transition: transform 1s ease-out;
-    transform: translateY(-2000px);
+    transition: transform 1s;
+    /* transform: translateY(-2000px); */
     z-index: 30;
 }
 
@@ -619,8 +619,8 @@ body {
 }
 
 #appsVisited {
-    display: inline-block;
-    width: 75%;
+    display: block;
+    width: 95%;
 }
 
 #appsVisited-title, #appsCouldntVisit-title, #choiceText{
@@ -648,6 +648,11 @@ body {
     display: inline-block;
     margin-bottom: 0px;
     margin-top: 25px;
+}
+
+#appsVisited-title {
+    display: block;
+    min-height: 25px;
 }
 
 #choice3 {

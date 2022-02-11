@@ -8,15 +8,12 @@ $(document).ready(function() {
 
     // handle redirects based on clicked ending
     $("#choice1").click(() => {
-        console.log("end-fenton")
         window.parent.location.href = ficLink + "#end-fenton"
     })
     $("#choice2").click(() => {
-        console.log("end-phantom")
         window.parent.location.href = ficLink + "#end-phantom"
     })
     $("#choice3").click(() => {
-        console.log("end-both")
         window.parent.location.href = ficLink + "#end-both"
     })
     
@@ -24,7 +21,7 @@ $(document).ready(function() {
         // unlocked both choices already, havent printed the option for choice 3 yet
         if (appsVisisted.length >= 5 && $("#choice3")[0].innerText.trim().length == 0 && unlockedSecretEnding)
         {
-            $("#choice3").css({ display: "inline" })
+            $("#choice3").css({ display: "block" })
 
             // const choiceConj2 = " or "
             const choice3 = "...both??"
@@ -81,7 +78,7 @@ $(document).ready(function() {
             appsCouldntVisit.push(appName.value);
             if (appsCouldntVisit.length == 1)
             {
-                const text = "Couldn't visit these apps, for some reason"
+                const text = "Wow, these apps must be really broken, couldn't visit them..."
                 $("#appsCouldntVisit-title").css({ display: "block"})
 
                 writing($("#appsCouldntVisit-title"), text, "")
@@ -145,12 +142,9 @@ $(document).ready(function() {
         })
     }
 
-
-    $("#snapchat-view").one('viewingApp', () => {
-        $("#snapchat-view").scrollTop($(".snp-box").height())
-    })
-
+    $("#snapchat-view").scrollTop($(".snp-box").height())
     $(".phone").each((i, p) => { $(p).scrollTop(5000) }) // set each message to bottom
+
     slideFromListToItem(".contact", ".phone-list", ".header-chevron", ".phone") // iMessage
     slideFromListToItem(".note-preview", ".notes-list", ".note-goback", ".notes-item") // notes app 
 
