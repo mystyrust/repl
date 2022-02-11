@@ -17,8 +17,10 @@ body {
     margin-bottom: -120px;
     margin-top: -20px;
     /* opacity: 0; */
-    transition: transform 1s;
-    /* transform: translateY(-2000px); */
+    -webkit-transition: -webkit-transform 1s;
+    -webkit-transition: transform 1s;
+    transition: all 1s;
+    transform: translateY(-2000px);
     z-index: 30;
 }
 
