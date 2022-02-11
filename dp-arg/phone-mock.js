@@ -82,6 +82,8 @@ $(document).ready(function() {
             if (appsCouldntVisit.length == 1)
             {
                 const text = "Couldn't visit these apps, for some reason"
+                $("#appsCouldntVisit-title").css({ display: "block"})
+
                 writing($("#appsCouldntVisit-title"), text, "")
 
                 var displayedText =  $("#appsCouldntVisit").html();

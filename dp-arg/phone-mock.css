@@ -628,6 +628,10 @@ body {
     text-decoration-thickness: 2.5px;
 }
 
+#choiceText {
+    display: inline-block;
+}
+
 #appsCouldntVisit {
     text-decoration: line-through;
 }
