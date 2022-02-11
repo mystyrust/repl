@@ -5,7 +5,7 @@ body {
 .phone-arg {
     /* text-align: center; */
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap-reverse;
     justify-content: center;
 }
 
@@ -16,8 +16,10 @@ body {
     position: relative;
     margin-bottom: -120px;
     margin-top: -20px;
-    opacity: 0;
-    transition: opacity 1s;
+    /* opacity: 0; */
+    transition: transform 1s ease-out;
+    transform: translateY(-2000px);
+    z-index: 30;
 }
 
 .screen-container {
@@ -158,6 +160,7 @@ body {
     height: 546px;
     z-index: 1;
     cursor: grab;
+    pointer-events: visible;
 }
 
 .app-screen-view {
@@ -495,9 +498,7 @@ body {
 .phone-checklist {
     display: inline-flex;
     position: relative;
-    /* margin-top: 25px; */
     overflow: visible;
-    margin-bottom: 200px;
 }
 
 .notebook-prompt {

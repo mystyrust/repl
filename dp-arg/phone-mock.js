@@ -53,9 +53,10 @@ $(document).ready(function() {
     $(".app-icon").click((event) => {
         var appScreen = event.target.attributes['app-target'];
         var appName = event.target.attributes['app-name'];
+        $(".home-btn").trigger("click") // close any "open" apps already
+
         if (appScreen)
         {
-            $(".home-btn").trigger("click") // close any "open" apps already
             var appScreenId = appScreen.value
             $("#"+appScreenId).css({ height: "457px" , width: "257px", opacity: 1, "pointer-events": "visible", border: "thin black solid", "box-sizing": " content-box" })
             $("#"+appScreenId).trigger("viewingApp")
@@ -142,6 +143,7 @@ $(document).ready(function() {
         })
     }
 
+    $(".phone").each((i, p) => { $(p).scrollTop(5000) }) // set each message to bottom
     slideFromListToItem(".contact", ".phone-list", ".header-chevron", ".phone") // iMessage
     slideFromListToItem(".note-preview", ".notes-list", ".note-goback", ".notes-item") // notes app 
 
@@ -151,7 +153,8 @@ $(document).ready(function() {
         var notebookPos = $(".phone-checklist")[0].getBoundingClientRect()
         var phonePos = $(".phone-container")[0].getBoundingClientRect()
         
-        $("body").scrollTop(notebookPos.top)
+        // $("body").scrollTop(notebookPos.top)
+        // window.parent.parent.scrollTo(0, window.innerHeight)
 
         // i wish i knew how to chain these timed events better, like using .then or await
         // this isnt great or even best practice but its good enough for me
@@ -193,12 +196,17 @@ $(document).ready(function() {
 
         setTimeout(() => {
             // set phone visible
-            $(".phone-container").css({ opacity: 1 })
-            $("body").scrollTop(phonePos.top) // scroll to the phone now
+            $(".phone-container").css({ transform: "translateY(0px)" })
+            // $("body").scrollTop(phonePos.top) // scroll to the phone now
+            // window.parent.parent.scrollTo(0,window.innerHeight-phonePos.height)
         }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
     })
 
-    setTimeout(() => { $(".notebook-cover").trigger('click') }, 300)
+    // setTimeout(() => { $(".notebook-cover").trigger('click') }, 300)
+
+    $("#snapchat-view").one('viewingApp', () => {
+        $("#snapchat-view").scrollTop($(".snp-box").height())
+    })
 
     const setTime = () => {
         var date = new  Date()

@@ -836,7 +836,20 @@
     padding-right: 6.5px;
     /* height: 457px; */
     margin-bottom: 0px;
+    min-height: 457px;
     /* position: relative; */
+  }
+
+  .message-box {
+    content: "";
+    background-image: url(https://i.imgur.com/WS62HOV.png);
+    width: 257px;
+    height: 34px;
+    position: sticky;
+    background-size: cover;
+    background-repeat: no-repeat;
+    bottom: 0;
+    margin-bottom: 0;
   }
 
   .breply {
