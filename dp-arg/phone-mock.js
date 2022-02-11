@@ -145,6 +145,11 @@ $(document).ready(function() {
         })
     }
 
+
+    $("#snapchat-view").one('viewingApp', () => {
+        $("#snapchat-view").scrollTop($(".snp-box").height())
+    })
+
     $(".phone").each((i, p) => { $(p).scrollTop(5000) }) // set each message to bottom
     slideFromListToItem(".contact", ".phone-list", ".header-chevron", ".phone") // iMessage
     slideFromListToItem(".note-preview", ".notes-list", ".note-goback", ".notes-item") // notes app 
@@ -206,8 +211,14 @@ $(document).ready(function() {
 
     // setTimeout(() => { $(".notebook-cover").trigger('click') }, 300)
 
-    $("#snapchat-view").one('viewingApp', () => {
-        $("#snapchat-view").scrollTop($(".snp-box").height())
+    // google chrome history hacks
+    $(".ch-x-cell").click(event => {
+        $(event.currentTarget.parentElement).addClass("ch-hide")
+        $(".ch-hist-clear").removeClass("ch-hide")
+    })
+    $(".ch-hist-clear").click(event => {
+        $(".ch-row.ch-hide").removeClass("ch-hide")
+        $(".ch-hist-clear").addClass("ch-hide")
     })
 
     const setTime = () => {

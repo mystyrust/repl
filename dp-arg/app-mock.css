@@ -1022,7 +1022,7 @@
     font-size: 12px;
     width: 97%;
     margin: 0 auto;
-    border-top: gray solid thin;
+    border-top: lightgray solid thin;
   }
 
   .contact-header {
@@ -2697,9 +2697,12 @@ div.ch-table p
 
 .ch-sub-header{
   color: #1A72E8;
-  font-size: .9em;
+  font-size: 11px;
   margin-bottom: 8px;
   margin-top: 9px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .ch-date{
@@ -2767,10 +2770,16 @@ div.ch-table p
   width:30px;
   display:table-cell;
   vertical-align: middle;
+  cursor: pointer;
 }
+
 .ch-x{
   margin:0 10px 0 5px;
   width:20px;
+}
+
+.ch-hide {
+  display: none;
 }
 
 
