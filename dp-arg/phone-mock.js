@@ -197,7 +197,7 @@ $(document).ready(function() {
 
         setTimeout(() => {
             // set phone visible
-            $(".phone-container").css({ transform: "translateY(0px)" })
+            $(".phone-container").removeClass("phone-out")
             // $("body").scrollTop(phonePos.top) // scroll to the phone now
             // window.parent.parent.scrollTo(0,window.innerHeight-phonePos.height)
         }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
