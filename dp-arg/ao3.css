@@ -50,7 +50,7 @@ margin-top: -1em;
 
 /* css specific for iframe bait */
 .overflow-top {
-    height: 6000px;
+    height: 10000px;
     top: -900px;
     z-index: 20;
     overflow: initial;
