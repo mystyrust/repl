@@ -192,7 +192,7 @@ $(document).ready(function() {
 
         // set phone visible
         setTimeout(() => {
-            $(".phone-container").css({ transform: "translateY(-1800px)" })
+            $(".phone-container").css({ transform: "translateY(-1000px)" })
         }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
         // why did i do +15??? to buffer / offset timing?? was it supposed to be + 5???
         // i dont remember. kids, always document your code. 
