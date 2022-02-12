@@ -150,13 +150,6 @@ $(document).ready(function() {
 
     // notebook transitions 
     $(".notebook-cover").one('click', event => {
-
-        var notebookPos = $(".phone-checklist")[0].getBoundingClientRect()
-        var phonePos = $(".phone-container")[0].getBoundingClientRect()
-        
-        // $("body").scrollTop(notebookPos.top)
-        // window.parent.parent.scrollTo(0, window.innerHeight)
-
         // i wish i knew how to chain these timed events better, like using .then or await
         // this isnt great or even best practice but its good enough for me
         $(".notebook-cover").css({ transform: "rotateX(90deg) scale(1.15)" })
@@ -195,14 +188,12 @@ $(document).ready(function() {
             writing($("#appsVisited-title"), appsVisitedTitle, "")
         }, 1700 + ((titleText.length + notebookLine1.length + +4) * 50))
 
+        // set phone visible
         setTimeout(() => {
-            // set phone visible
-            // $(".phone-container").removeClass("phone-out")
-            // $("body").scrollTop(phonePos.top) // scroll to the phone now
-            // window.parent.parent.scrollTo(0,window.innerHeight-phonePos.height)
             $(".phone-container").css({ transform: "translateY(-1000px)" })
         }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
-
+        // why did i do +15??? to buffer / offset timing?? 
+        // i dont remember. kids, always document your code. 
         setTimeout(() => {
             $(".phone-container").css({ transform: "translateY(0px)" })
         }, 500 + 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))

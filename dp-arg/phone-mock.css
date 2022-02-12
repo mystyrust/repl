@@ -17,9 +17,9 @@ body {
     margin-bottom: -120px;
     margin-top: -20px;
     /* opacity: 0; */
-    -webkit-transition: -webkit-transform 1s;
-    -webkit-transition: transform 1s;
-    transition: all 1s;
+    -webkit-transition: -webkit-transform 500mss;
+    -webkit-transition: transform 500ms;
+    transition: all 500ms;
     transform-style: preserve-3d;
     transform-origin: top center;
     transform: translateY(-2000px);
