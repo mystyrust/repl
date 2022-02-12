@@ -197,10 +197,15 @@ $(document).ready(function() {
 
         setTimeout(() => {
             // set phone visible
-            $(".phone-container").removeClass("phone-out")
+            // $(".phone-container").removeClass("phone-out")
             // $("body").scrollTop(phonePos.top) // scroll to the phone now
             // window.parent.parent.scrollTo(0,window.innerHeight-phonePos.height)
+            $(".phone-container").css({ transform: "translateY(-1000px)" })
         }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
+
+        setTimeout(() => {
+            $(".phone-container").css({ transform: "translateY(0px)" })
+        }, 500 + 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
     })
 
     setTimeout(() => { $(".notebook-cover").trigger('click') }, 300)

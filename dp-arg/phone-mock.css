@@ -22,13 +22,13 @@ body {
     transition: all 1s;
     transform-style: preserve-3d;
     transform-origin: top center;
-    /* transform: translateY(-2000px); */
+    transform: translateY(-2000px);
     z-index: 30;
 }
 
-.phone-out {
+/* .phone-out {
     transform: translateY(-2000px);
-}
+} */
 
 .screen-container {
     width: 259px;
