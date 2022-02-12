@@ -4,7 +4,9 @@ $(document).ready(function() {
     var appsCouldntVisit = []
     var unlockedSecretEnding = false;
 
-    var ficLink = "./ao3.html"
+    var ficLink =  document.referrer == "https://archiveofourown.org/" ? 
+        "https://archiveofourown.org/works/36623599" : 
+        "./ao3.html"
 
     // handle redirects based on clicked ending
     $("#choice1").click(() => {
@@ -192,11 +194,11 @@ $(document).ready(function() {
         setTimeout(() => {
             $(".phone-container").css({ transform: "translateY(-1000px)" })
         }, 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
-        // why did i do +15??? to buffer / offset timing?? 
+        // why did i do +15??? to buffer / offset timing?? was it supposed to be + 5???
         // i dont remember. kids, always document your code. 
         setTimeout(() => {
             $(".phone-container").css({ transform: "translateY(0px)" })
-        }, 500 + 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
+        }, 600 + 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
     })
 
     setTimeout(() => { $(".notebook-cover").trigger('click') }, 300)

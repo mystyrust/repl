@@ -17,7 +17,7 @@ body {
     margin-bottom: -120px;
     margin-top: -20px;
     /* opacity: 0; */
-    -webkit-transition: -webkit-transform 500mss;
+    -webkit-transition: -webkit-transform 500ms;
     -webkit-transition: transform 500ms;
     transition: all 500ms;
     transform-style: preserve-3d;
