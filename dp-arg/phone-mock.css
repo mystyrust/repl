@@ -20,6 +20,8 @@ body {
     -webkit-transition: -webkit-transform 1s;
     -webkit-transition: transform 1s;
     transition: all 1s;
+    transform-style: preserve-3d;
+    transform-origin: top center;
     /* transform: translateY(-2000px); */
     z-index: 30;
 }
