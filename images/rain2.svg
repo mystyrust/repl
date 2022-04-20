@@ -11,7 +11,12 @@
   <foreignObject x="0" y="0" width="100%" height="100%"  viewBox="0 0 100 100" preserveAspectRatio="none">
   <div xmlns="http://www.w3.org/1999/xhtml" class="rain">
   <a xlink:href="https://www.w3.org/TR/SVG/"
-	  target="_blank">test link</a>
+	  target="_blank">test link</a> <br /> <br />
+     <a href="https://www.w3.org/TR/SVG/">
+    <text x="50" y="90" text-anchor="middle">
+      &lt;circle&gt;
+    </text>
+  </a> <br /><br />
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
   <br /><br />
   Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC
