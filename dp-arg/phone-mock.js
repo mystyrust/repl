@@ -201,7 +201,7 @@ $(document).ready(function() {
         }, 600 + 1700 + ((appsVisitedTitle.length + titleText.length + notebookLine1.length + 15) * 50))
     })
 
-    setTimeout(() => { $(".notebook-cover").trigger('click') }, 300)
+    setTimeout(() => { $(".notebook-cover").trigger('click') }, 400)
 
     // google chrome history hacks
     $(".ch-x-cell").click(event => {
