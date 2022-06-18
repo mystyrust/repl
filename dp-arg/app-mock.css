@@ -275,6 +275,10 @@
   display: inline-block;
 }
 
+.reaction:hover, .reaction-yours:hover {
+  cursor: pointer;
+}
+
 /* The overall discord module */
 .discord {
     /* max-width: 710px; */
