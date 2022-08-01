@@ -72,6 +72,6 @@
 }
 </style>
   <foreignObject xmlns="http://www.w3.org/2000/svg" x="0" y="0" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
-<span class="words"></span><span class="letter-changer"></span><span class="accessibility">I am a <s>CSS fan.</s>nerd.</span>
+<span xmlns="http://www.w3.org/1999/xhtml" class="words"></span><span xmlns="http://www.w3.org/1999/xhtml" class="letter-changer"></span><span xmlns="http://www.w3.org/1999/xhtml" class="accessibility">I am a <s>CSS fan.</s>nerd.</span>
   </foreignObject>
 </svg>
