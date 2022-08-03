@@ -9,7 +9,7 @@
       background-color: white;
       color: black;
       font-family: "Lucida Grande";
-      font-size: 16px;
+      font-size: 15px;
       white-space: nowrap;
       overflow: hidden;
       box-sizing: border-box;
