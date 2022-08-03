@@ -8,7 +8,7 @@
 	background-color: white;
 	color: black;
   font-family: "times new roman";
-  font-size; 12px;
+  font-size: 15px;
   white-space: nowrap;
   overflow: hidden;
   box-sizing: border-box;
