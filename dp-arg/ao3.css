@@ -27,12 +27,6 @@ p.span-cont {
   line-height: 1.5;
 }
 
-p span:not(.tab)
-{
-  display: block;
-  margin-bottom: 20px;
-}
-
 span.hr {
   width: 33%;
   margin: 2em auto !important;
@@ -47,8 +41,7 @@ span.hr {
 
 .tab, 
 .tab0,
-:target ~ .default-tab ,
-p:has(:target) ~ .default-tab { display: none }
+:target ~ .default-tab { display: none; }
 
 .default-tab { display: block; }
 .root { margin-top: -1em !important; }
@@ -61,12 +54,7 @@ p:has(:target) ~ .default-tab { display: none }
 :target[name='root'] ~ .root,
 :target[name='end-fenton'] ~ .end-fenton,
 :target[name='end-phantom'] ~ .end-phantom,
-:target[name='end-both'] ~ .end-both, 
-
-p:has(:target[name='root']) ~ .root,
-p:has(:target[name='end-fenton']) ~ .end-fenton,
-p:has(:target[name='end-phantom']) ~ .end-phantom,
-p:has(:target[name='end-both']) ~ .end-both
+:target[name='end-both'] ~ .end-both
 
 {
 display: block;
