@@ -23,13 +23,32 @@ left: 50%;
 padding: 0;
 }
 
+p.span-cont {
+  line-height: 1.5;
+}
+
+p span:not(.tab)
+{
+  display: block;
+  margin-bottom: 20px;
+}
+
+span.hr {
+  width: 33%;
+  margin: 2em auto !important;
+  border: 1px solid;
+  display: block;
+  height: 0px;
+}
+
 /* tabbing css */
 
 /* https://stackoverflow.com/questions/3354279/default-target-with-css */
 
 .tab, 
 .tab0,
-:target ~ .default-tab { display: none }
+:target ~ .default-tab ,
+p:has(:target) ~ .default-tab { display: none }
 
 .default-tab { display: block; }
 .root { margin-top: -1em !important; }
@@ -37,7 +56,19 @@ padding: 0;
 #root:target ~ .root, /* start of ch */
 #end-fenton:target ~ .end-fenton,
 #end-phantom:target ~ .end-phantom,
-#end-both:target ~ .end-both {
+#end-both:target ~ .end-both,
+
+:target[name='root'] ~ .root,
+:target[name='end-fenton'] ~ .end-fenton,
+:target[name='end-phantom'] ~ .end-phantom,
+:target[name='end-both'] ~ .end-both, 
+
+p:has(:target[name='root']) ~ .root,
+p:has(:target[name='end-fenton']) ~ .end-fenton,
+p:has(:target[name='end-phantom']) ~ .end-phantom,
+p:has(:target[name='end-both']) ~ .end-both
+
+{
 display: block;
 margin-top: -1em;
 }
