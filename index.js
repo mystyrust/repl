@@ -7,7 +7,6 @@ const app = express();
 const ficUrl = "https://archiveofourown.org/works/27314074/chapters/87215485"
 
 app.set('trust proxy', true)
-app.use(require('cookie-parser')());
 
 app.use(function getOrInitId(req, res, next) {
   const ip = req.ip;
