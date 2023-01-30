@@ -11,9 +11,13 @@ app.use(require('cookie-parser')());
 
 app.use(function getOrInitId(req, res, next) {
   const ip = req.ip;
-  if (!histories[ip])
+  const time = timestamps[ip];
+  const now = new Date(Date.now());
+
+  if (!histories[ip] || (time && now.getDay() - time.getDay() >= 2))
   {
-    histories[ip] = [];
+    histories[ip] = []; // clear histories after 2 days , or user is visiting for the first time
+    timestamps[ip] = new Date(Date.now());
   }
   next();
 })
