@@ -10,7 +10,7 @@ app.set('trust proxy', true)
 app.use(require('cookie-parser')());
 
 app.use(function getOrInitId(req, res, next) {
-  const ip = req.connection.remoteAddress;
+  const ip = req.ip;
   if (!histories[ip])
   {
     histories[ip] = [];
@@ -19,12 +19,13 @@ app.use(function getOrInitId(req, res, next) {
 })
 
 var histories = {}; // key = ip address (used to be cookie id) , value = array of loops visited
+var timestamps = {} // key = ip address, value = timestamp 
 const loops = ["ask-sam", "ask-jazz", "ask-tucker", "ask-elle", "ask-none"]
 
 app.get("/images/:visited/visited.png", (req, res) => {
   const filePath = "./images/red-x.png"
   const visited = req.params.visited;
-  const ip = req.connection.remoteAddress;
+  const ip = req.ip;
 
   // https://www.geeksforgeeks.org/how-to-fetch-images-from-node-server/
 
@@ -50,7 +51,7 @@ app.get("/images/:visited/visited.png", (req, res) => {
 
 app.get('/next/:visited', (req, res) => {
   const visited = req.params.visited;
-  const ip = req.connection.remoteAddress;
+  const ip = req.ip;
 
   if (!histories[ip].includes(visited)) {
     histories[ip].push(visited);
@@ -69,7 +70,7 @@ app.get('/next/:visited', (req, res) => {
 });
 
 app.get('/clear', (req, res) => {
-  const ip = req.connection.remoteAddress;
+  const ip = req.ip;
 
   histories[ip].splice(0, histories[ip].length)
   res.redirect(ficUrl + "#root")
