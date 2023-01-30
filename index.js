@@ -14,8 +14,7 @@ app.use(function getOrInitId(req, res, next) {
   const time = timestamps[ip];
   const now = new Date(Date.now());
 
-  if (!histories[ip] || (time && now.getDay() - time.getDay() >= 2))
-  {
+  if (!histories[ip] || (time && now.getDate() - time.getDate() >= 2)) {
     histories[ip] = []; // clear histories after 2 days , or user is visiting for the first time
     timestamps[ip] = new Date(Date.now());
   }
@@ -76,7 +75,8 @@ app.get('/next/:visited', (req, res) => {
 app.get('/clear', (req, res) => {
   const ip = req.ip;
 
-  histories[ip].splice(0, histories[ip].length)
+  histories[ip] = [];
+  timestamps[ip] = new Date(Date.now());
   res.redirect(ficUrl + "#root")
 })
 
