@@ -13,7 +13,7 @@ app.use(function getOrInitId(req, res, next) {
   const time = timestamps[ip];
   const now = new Date(Date.now());
 
-  if (!histories[ip] || (time && Math.abs(now.getDate() - time.getDate() >= 2))) {
+  if (!histories[ip] || (time && Math.abs(now.getDate() - time.getDate()) >= 2)) {
     histories[ip] = []; // clear histories after 2 days , or user is visiting for the first time
     timestamps[ip] = new Date(Date.now());
   }
