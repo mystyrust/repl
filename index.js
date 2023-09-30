@@ -7,28 +7,28 @@ const app = express();
 const ficUrl = "https://archiveofourown.org/works/27314074/chapters/87215485"
 
 app.set('trust proxy', true)
-app.use(require('cookie-parser')());
 
 app.use(function getOrInitId(req, res, next) {
-  var id = req.cookies.id;
-  if (id === undefined || !(id in histories)) {
-    id = Math.random();
-    res.cookie("id", id, { maxAge: 90000000, sameSite: "None", secure: true });
-    histories[id] = [];
+  const ip = req.ip;
+  const time = timestamps[ip];
+  const now = new Date(Date.now());
+
+  if (!histories[ip] || (time && Math.abs(now.getDate() - time.getDate()) >= 2)) {
+    histories[ip] = []; // clear histories after 2 days , or user is visiting for the first time
+    timestamps[ip] = new Date(Date.now());
   }
-  req.id = id;
   next();
 })
 
-var histories = {};
+var histories = {}; // key = ip address (used to be cookie id) , value = array of loops visited
+var timestamps = {} // key = ip address, value = timestamp 
 const loops = ["ask-sam", "ask-jazz", "ask-tucker", "ask-elle", "ask-none"]
 
 app.get("/images/:visited/visited.png", (req, res) => {
   const filePath = "./images/red-x.png"
   const visited = req.params.visited;
-  // console.log("connection", req.connection.remoteAddress);
-  // console.log("socket", req.socket.remoteAddress);
-  // console.log("ip", req.ip);
+  const ip = req.ip;
+
   // https://www.geeksforgeeks.org/how-to-fetch-images-from-node-server/
 
   fs.exists(filePath, function(exists) {
@@ -38,7 +38,7 @@ app.get("/images/:visited/visited.png", (req, res) => {
       "Content-Type": contentType
     });
 
-    if (histories[req.id].includes(visited)) {
+    if (histories[ip].includes(visited)) {
       // Reading the file
       fs.readFile(filePath, function(err, content) {
         res.end(content);
@@ -53,17 +53,18 @@ app.get("/images/:visited/visited.png", (req, res) => {
 
 app.get('/next/:visited', (req, res) => {
   const visited = req.params.visited;
+  const ip = req.ip;
 
-  if (!histories[req.id].includes(visited)) {
-    histories[req.id].push(visited);
+  if (!histories[ip].includes(visited)) {
+    histories[ip].push(visited);
   }
 
-  let allFounded = loops.every(l => histories[req.id].includes(l));
+  let allFounded = loops.every(l => histories[ip].includes(l));
 
   // handle redirect here
   if (allFounded) {
-    res.redirect(ficUrl + "#start2")
     // res.send(`visited all routes`)
+    res.redirect(ficUrl + "#start2")
   } else {
     // res.send(`havent visited all routes yet! you just visited [${visited}] rn`)
     res.redirect(ficUrl + "#start")
@@ -71,7 +72,10 @@ app.get('/next/:visited', (req, res) => {
 });
 
 app.get('/clear', (req, res) => {
-  histories[req.id].splice(0, histories[req.id].length)
+  const ip = req.ip;
+
+  histories[ip] = [];
+  timestamps[ip] = new Date(Date.now());
   res.redirect(ficUrl + "#root")
 })
 
